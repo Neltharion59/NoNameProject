@@ -1,0 +1,45 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  ann_projectile_spawner.skrit
+// Author(s):  Emir Ghanawa (2026)
+//
+// The effect script throws an effect towards the target. Then spawns a template at the target. Does this every time an ACTIVATE message is received.
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////
+
+
+property Scid jump_start$   doc = "Where to jump from";
+property Scid jump_end$   	doc = "Where to jump to";
+property	string   	effect_script$								doc = "Effect to play";
+property	string   	child_template_name$								doc = "Template to spawn";
+property	float	delay$	=	0.0	doc = "Delay from effect start to actual spawn";
+
+owner = GoSkritComponent;
+
+startup state Active$ {
+	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage /*msg$*/ ) {
+		if( e$ == WE_REQ_ACTIVATE ) {
+			SetState Summoning$;
+		}
+	}
+}
+
+state Summoning$ {
+	event OnEnterState$ {
+		SiegeFx.RunScript( effect_script$, jump_end$.goid, jump_start$.goid, "", owner.Goid, WE_REQ_ACTIVATE );
+		This.CreateTimer( 1, delay$ ); 
+	}
+
+	trigger OnTimer$ ( 1 )
+	{
+		GoCloneReq cloneReq$ = MakeGoCloneReq( owner.Goid, child_template_name$ );
+		cloneReq$.StartingPos = jump_end$.Go.Placement.Position;
+		cloneReq$.SetStartingOrient = jump_end$.Go.Placement.Orientation;
+		cloneReq$.SnapToTerrain = true;
+		GoDb.SCloneGo(cloneReq$);
+
+		SetState Active$;
+	}
+}

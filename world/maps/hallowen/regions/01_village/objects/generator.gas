@@ -1,0 +1,100 @@
+[t:ann_generator_projectile_sfx,n:0x0010040e]
+{
+	[ann_projectile_spawner]
+	{
+		child_template_name = "ann_r01_cart_spider";
+	  f delay = 1.6;
+		effect_script = "ann_effect_catapulted_projectile_spider";
+	  x jump_end = 0x0010041B;
+	  x jump_start = 0x00100410;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0.5,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-5.08969e-007,0,1;
+	  p position = -0.689031,0,0.497131,0xb05f6734;
+	}
+}
+[t:ann_generator_projectile_sfx,n:0x00100678]
+{
+	[ann_projectile_spawner]
+	{
+		child_template_name = "ann_r01_cart_spider";
+	  f delay = 1.6;
+		effect_script = "ann_effect_catapulted_projectile_spider";
+	  x jump_end = 0x001003FC;
+	  x jump_start = 0x001003FB;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0.5,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-5.08969e-007,0,1;
+	  p position = 2.68417,0,0.781677,0xb05f6734;
+	}
+}
+[t:ann_generator_projectile_sfx,n:0x001003fa]
+{
+	[ann_projectile_spawner]
+	{
+		child_template_name = "ann_r01_cart_grub";
+	  f delay = 0.5;
+		effect_script = "ann_effect_projectile_summon_01_grub";
+	  x jump_end = 0x0010040B;
+	  x jump_start = 0x00100407;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0,0.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 3.43376,0,1.19067,0x9e2b0b4f;
+	}
+}
+[t:ann_generator_projectile_sfx,n:0x00100700]
+{
+	[ann_projectile_spawner]
+	{
+		child_template_name = "ann_r01_cart_grub";
+	  f delay = 0.5;
+		effect_script = "ann_effect_projectile_summon_01_grub";
+	  x jump_end = 0x001006EC;
+	  x jump_start = 0x001006C0;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0,0.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 3.66636,0,0.11084,0x9e2b0b4f;
+	}
+}
+[t:ann_generator_projectile_sfx,n:0x0010063f]
+{
+	[ann_projectile_spawner]
+	{
+		child_template_name = "ann_r01_cart_spider";
+	  f delay = 1.6;
+		effect_script = "ann_effect_catapulted_projectile_spider";
+	  x jump_end = 0x00100401;
+	  x jump_start = 0x001003F1;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0.5,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-5.08969e-007,0,1;
+	  p position = 3.61354,0,-1.36024,0xc3688438;
+	}
+}

@@ -1,0 +1,162 @@
+[t:template,n:ann_r01_spider_frag_01]
+{
+	doc = "ann_r01_spider_frag_01";
+	specializes 	= fragment;
+	aspect:model 	= m_i_glb_frag-spider-01;
+    [aspect]
+	{
+        scale_base = 0.30;
+    }
+}
+[t:template,n:ann_r01_spider_frag_02]
+{
+	doc = "ann_r01_spider_frag_02";
+	specializes 	= fragment;
+	aspect:model 	= m_i_glb_frag-spider-02;
+    [aspect]
+	{
+        scale_base = 0.30;
+    }
+}
+[t:template,n:ann_r01_spider_frag_03]
+{
+	doc = "ann_r01_spider_frag_03";
+	specializes 	= fragment;
+	aspect:model 	= m_i_glb_frag-spider-03;
+    [aspect]
+	{
+        scale_base = 0.30;
+    }
+}
+[t:template,n:ann_r01_spider_frag_04]
+{
+	doc = "ann_r01_spider_frag_04";
+	specializes 	= fragment;
+	aspect:model 	= m_i_glb_frag-spider-04;
+    [aspect]
+	{
+        scale_base = 0.30;
+    }
+}
+[t:template,n:ann_r01_spider_frag_05]
+{
+	doc = "ann_r01_spider_frag_05";
+	specializes 	= fragment;
+	aspect:model 	= m_i_glb_frag-spider-05;
+    [aspect]
+	{
+        scale_base = 0.30;
+    }
+}
+
+[t:template,n:ann_r01_spider_cart_frag_base]
+{
+	doc = "ann_r01_spider_cart_frag_base";
+	specializes = fragment;
+	[aspect]
+	{
+		scale_base = 0.40;
+		[textures] {0 = b_c_edm_ann_01_as_01; }
+	}
+}
+[t:template,n:ann_r01_spider_cart_frag_01]
+{
+	doc = "ann_r01_spider_cart_frag_01";
+	specializes = ann_r01_spider_cart_frag_base;
+	[aspect]
+	{
+		model = m_i_glb_frag-spider-adolescent-01;
+	}
+}
+[t:template,n:ann_r01_spider_cart_frag_02]
+{
+	doc = "ann_r01_spider_cart_frag_02";
+	specializes = ann_r01_spider_cart_frag_base;
+	[aspect]
+	{
+		model = m_i_glb_frag-spider-adolescent-02;
+	}
+}
+[t:template,n:ann_r01_spider_cart_frag_03]
+{
+	doc = "ann_r01_spider_cart_frag_03";
+	specializes = ann_r01_spider_cart_frag_base;
+	[aspect]
+	{
+		model = m_i_glb_frag-spider-adolescent-03;
+	}
+}
+[t:template,n:ann_r01_spider_cart_frag_04]
+{
+	doc = "ann_r01_spider_cart_frag_04";
+	specializes = ann_r01_spider_cart_frag_base;
+	[aspect]
+	{
+		model = m_i_glb_frag-spider-adolescent-04;
+	}
+}
+[t:template,n:ann_r01_spider_cart_frag_05]
+{
+	doc = "ann_r01_spider_cart_frag_05";
+	specializes = ann_r01_spider_cart_frag_base;
+	[aspect]
+	{
+		model = m_i_glb_frag-spider-adolescent-05;
+	}
+}
+
+[t:template,n:ann_r01_frag_cart_grub_base]
+{
+	doc = "ann_r01_frag_cart_grub_base";
+	specializes = fragment;
+	[aspect]
+	{
+		scale_base = 0.70;
+		[textures] {0 = b_c_edm_ann_01_gb_01; }
+	}
+}
+[t:template,n:ann_r01_frag_cart_grub_01]
+{
+	doc = "ann_r01_frag_cart_grub_01";
+	specializes = ann_r01_frag_cart_grub_base;
+	[aspect]
+	{
+		model = m_i_glb_frag-googore-grub-01;
+	}
+}
+[t:template,n:ann_r01_frag_cart_grub_02]
+{
+	doc = "ann_r01_frag_cart_grub_02";
+	specializes = ann_r01_frag_cart_grub_base;
+	[aspect]
+	{
+		model = m_i_glb_frag-googore-grub-02;
+	}
+}
+[t:template,n:ann_r01_frag_cart_grub_03]
+{
+	doc = "ann_r01_frag_cart_grub_03";
+	specializes = ann_r01_frag_cart_grub_base;
+	[aspect]
+	{
+		model = m_i_glb_frag-googore-grub-03;
+	}
+}
+[t:template,n:ann_r01_frag_cart_grub_04]
+{
+	doc = "ann_r01_frag_cart_grub_04";
+	specializes = ann_r01_frag_cart_grub_base;
+	[aspect]
+	{
+		model = m_i_glb_frag-googore-grub-04;
+	}
+}
+[t:template,n:ann_r01_frag_cart_grub_05]
+{
+	doc = "ann_r01_frag_cart_grub_05";
+	specializes = ann_r01_frag_cart_grub_base;
+	[aspect]
+	{
+		model = m_i_glb_frag-googore-grub-05;
+	}
+}

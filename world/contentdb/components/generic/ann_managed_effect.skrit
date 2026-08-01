@@ -1,0 +1,51 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  ann_managed_effect.skrit
+// Author(s):  Emir Ghanawa (2026)
+//
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//
+// Better guaranteed effect on a template
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// Public Definitions
+
+// Reserved Tags
+property bool		_server_only$	= false;
+property string		_doc$			= "Puts an indicator above the head of an NPC. Only one indicator can be active at a time.";
+
+
+// exported properties
+
+property 	string 	effect_name$;
+			
+            SFxSID active_effect$;
+owner = GoSkritComponent;
+
+//////////////////////////////////////////////////////////////////////////////
+
+startup state Active$
+{
+    trigger OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
+    {
+        if( e$ == WE_ENTERED_WORLD ) //This will override an ID that was setup by a WE_REQ_ACTIVATE command.
+        {
+            active_effect$ = SiegeFx.SRunMPScript( effect_name$, owner.Goid, owner.Goid, "", owner.Goid, WE_UNKNOWN );
+        }
+        if( e$ == WE_LEFT_WORLD )	//If the actor leaves the world, we need to deactivate the indicator to prevent it from coming back.
+        {
+            SiegeFx.SStopScript( active_effect$ );
+        }
+        if( e$ == WE_REQ_DEACTIVATE )	//If the actor leaves the world, we need to deactivate the indicator to prevent it from coming back.
+        {
+            SiegeFx.SStopScript( active_effect$ );
+		    SetState Finished$;
+        }
+    }
+}
+state Finished$
+{
+}

@@ -92,3 +92,18 @@
 		}
 	}
 }
+[t:template,n:ann_r01_wagon_wheel]
+{
+	specializes			= base_container_barrel;
+	doc					= "ann_r01_wagon_wheel";
+	category_name		= "container";
+
+	[aspect]
+	{
+		model = m_i_glb_wheel-wagon;
+	}
+	[common]
+	{
+		screen_name = "Spare Wagon Wheel";
+	}
+}

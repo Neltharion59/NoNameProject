@@ -228,6 +228,35 @@
 		use_point_scids = 0x00100a88;
 	}
 }
+[t:ann_r01_wagon_wheel,n:0x001003d2]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00100404,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_damaged",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = -0.382683,0,0,0.92388;
+	  p position = 0.152868,0.103657,1.97943,0x9e2b0b4f;
+	}
+}
 [t:ann_r01_chest_1,n:0x00100a90]
 {
 	[inventory]

@@ -385,7 +385,51 @@
 {
 	[placement]
 	{
-	  p position = 0.356258,-0.25,-0.871437,0xd5cc0cb6;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.50539,0,-1.79778,0x5c7cd25b;
+	}
+}
+[t:mp_peasant_male_big,n:0x001003f3]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x001003F8,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_talk_end",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = ann_conv_01_infested_cart_after_quest_first;
+			* = ann_conv_01_infested_cart_after_quest_next;
+			* = ann_conv_01_infested_cart_b4_quest_first;
+			* = ann_conv_01_infested_cart_b4_quest_next;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\ann_job_talk_01_haunted_cart_man.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 1.2332,0,-1.91518,0xc792297a;
 	}
 }
 [t:ann_r01_wolf,n:0x00100363]

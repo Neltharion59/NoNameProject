@@ -39,3 +39,33 @@
 		}
 	}
 }
+[t:template,n:ann_ambient_item_01_spider]
+{
+	category_name = "indoor";
+	doc = "ann 01 Ambient Item spider";
+	specializes = ann_ambient_item_base;
+	[aspect]
+	{
+		model			= m_c_edm_as_pos_1;
+		scale_base = 0.40;
+		[textures]
+		{
+			0 = b_c_edm_ann_01_as_01;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_01_grub]
+{
+	category_name = "indoor";
+	doc = "ann 01 Ambient Item Grub";
+	specializes = ann_ambient_item_base;
+	[aspect]
+	{
+		model			= m_c_edm_gb_pos_1;
+		scale_base = 0.75;
+		[textures]
+		{
+			0 = b_c_edm_ann_01_gb_01;
+		}
+	}
+}

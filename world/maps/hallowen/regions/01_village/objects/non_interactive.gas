@@ -17016,12 +17016,20 @@
 	  p position = -7.96617,-4.65,1.24026,0xa6e1a876;
 	}
 }
+[t:cobweb_csl_01,n:0x001003ef]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,1.49012e-007;
+	  p position = -7.85704,-4.65,-5.96884,0xa6e1a876;
+	}
+}
 [t:tree_grs_deciduous_sway_07,n:0x0010089f]
 {
 	[placement]
 	{
 	  q orientation = 0,1,0,0;
-	  p position = -7.57813,-4.65,-5.43902,0xa6e1a876;
+	  p position = -7.7254,-4.65,-5.64825,0xa6e1a876;
 	}
 }
 [t:tree_grs_deciduous_sway_07,n:0x001008a3]
@@ -17035,8 +17043,8 @@
 {
 	[placement]
 	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.622816,0,1.55836,0x53db4c5e;
+	  q orientation = 0,-0.92388,0,0.382684;
+	  p position = 0.254804,0,0.917267,0x53db4c5e;
 	}
 }
 [t:tree_grs_deciduous_sway_07,n:0x001008a2]
@@ -17070,6 +17078,69 @@
 	  p position = 0.77845,0,0.535301,0x937af0be;
 	}
 }
+[t:cart_grs_03,n:0x001003d1]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.21883,0,0.310303,0x9e2b0b4f;
+	}
+}
+[t:hay_pile_grs_01,n:0x001003d3]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.25;
+	}
+	[placement]
+	{
+	  p position = -0.133151,0.839118,0.243378,0x9e2b0b4f;
+	}
+}
+[t:hay_pile_grs_01,n:0x001003da]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.25;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.69994,0.839118,0.314774,0x9e2b0b4f;
+	}
+}
+[t:hay_csl_floor,n:0x001003e2]
+{
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,-0.382683;
+	  p position = -0.790366,1.05253,0.426453,0x9e2b0b4f;
+	}
+}
+[t:hay_csl_floor,n:0x001003e6]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,-0.923879;
+	  p position = -0.127324,1.05253,0.576004,0x9e2b0b4f;
+	}
+}
+[t:hay_csl_floor,n:0x001003e7]
+{
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,0.382684;
+	  p position = -0.953699,1.05253,0.188171,0x9e2b0b4f;
+	}
+}
+[t:hay_bale_grs,n:0x001003ed]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -0.936243,1.11363,0.191971,0x9e2b0b4f;
+	}
+}
 [t:firepit_des_dragon,n:0x001004be]
 {
 	[placement]
@@ -17089,8 +17160,8 @@
 {
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 3.76514,7.62939e-006,-2.04603,0x9331278a;
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -3.75146,0,3.27487,0x9331278a;
 	}
 }
 [t:tree_grs_maple_burgandy_01,n:0x00100990]

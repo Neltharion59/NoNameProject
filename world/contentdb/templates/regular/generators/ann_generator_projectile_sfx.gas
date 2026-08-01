@@ -1,0 +1,18 @@
+[t:template,n:ann_generator_projectile_sfx]
+{
+	specializes = generator;
+	doc = "ann_01_generator_generic_sfx";
+    extra_doc = "Basic Generator Object Used to Spawn Objects with leading SFX.";
+	category_name       = "1w_generator";
+
+	[gizmo]
+	{
+		model				=	m_i_glb_object-waypoint;
+		texture				=	;
+		diffuse_color		=	0.0, 1, 0.0;
+		use_diffuse_color	=	true;
+	}
+
+   	[ann_projectile_spawner] { }
+
+}

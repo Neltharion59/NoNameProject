@@ -113,3 +113,22 @@
 	  p position = -0.932124,-1.19209e-007,-1.12147,0x591d805a;
 	}
 }
+[t:generator_cobweb,n:0x00100402]
+{
+	[aspect]
+	{
+	  b is_invincible = true;
+	  b is_selectable = false;
+	}
+	[generator_breakable]
+	{
+		child_template_name = "ann_r01_spider";
+	  i max_alive_children = 1;
+	  f spawn_range = 3;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.84718,-0.25,-1.56157,0xd5cc0cb6;
+	}
+}

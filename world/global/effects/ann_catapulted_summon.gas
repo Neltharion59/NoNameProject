@@ -1,0 +1,77 @@
+[effect_script*] // - ET
+{
+	name	=ann_effect_catapulted_summon;
+
+	script	=[[
+			///////////////////////////////////////
+			// all we do is call the base firebomb
+			call ann_effect_catapulted_summon_base [0];
+			waitfor script #POP #DEFAULT_TIMEOUT;
+			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}
+[effect_script*] // - ET
+{
+	name	=ann_effect_catapulted_summon_base;
+
+	script	=[[
+	
+			sfx create orbiter #TARGET_KB 
+				"radius(0)dur(10)invisible()";
+			sfx snap_to_ground #PEEK;              
+			set $orb #PEEK;
+			sfx start #POP;  
+			
+			pause .01;                                     
+	        
+			/////////////////////////////////////////
+			// This is the main trackball for the effect, everything is based off of this.
+			sfx create trackball #TARGET_KB 
+				"invisible()must_update()dir(0,1,0)scale(.45)dur(1.80)afterlife(0)
+				ts(1.4)homing()damped()kdamp(0)accel(1)";
+			sfx rat #PEEK;
+			sfx target #PEEK $orb;
+			set $trackball #POP;
+			sfx position_at $trackball @weapon_bone source;
+			sfx offset_bone $trackball v<0 0 0> target;
+			sfx friendly party $trackball;
+			sfx start $trackball;
+
+			sfx create orbiter #TARGET 
+				"must_update()scale(1)radius(0)theta(0)iphi(0)rotate(0,180,0)
+				itheta(0)model([0])";
+			set $projectile #POP;
+			sfx rat $projectile;
+			sfx target $projectile $trackball;
+			sfx start $projectile;
+			
+			pause .01;                                     
+	        
+			sound play s_e_hit_flesh_wood at #SOURCE_POSITION dist 3 20;
+			waitfor collision $trackball #DEFAULT_TIMEOUT;
+			
+			set $collision_type #POP;
+			if ( ( $collision_type == #OBJECT_COLLISION ) || ( $collision_type == #TERRAIN_COLLISION ) )
+			{
+				////////////////////////////
+				// clean up
+				sfx destroy $trackball;
+			}
+			
+			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+						
+			]];
+}
+[effect_script*] // - ET
+{
+	name	=ann_effect_catapulted_summon_01_spider;
+
+	script	=[[
+			///////////////////////////////////////
+			// all we do is call the base firebomb
+			call ann_effect_catapulted_summon s<ann_ambient_item_01_spider>;
+
+			waitfor script #POP #DEFAULT_TIMEOUT;
+			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}

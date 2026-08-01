@@ -199,3 +199,283 @@
 		sight_range = 14.0;
 	}
 }
+[t:template,n:ann_r01_cart_spider]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r01_cart_spider";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  1, 0;
+			intelligence =  12, 0;
+			dexterity =  7, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1;
+		life = 4;
+		max_life = 4;
+		mana = 1;
+		max_mana = 1;
+		model = m_c_edm_as_pos_1;
+		scale_base = 0.40;
+		[textures]
+		{
+			0 = b_c_edm_ann_01_as_01;
+		}
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_spider; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_spider_SED; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 5;
+		damage_min = 1;
+	}
+	[body]
+	{
+		min_move_velocity = 2.85;
+		avg_move_velocity = 3.430000;
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = bone01;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_as_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+					02 = at-03;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+					01 = di-02;
+					02 = di-03;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[common]
+	{
+		screen_name="Creepy Spider";
+        [template_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00100509,0f,"default","every",0);
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  b single_shot = true;
+			}
+		}
+	}
+	[defend] { defense=5; }
+	[mind]
+	{
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?social							= 0.45
+			&still							= false;
+
+		melee_engage_range = 14.0;
+		personal_space_range = 0.5;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+	[physics]
+	{
+		break_effect = spider_guts_pink;
+		break_sound = ;
+		explode_when_killed = true;
+		explosion_magnitude = 1.0;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			ann_r01_spider_cart_frag_01 = 1;
+			ann_r01_spider_cart_frag_02 = 1;
+			ann_r01_spider_cart_frag_03 = 1;
+			ann_r01_spider_cart_frag_04 = 2;
+			ann_r01_spider_cart_frag_05 = 1;
+		}
+	}
+}
+[t:template,n:ann_r01_cart_grub]
+{
+	doc = "ann_r01_cart_grub";
+	specializes = actor_evil;
+    category_name = "1W_evil_d";
+	[actor]
+	{
+		race	= other;
+
+		[skills]
+		{
+			strength =  	1, 0;
+			intelligence =  1, 0;
+			dexterity =  	1, 0;
+			melee =  		1, 0;
+		}
+	}
+	[aspect]
+	{
+		model			= m_c_edm_gb_pos_1;
+		experience_value	= 2;
+		life				= 7;
+		max_life			= 7;
+		mana = 2;
+        max_mana = 2;
+		scale_base = 0.70;
+		[textures]
+		{
+			0 = b_c_edm_ann_01_gb_01;
+		}
+        [voice]
+		{
+			[die] { * = s_e_die_googore_grub; }
+		}
+	}
+	[attack]
+	{
+		damage_min		= 3;
+		damage_max		= 1;
+		attack_range	= 0.5;
+	}
+
+	[body]
+	{
+		avg_move_velocity = .65;
+        [bone_translator]
+		{
+			 kill_bone			= bone01;
+			 weapon_bone		= spine_1;
+			 shield_bone		= spine_1;
+			 body_anterior		= spine_1;
+			 body_mid			= spine_3;
+			 body_posterior		= spine_5;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_gb_fs;
+
+			[chore_attack]
+			{
+				skrit = select_attack;
+				chore_stances = 0;
+
+				anim_files:00 = at;
+				anim_files:01 = at-02;
+			}
+
+			[chore_die]
+			{
+				skrit = select_transition;
+				chore_stances = 0;
+
+				anim_files:00 = di;
+			}
+
+			[chore_default]
+			{
+				skrit = infinite_loop;
+				chore_stances = 0;
+
+				anim_files:00 = dfs;
+			}
+
+			[chore_fidget]
+			{
+				skrit = select_fidget;
+				chore_stances = 0;
+
+				anim_files:00 = dff;
+				anim_files:01 = dff-02;
+			}
+
+			[chore_walk]
+			{
+				skrit = select_walk;
+				chore_stances = 0;
+
+				anim_files:00 = wl;
+				anim_files:01 = wl-02;
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Sleazy Grub";
+        [template_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00100509,0f,"default","every",0);
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  b single_shot = true;
+			}
+		}
+	}
+	[defend] { defense=5; }
+	[mind]
+	{
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit;
+		
+		melee_engage_range  	= 14;
+		personal_space_range	= 0.7;
+		ranged_engage_range 	= 14.0;
+		sight_range				= 14.0;
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		break_effect = blood_mist;
+		break_sound = s_e_meat_explosion;
+		[break_particulate]
+		{
+			ann_r01_frag_cart_grub_01 = 1;
+			ann_r01_frag_cart_grub_02 = 1;
+			ann_r01_frag_cart_grub_03 = 1;
+			ann_r01_frag_cart_grub_04 = 1;
+			ann_r01_frag_cart_grub_05 = 1;
+		}
+	}
+}
+

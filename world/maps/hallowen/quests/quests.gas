@@ -141,4 +141,38 @@
 			is_complete     = true; 
 		}
 	}
+
+	// ==========================================
+	// VEDĽAJŠÍ QUEST 3 (Haunted Cart)
+	// ==========================================
+	[quest_haunted_cart]
+	{
+		chapter			= chapter_1;		
+		screen_name		= "Side Quest: Cart of Terrors";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_03;              
+		
+		[*]
+		{
+			order			= 0;
+			speaker         = "Johnothros of Hay";			
+			description     = "Knock on one of the wheels of the cart";
+			address			= 01_village:conversations:ann_conv_01_infested_cart_b4_quest_first;
+		}
+		[*]
+		{
+			order			= 1;		
+			description     = "Defeat the creepy crawly of the cart";
+		}
+		[*]
+		{
+			order			= 2;		
+			description     = "Speak with Johnothros";
+		}
+		[*]
+		{
+			order			= 3;		
+			description     = "You helped Johnothros as much as you could";
+		}
+	}
 }

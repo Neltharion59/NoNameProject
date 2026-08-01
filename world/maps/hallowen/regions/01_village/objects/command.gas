@@ -144,3 +144,16 @@
 	  p position = 1.8501,0,-1.35491,0x9697cb6d;
 	}
 }
+[t:cmd_selection_toggle,n:0x001003f6]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x001003D2;
+	  i start_state = 1;
+	  b toggle_invincibility = true;
+	}
+	[placement]
+	{
+	  p position = 0.441898,0,-1.6443,0xb05f6734;
+	}
+}
