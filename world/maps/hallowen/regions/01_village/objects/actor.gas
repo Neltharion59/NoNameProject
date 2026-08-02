@@ -241,6 +241,52 @@
 	  p position = 1.10392,-1.5,-4.05174,0xc2748e33;
 	}
 }
+[t:ann_r01_npc_loot_thief,n:0x001006bf]
+{
+	[ann_loot_thief]
+	{
+	  x extractionspot1 = 0x00100805;
+	  x extractionspot2 = 0x00100806;
+	  x extractionspot3 = 0x00100808;
+	  x stealingspot01 = 0x001007C5;
+	  x stealingspot02 = 0x001007C3;
+	  x stealingspot03 = 0x001007BD;
+	  x stealingspot04 = 0x00100739;
+	  x stealingspot05 = 0x001007E4;
+	  x stealingspot06 = 0x001007CC;
+	  x stealingspot07 = 0x001007C7;
+	  x stealingspot08 = 0x001007C1;
+	  x stealingspot09 = 0x001007BF;
+	  x stealingspot10 = 0x00100737;
+	  x stealingspot11 = 0x001007EE;
+	  x stealingspot12 = 0x001007C9;
+
+	  HaulTemplate = ann_r01_reward_pickpocket;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = ann_conv_01_thief_caught_empty_handed_01;
+			* = ann_conv_01_thief_caught_empty_handed_02;
+			* = ann_conv_01_thief_caught_empty_handed_03;
+			* = ann_conv_01_thief_caught_with_haul_01;
+			* = ann_conv_01_thief_caught_with_haul_02;
+			* = ann_conv_01_thief_caught_with_haul_03;
+			* = ann_conv_01_thief_when_escaping;
+			* = ann_conv_01_thief_default;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\ann_job_talk_01_pickpocket.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.651306,-0.281137,1.65569,0x2ceb4aef;
+	}
+}
 [t:ann_r01_dog,n:0x0010035f]
 {
 	[placement]
@@ -462,5 +508,100 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -3.39138,0,0.132192,0xa71277b0;
+	}
+}
+[t:townfolk_male_03,n:0x00100842]
+{
+	[placement]
+	{
+	  p position = -3.80821,0,-3.0612,0xf033414e;
+	}
+}
+[t:townfolk_male_03,n:0x00100843]
+{
+	[placement]
+	{
+	  q orientation = 0,-2.98023e-008,0,1;
+	  p position = 1.57674,0,-1.61338,0x1f32713f;
+	}
+}
+[t:townfolk_male_03,n:0x00100845]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -3.69913,0,2.0365,0x5812818e;
+	}
+}
+[t:townfolk_male_03,n:0x00100846]
+{
+	[placement]
+	{
+	  q orientation = 0,-2.98023e-008,0,1;
+	  p position = 1.76065,-0.326065,-1.58679,0x2ceb4aef;
+	}
+}
+[t:townfolk_male_03,n:0x00100847]
+{
+	[placement]
+	{
+	  q orientation = 0,-2.98023e-008,0,1;
+	  p position = -0.307617,-0.289624,-1.61835,0x2ceb4aef;
+	}
+}
+[t:townfolk_male_03,n:0x00100868]
+{
+	[placement]
+	{
+	  q orientation = 0,-2.98023e-008,0,1;
+	  p position = 0.777308,0,-0.104919,0xac05086f;
+	}
+}
+[t:townfolk_male_03,n:0x0010088c]
+{
+	[placement]
+	{
+	  q orientation = 0,-2.98023e-008,0,1;
+	  p position = 1.10679,-0.0584545,0.32869,0x786f474a;
+	}
+}
+[t:townfolk_male_03,n:0x0010088f]
+{
+	[placement]
+	{
+	  q orientation = 0,-2.98023e-008,0,1;
+	  p position = -0.164505,-0.0265492,-0.646492,0x696844a8;
+	}
+}
+[t:townfolk_male_03,n:0x0010089e]
+{
+	[placement]
+	{
+	  q orientation = 0,-2.98023e-008,0,1;
+	  p position = -2.98622,0,1.9704,0x6730a3c1;
+	}
+}
+[t:townfolk_male_03,n:0x00100913]
+{
+	[placement]
+	{
+	  q orientation = 0,-2.98023e-008,0,1;
+	  p position = -2.59912,0,-1.40399,0x6730a3c1;
+	}
+}
+[t:townfolk_male_03,n:0x00100919]
+{
+	[placement]
+	{
+	  q orientation = 0,-2.98023e-008,0,1;
+	  p position = 0.926669,0,-0.308273,0x0c0960d5;
+	}
+}
+[t:townfolk_male_03,n:0x0010091b]
+{
+	[placement]
+	{
+	  q orientation = 0,-2.98023e-008,0,1;
+	  p position = 2.92144,0,-2.87915,0xf033414e;
 	}
 }

@@ -1,0 +1,188 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  ann_loot_thief.skrit
+// Author(s):  Emir Ghanawa (2026)
+//
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//
+// Better guaranteed effect on a template
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+
+property Scid StealingSpot01$ doc="Target 1 of stealing";
+property Scid StealingSpot02$ doc="Target 2 of stealing";
+property Scid StealingSpot03$ doc="Target 3 of stealing";
+property Scid StealingSpot04$ doc="Target 4 of stealing";
+property Scid StealingSpot05$ doc="Target 5 of stealing";
+property Scid StealingSpot06$ doc="Target 6 of stealing";
+property Scid StealingSpot07$ doc="Target 7 of stealing";
+property Scid StealingSpot08$ doc="Target 8 of stealing";
+property Scid StealingSpot09$ doc="Target 9 of stealing";
+property Scid StealingSpot10$ doc="Target 10 of stealing";
+property Scid StealingSpot11$ doc="Target 11 of stealing";
+property Scid StealingSpot12$ doc="Target 12 of stealing";
+
+property float StealingTimeMin$ = 2.0 doc="Miminum time to linger near a stealing spot";
+property float StealingTimeMax$ = 4.0 doc="Maxinum time to linger near a stealing spot";
+
+property float StealSuccessChance$ = 1.10 doc="Chance of a successful steal (0-1.0)";
+
+property Scid ExtractionSpot1$ doc="Point 1 For Escaping";
+property Scid ExtractionSpot2$ doc="Point 2 For Escaping";
+property Scid ExtractionSpot3$ doc="Point 3 For Escaping";
+
+property float ExtractionTime$ = 4.0 doc="Time to disappear after running order issued";
+
+property float RestartTimeMin$ = 10.0 doc="Miminum time to appear again";
+property float RestartTimeMax$ = 15.0 doc="Maxinum time to appear again";
+
+property string			HaulTemplate$	= ""					doc = "Which template to spawn when caught with haul";
+
+
+owner = GoSkritComponent;
+
+int currentStealingSpotID$ = -1;
+bool carryingHaul$ = false;
+
+void MoveToStealingSpot$( )
+{
+    int nextStealingSpotID$ = Math.RandomInt( 11 );
+    if (nextStealingSpotID$ == currentStealingSpotID$) {
+        nextStealingSpotID$ = (nextStealingSpotID$ + 1) % 12;
+    }
+    currentStealingSpotID$ = nextStealingSpotID$;
+
+    Scid nextStealingSpot$;
+
+    if( nextStealingSpotID$ == 0 ) { nextStealingSpot$ = StealingSpot01$; }
+    else if( nextStealingSpotID$ == 1 ) { nextStealingSpot$ = StealingSpot02$; }
+    else if( nextStealingSpotID$ == 2 ) { nextStealingSpot$ = StealingSpot03$; }
+    else if( nextStealingSpotID$ == 3 ) { nextStealingSpot$ = StealingSpot04$; }
+    else if( nextStealingSpotID$ == 4 ) { nextStealingSpot$ = StealingSpot05$; }
+    else if( nextStealingSpotID$ == 5 ) { nextStealingSpot$ = StealingSpot06$; }
+    else if( nextStealingSpotID$ == 6 ) { nextStealingSpot$ = StealingSpot07$; }
+    else if( nextStealingSpotID$ == 7 ) { nextStealingSpot$ = StealingSpot08$; }
+    else if( nextStealingSpotID$ == 8 ) { nextStealingSpot$ = StealingSpot09$; }
+    else if( nextStealingSpotID$ == 9 ) { nextStealingSpot$ = StealingSpot10$; }
+    else if( nextStealingSpotID$ == 10 ) { nextStealingSpot$ = StealingSpot11$; }
+    else { nextStealingSpot$ = StealingSpot12$; }
+
+    JobReq req$ = MakeJobReq( JAT_MOVE, JQ_ACTION, QP_CLEAR, AO_COMMAND, nextStealingSpot$.Go.placement.position );
+    req$.Float1 = 1.5;
+    owner.go.Mind.SDoJob( req$ );
+}
+void MoveToExtractionSpot$()
+{
+    int extractionSpotID$ = Math.RandomInt( 2 );
+
+    Scid extractionSpot$;
+
+    if( extractionSpotID$ == 0 ) { extractionSpot$ = ExtractionSpot1$; }
+    else if( extractionSpotID$ == 1 ) { extractionSpot$ = ExtractionSpot2$; }
+    else { extractionSpot$ = ExtractionSpot3$; }
+
+    JobReq req$ = MakeJobReq( JAT_MOVE, JQ_ACTION, QP_CLEAR, AO_COMMAND, extractionSpot$.Go.Placement.Position );
+    req$.Float1 = 1.5;
+
+    owner.go.Mind.SDoJob( req$ );
+}
+void ToggleAvailability$(bool available$)
+{
+    owner.Go.Aspect.SSetIsSelectable( available$ );
+    owner.Go.Aspect.SSetIsVisible( available$ );
+}
+void MakeAvailable$() {
+    ToggleAvailability$(true);
+}
+void MakeUnavailable$() {
+    ToggleAvailability$(false);
+}
+
+startup state Stealing$
+{
+    event OnEnterState$
+	{
+		GameAuditor.GetDb.SetInt( "ann_01_thief_conv_state", 1 );
+        MoveToStealingSpot$();
+
+        float stealingTime$ = GoMath.RandomFloat( StealingTimeMin$, StealingTimeMax$ );
+		this.CreateTimer( 1, stealingTime$ );
+	}
+
+    trigger OnTimer$(1)
+	{
+        if (GameAuditor.GetDb.GetBool( "ann_01_thief_interrupted" ))
+        {
+		    GameAuditor.GetDb.SetInt( "ann_01_thief_conv_state", 3 );
+            SetState RunningAway$;
+        }
+        else {
+            float stealingAttempt$ = GoMath.RandomFloat( 0.0, 1.0 );
+            bool stealAttemptSuccessful$ = stealingAttempt$ < StealSuccessChance$;
+
+            if (stealAttemptSuccessful$) {
+                GameAuditor.GetDb.SetInt( "ann_01_thief_conv_state", 2 );
+                carryingHaul$ = true;
+                SetState RunningAway$;
+            } else {
+                MoveToStealingSpot$();
+
+                float stealingTime$ = GoMath.RandomFloat( StealingTimeMin$, StealingTimeMax$ );
+                this.CreateTimer( 1, stealingTime$ );
+            }
+        }
+	}
+}
+state RunningAway$
+{
+    event OnEnterState$
+    {
+        MoveToExtractionSpot$();
+
+        this.CreateTimer( 1, ExtractionTime$ );
+    }
+
+    trigger OnTimer$(1)
+	{
+        if (GameAuditor.GetDb.GetBool( "ann_01_thief_interrupted" ))
+        {
+            GameAuditor.GetDb.SetInt( "ann_01_thief_conv_state", 3 );
+
+            if (carryingHaul$) {
+                carryingHaul$ = false;
+
+                // Generate Pcontent
+                GoCloneReq cloneReq$ = MakeGoCloneReq(HaulTemplate$);
+                cloneReq$.FadeIn = true;
+                cloneReq$.StartingPos	= owner.go.placement.position;
+                GoDb.SCloneGo(cloneReq$);
+            }
+
+            MoveToExtractionSpot$();
+        }
+
+        SetState Hidden$;
+    }
+}
+state Hidden$
+{
+    event OnEnterState$
+    {
+        MakeUnavailable$();
+        MoveToExtractionSpot$();
+
+        float restartTime$ = GoMath.RandomFloat( RestartTimeMin$, RestartTimeMin$ );
+        this.CreateTimer( 1, restartTime$ );
+    }
+
+    trigger OnTimer$(1)
+	{
+        GameAuditor.GetDb.SetBool( "ann_01_thief_interrupted", false );
+        MakeAvailable$();
+
+        SetState Stealing$;
+    }
+}

@@ -35,6 +35,70 @@
 	  f scroll_rate = 10.000000;
 	}
 }
+[ann_conv_01_thief_caught_empty_handed_01]
+{
+	[text*]
+	{
+		screen_text = "Aaah, you spoilt a good snatch!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_conv_01_thief_caught_empty_handed_02]
+{
+	[text*]
+	{
+		screen_text = "I almost had it. Can you not leave honest working folk alone?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_conv_01_thief_caught_empty_handed_03]
+{
+	[text*]
+	{
+		screen_text = "Oh no! You cannot give people away like that.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_conv_01_thief_caught_with_haul_01]
+{
+	[text*]
+	{
+		screen_text = "Extortion! Why would you want to take MY things?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_conv_01_thief_caught_with_haul_02]
+{
+	[text*]
+	{
+		screen_text = "Nooo! My valuables that I honestly stole! You cannot steal them from me like that!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_conv_01_thief_caught_with_haul_03]
+{
+	[text*]
+	{
+		screen_text = "Not my haul! Not my precious haul!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_conv_01_thief_when_escaping]
+{
+	[text*]
+	{
+		screen_text = "I am empty-handed! There is nothing for you to take from me. Leave me alone!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_conv_01_thief_default]
+{
+	[text*]
+	{
+		screen_text = "The shine of jewels,\nthe cling of gold,\nI stash in sewers,\ntill I'm too old. Hahahaha!";
+	  f scroll_rate = 10.000000;
+	}
+}
 [conversation_child]
 {
 	[text*]

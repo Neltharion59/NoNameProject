@@ -1,0 +1,110 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+//		MINI-BOSS MONSTER BASE TEMPLATES
+//
+///////////////////////////////////////////////////////////////////////////////
+[t:template,n:base_npc_loot_thief]
+{
+	category_name = "1W_character";
+	specializes = npc;
+	[aspect]
+	{
+		model = m_c_edm_049_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_049_body;
+			1 = b_c_edm_049_head;
+		}
+	}
+	[body]
+	{
+		min_move_velocity = 6.0;
+		avg_move_velocity = 6.0;
+		max_move_velocity = 6.0;
+		[bone_translator]
+		{
+			body_anterior = Bip01_spine1;
+			body_mid = Bip01_spine;
+			body_posterior = Bip01_tail1;
+			kill_bone = Bip01_head;
+			shield_bone = Bip01_L_hand;
+			weapon_bone = Bip01_R_hand;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_049_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00=dff;
+					01=dff-02;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=dff; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00=di;
+					01=di-02;
+					02=di-03;
+				}
+				[anim_effects]
+				{
+					00=efct_thief_die_01,false;
+					01=efct_thief_die_02,false;
+					02=efct_thief_die_03,false;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					knbk = a_c_edm_049_fs0_kb;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=rl; }
+			}
+		}
+	}
+    [conversation] {}
+    [mind]
+    {
+		actor_may_attack = false;
+        actor_may_be_attacked = false;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+[t:template,n:ann_r01_npc_loot_thief]
+{
+	category_name = "1W_townsperson";
+	doc = "Ann r01 NPC loot thief";
+	specializes = base_npc_loot_thief;
+	[common]
+	{
+		screen_name = "Rimonnel";
+	}
+    [ann_loot_thief] {}
+}
