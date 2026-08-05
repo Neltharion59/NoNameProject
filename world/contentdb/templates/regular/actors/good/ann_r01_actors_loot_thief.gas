@@ -3,7 +3,7 @@
 //		MINI-BOSS MONSTER BASE TEMPLATES
 //
 ///////////////////////////////////////////////////////////////////////////////
-[t:template,n:base_npc_loot_thief]
+[t:template,n:ann_npc_loot_thief_base]
 {
 	category_name = "1W_character";
 	specializes = npc;
@@ -101,7 +101,7 @@
 {
 	category_name = "1W_townsperson";
 	doc = "Ann r01 NPC loot thief";
-	specializes = base_npc_loot_thief;
+	specializes = ann_npc_loot_thief_base;
 	[common]
 	{
 		screen_name = "Rimonnel";

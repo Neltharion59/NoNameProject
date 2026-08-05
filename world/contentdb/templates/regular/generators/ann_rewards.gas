@@ -21,13 +21,22 @@
                 [oneof*]
                 {
                     chance = 1.00;
-                    il_main = sd_un_big_2h_d_serrated;
+                    il_main = #spell/0-2;
+                    il_main = #bow/1-3;
+                    il_main = #body/1-6;
+                    il_main = #melee/1-3;
+                    il_main = #club/2-3;
                 }
                 [oneof*]
                 {
                     chance = 0.10;
                     il_main = potion_health_small;
                     il_main = potion_mana_small;
+                }
+                [oneof*]
+                {
+                    chance = 0.10;
+                    il_main = #spell/0-2;
                 }
                 [oneof*]
                 {

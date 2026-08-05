@@ -70,6 +70,11 @@ void MoveToStealingSpot$( )
     else if( nextStealingSpotID$ == 10 ) { nextStealingSpot$ = StealingSpot11$; }
     else { nextStealingSpot$ = StealingSpot12$; }
 
+    if( nextStealingSpot$.Go == NULL )
+	{
+		return;
+	}
+
     JobReq req$ = MakeJobReq( JAT_MOVE, JQ_ACTION, QP_CLEAR, AO_COMMAND, nextStealingSpot$.Go.placement.position );
     req$.Float1 = 1.5;
     owner.go.Mind.SDoJob( req$ );

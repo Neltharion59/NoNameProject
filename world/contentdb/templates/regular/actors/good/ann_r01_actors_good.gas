@@ -304,3 +304,314 @@
 
 	}
 }
+[t:template,n:ann_r01_npc_camp_fb_base]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp fb base";
+	specializes = base_npc_fb;
+	[conversation] {}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+[t:template,n:ann_r01_npc_camp_fg_base]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp fg base";
+	specializes = base_npc_fg;
+	[conversation] {}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+[t:template,n:ann_r01_npc_camp_witch_base]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp witch base";
+	specializes = ann_npc_swamp_witch_base;
+	[conversation] {}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+[t:template,n:ann_r01_npc_camp_pmo_base]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp pmo base";
+	specializes = base_npc_pmo;
+	[conversation] {}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+[t:template,n:ann_r01_npc_camp_fb_1]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp fb 01";
+	specializes = ann_r01_npc_camp_fb_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_12;
+			1 = b_c_pos_a1_051;
+		}
+	}
+	[common]
+	{
+		screen_name = "The Odore";
+	}
+}
+[t:template,n:ann_r01_npc_camp_fb_2]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp fb 02";
+	specializes = ann_r01_npc_camp_fb_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_33;
+			1 = b_c_pos_a1_077;
+		}
+	}
+	[common]
+	{
+		screen_name = "Leo Nerd";
+	}
+}
+[t:template,n:ann_r01_npc_camp_fb_3]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp fb 03";
+	specializes = ann_r01_npc_camp_fb_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_21;
+			1 = b_c_pos_a1_061;
+		}
+	}
+	[common]
+	{
+		screen_name = "Neo Lith Ick";
+	}
+}
+[t:template,n:ann_r01_npc_camp_fb_4]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp fb 04";
+	specializes = ann_r01_npc_camp_fb_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_17;
+			1 = b_c_pos_a1_012;
+		}
+	}
+	[common]
+	{
+		screen_name = "Mar Thin";
+	}
+}
+[t:template,n:ann_r01_npc_camp_fb_5]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp fb 05";
+	specializes = ann_r01_npc_camp_fb_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_28;
+			1 = b_c_pos_a1_028;
+		}
+	}
+	[common]
+	{
+		screen_name = "Look Ass";
+	}
+}
+[t:template,n:ann_r01_npc_camp_fb_6]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp fb 06";
+	specializes = ann_r01_npc_camp_fb_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_28;
+			1 = b_c_pos_a1_028;
+		}
+	}
+	[common]
+	{
+		screen_name = "Tho Mee";
+	}
+}
+[t:template,n:ann_r01_npc_camp_fg_1]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp fg 01";
+	specializes = ann_r01_npc_camp_fg_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_01;
+			1 = b_c_pos_a1_063;
+		}
+	}
+	[common]
+	{
+		screen_name = "Add Rianna";
+	}
+}
+[t:template,n:ann_r01_npc_camp_fg_2]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp fg 02";
+	specializes = ann_r01_npc_camp_fg_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_02;
+			1 = b_c_pos_a1_041;
+		}
+	}
+	[common]
+	{
+		screen_name = "Paw La";
+	}
+}
+[t:template,n:ann_r01_npc_camp_fg_3]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp fg 03";
+	specializes = ann_r01_npc_camp_fg_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_08;
+			1 = b_c_pos_a1_021;
+		}
+	}
+	[common]
+	{
+		screen_name = "A Meh Lya";
+	}
+}
+[t:template,n:ann_r01_npc_camp_fg_4]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp fg 04";
+	specializes = ann_r01_npc_camp_fg_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_14;
+			1 = b_c_pos_a1_038;
+		}
+	}
+	[common]
+	{
+		screen_name = "Miss Arya";
+	}
+}
+[t:template,n:ann_r01_npc_camp_fg_5]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp fg 05";
+	specializes = ann_r01_npc_camp_fg_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_21;
+			1 = b_c_pos_a1_052;
+		}
+	}
+	[common]
+	{
+		screen_name = "Ing. Rid";
+	}
+}
+[t:template,n:ann_r01_npc_camp_fg_6]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp fg 06";
+	specializes = ann_r01_npc_camp_fg_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_24;
+			1 = b_c_pos_a1_012;
+		}
+	}
+	[common]
+	{
+		screen_name = "Mar Iah";
+	}
+}
+[t:template,n:ann_r01_npc_camp_witch_1]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp witch 1";
+	specializes = ann_r01_npc_camp_witch_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_edm_sw-02;
+		}
+	}
+	[common]
+	{
+		screen_name = "Streegha";
+	}
+}
+[t:template,n:ann_r01_npc_camp_witch_2]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp witch 2";
+	specializes = ann_r01_npc_camp_witch_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_edm_sw-03;
+		}
+	}
+	[common]
+	{
+		screen_name = "Baabeeznyah";
+	}
+}
+[t:template,n:ann_r01_npc_camp_pmo_1]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp pmo 1";
+	specializes = ann_r01_npc_camp_pmo_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gbn_pmo;
+		}
+	}
+	[common]
+	{
+		screen_name = "Dhedulaack";
+	}
+}

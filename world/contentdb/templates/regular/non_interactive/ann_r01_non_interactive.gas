@@ -1,0 +1,14 @@
+// We need non-blocking versions of normally blocking items so that the pickpocket can run smoothly
+[t:template,n:ann_r01_non_blocking_base]
+{
+	category_name = "outdoor";
+	doc = "ann r01 non_blocking base";
+	specializes = non_interactive_nonblocking;
+}
+[t:template,n:ann_r01_non_blocking_tent_grs_camp]
+{
+	category_name = "outdoor";
+	doc = "ann r01 non_blocking tent_hide";
+	specializes = ann_r01_non_blocking_base;
+	[aspect] { model=m_i_grs_tent-camp; }
+}

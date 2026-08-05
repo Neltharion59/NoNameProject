@@ -1,0 +1,88 @@
+[t:template,n:ann_npc_swamp_witch_base]
+{
+	category_name = "1W_character";
+	doc = "ann npc swamp witch base";
+	specializes = npc;
+	[aspect]
+	{
+		model = m_c_edm_sw_pos_1;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_swamp_witch; }
+			[hit_critical]	{ priority = low; * = s_e_hit_swamp_witch_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_swamp_witch_SED; }
+			[hit_solid]		{ priority = low; * = s_e_hit_swamp_witch_SED; }
+		}
+	}
+	[body]
+	{
+		avg_move_velocity = 1.8;
+		[bone_translator]
+		{
+			body_anterior = Bip01_Head;
+			body_mid = Bip01_Spine1;
+			body_posterior = Bip01_Pelvis;
+			kill_bone = Bip01_Spine;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			initial_chore = chore_none;
+			chore_prefix = a_c_edm_sw_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=mg; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=dfs; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=mg; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_misc]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					slep = dfs;
+					wake = dfs;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+    [conversation] {}
+    [mind]
+    {
+		actor_may_attack = false;
+        actor_may_be_attacked = false;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
