@@ -1,0 +1,26 @@
+[t:template,n:ann_accumulate_trigger_reusable]
+{
+	specializes		= trigger;
+
+	doc				= "ann reusable accumulate_trigger";
+	category_name	= "trigger";
+	[common]
+	{
+		auto_expiration_class = never;
+		forced_expiration_class = never;
+	}
+	[ann_accum_trigger_reusable] { }
+}
+[t:template,n:ann_r01_arena_manager]
+{
+	specializes		= trigger;
+
+	doc				= "ann r01 arena_manager";
+	category_name	= "special";
+	[common]
+	{
+		auto_expiration_class = never;
+		forced_expiration_class = never;
+	}
+	[ann_arena_manager] { }
+}

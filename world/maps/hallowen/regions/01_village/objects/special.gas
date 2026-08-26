@@ -516,6 +516,204 @@
 	  p position = -1.43083,-0.15,-0.341064,0xd0134218;
 	}
 }
+[t:ann_r01_arena_manager,n:0x00100b9f]
+{
+	[ann_arena_manager]
+	{
+	  x fighttrigger = 0x00100BA4;
+	  x guard1 = 0x00100B99;
+	  x guard2 = 0x00100B9A;
+	  x guard3 = 0x00100B98;
+	  x guard4 = 0x00100B8C;
+	  x playerbetsonteam1collector = 0x00100BA1;
+	  x playerbetsonteam2collector = 0x00100BA2;
+	  x team1spawner = 0x00100B9C;
+	  x team2spawner = 0x00100BA0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.91554,0,1.9534,0x1f9def9e;
+	}
+}
+[t:trigger_generic,n:0x00100ba0]
+{
+	[common]
+	{
+		dev_instance_text = "SPAWN TEAM 2";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00100B94,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x00100B94,0.3f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x00100B94,0.6f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.916992,0,-1.31773,0xfd9e0c1f;
+	}
+}
+[t:interest_point,n:0x00100b95]
+{
+	[common]
+	{
+		dev_instance_text = "SPIDER JUMPS TO HERE";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.5,0,0.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.51277,0,0.0657959,0x6730a3c1;
+	}
+}
+[t:trigger_generic,n:0x00100b9b]
+{
+	[common]
+	{
+		dev_instance_text = "TOGGLE GUARDS";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00100B8C,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x00100B98,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x00100B9A,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x00100B99,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -2.70313,0,1.19312,0x6730a3c1;
+	}
+}
+[t:ann_accumulate_trigger_reusable,n:0x00100b9d]
+{
+	[ann_accum_trigger_reusable]
+	{
+	  i num_til_send = 3;
+	  i send_data = 2;
+	  x send_to_scid = 0x00100B9F;
+	}
+	[common]
+	{
+		dev_instance_text = "COUNT TEAM1";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.00515,0,-0.885422,0x6730a3c1;
+	}
+}
+[t:trigger_generic,n:0x00100b9c]
+{
+	[common]
+	{
+		dev_instance_text = "SPAWN TEAM 1";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00100B91,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x00100B91,0.3f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x00100B91,0.6f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -1.47449,0.105103,-0.750468,0x696844a8;
+	}
+}
+[t:interest_point,n:0x00100b92]
+{
+	[common]
+	{
+		dev_instance_text = "SPIDER JUMPS TO HERE";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.5,0,0.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382684;
+	  p position = 3.12152,0,0.869438,0xc909cbbc;
+	}
+}
+[t:interest_point,n:0x00100b93]
+{
+	[common]
+	{
+		dev_instance_text = "SPIDER JUMPS TO HERE";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.5,0,0.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382684;
+	  p position = 1.37633,1.22507,-0.927359,0xc909cbbc;
+	}
+}
+[t:ann_accumulate_trigger_reusable,n:0x00100b9e]
+{
+	[ann_accum_trigger_reusable]
+	{
+	  i num_til_send = 3;
+	  i send_data = 1;
+	  x send_to_scid = 0x00100B9F;
+	}
+	[common]
+	{
+		dev_instance_text = "COUNT TEAM2";
+	}
+	[placement]
+	{
+	  q orientation = 0,2.98023e-008,0,1;
+	  p position = 3.43692,0,-1.36833,0xe93dac53;
+	}
+}
 [t:use_point,n:0x001003f4]
 {
 	[placement]
@@ -1738,6 +1936,22 @@
 	[placement]
 	{
 	  p position = 2.73096,0,0.423492,0xc3688438;
+	}
+}
+[t:interest_point,n:0x00100b96]
+{
+	[common]
+	{
+		dev_instance_text = "SPIDER JUMPS TO HERE";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.5,0,0.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.47969,1.24777,-0.496396,0xb93eb32b;
 	}
 }
 [t:use_point,n:0x0010034a]

@@ -7,6 +7,18 @@
 		use_point_scids = 0x00100a95,0x00100a96;
 	}
 }
+[t:ann_r01_usable_bench,n:0x00100ba4]
+{
+	[ann_lever_single_use_reusable]
+	{
+	  x sendonactivate = 0x00100B9F;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.992962,0,-0.856186,0x55616fb8;
+	}
+}
 [t:bookcase_glb_gen_04,n:0x00100ad6]
 {
 	[placement]

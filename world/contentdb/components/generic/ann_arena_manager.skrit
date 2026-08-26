@@ -1,0 +1,236 @@
+property Scid Team1Spawner$;
+property Scid Team2Spawner$;
+property Scid PlayerBetsOnTeam1Collector$;
+property Scid PlayerBetsOnTeam2Collector$;
+property Scid Guard1$;
+property Scid Guard2$;
+property Scid Guard3$;
+property Scid Guard4$;
+property Scid FightTrigger$;
+
+property int NpcBetsMin$ = 10;
+property int NpcBetsMax$ = 80;
+property float BetCollectionRadius$ = 3;
+
+owner = GoSkritComponent;
+
+int NpcBetsOnTeam1$ = 0;
+int NpcBetsOnTeam2$ = 0;
+int PlayerBetsOnTeam1$ = -1;
+int PlayerBetsOnTeam2$ = -1;
+
+int teamWon$ = 0;
+
+void SendActivateMessage$( scid scidToSendTo$ )
+{
+  Go goToSendTo$ = GoDb.FindGoidByScid( scidToSendTo$ ).Go;
+  SendWorldMessage( WE_REQ_ACTIVATE, goToSendTo$.Goid, goToSendTo$.Goid );
+}
+void DropGold$( int amount$ )
+{
+  SiegePos SpawnPos$;
+  GoCloneReq cloneReq$ = MakeGoCloneReq( "gold" );
+  SpawnPos$ = owner.go.placement.position;
+  cloneReq$.StartingPos	= SpawnPos$;
+  cloneReq$.SnapToTerrain = true;
+  Goid gold$ = GoDb.SCloneGo( cloneReq$ );
+  gold$.Go.Aspect.SetGoldValue(amount$);
+}
+void RandomizeNpcBets$()
+{
+    // (Pseudo) Randomly set NpcBetsOnTeam1, NpcBetsOnTeam2 - And affect bystanders, if we implement something like that
+    // May become more sophisticated in the future
+    NpcBetsOnTeam1$ = Math.RandomInt( NpcBetsMin$, NpcBetsMax$ );
+    NpcBetsOnTeam2$ = Math.RandomInt( NpcBetsMin$, NpcBetsMax$ );
+}
+int CollectOnePlayerBets$(Scid collectorScid$)
+{
+    // we need to find all the items in radius of the collector
+    collectorScid$.Go.Mind.TempGopColl1.Clear;
+    
+    collectorScid$.Go.Mind.GetVisible( QT_ITEM, collectorScid$.Go.Mind.TempGopColl1, BetCollectionRadius$ );
+                        
+    int i$ = 0;
+    int iend$ = collectorScid$.Go.Mind.TempGopColl1.Size();
+    
+    int total_gold_amount$ = 0;
+    Go temp$;
+
+    // now loop through the items
+    while(i$ < iend$)
+    {
+        temp$ = collectorScid$.Go.Mind.TempGopColl1.Get( i$ );
+    
+        if (temp$.GetTemplateName() == "gold")
+        {
+            total_gold_amount$ = temp$.Aspect.GetGoldValue();
+            PostWorldMessage( WE_REQ_DELETE, temp$.goid, temp$.goid, .1 );
+        }
+
+        i$ += 1;
+    }
+
+    return total_gold_amount$;
+}
+void CollectAllPlayerBets$()
+{
+    // Collect the gold the player wants to bet
+    PlayerBetsOnTeam1$ = CollectOnePlayerBets$(PlayerBetsOnTeam1Collector$);
+    PlayerBetsOnTeam2$ = CollectOnePlayerBets$(PlayerBetsOnTeam2Collector$);
+}
+void StartFight$()
+{
+    // Spawn the arena fighters
+    SendActivateMessage$(Team1Spawner$);
+    SendActivateMessage$(Team2Spawner$);
+}
+void ChangeGuardAttackability$(scid guardScid$, bool attackable$)
+{
+    guardScid$.go.Mind.SetMayAttack( attackable$ );
+    guardScid$.go.Mind.SetMayBeAttacked( attackable$ );
+}
+void MakeGuardsAggressive$()
+{
+    // Make guards may_attack for a while
+    ChangeGuardAttackability$(Guard1$, true);
+    ChangeGuardAttackability$(Guard2$, true);
+    ChangeGuardAttackability$(Guard3$, true);
+    ChangeGuardAttackability$(Guard4$, true);
+}
+void MakeGuardsPassive$()
+{
+    // Make guards not may_attack for a while
+    ChangeGuardAttackability$(Guard1$, false);
+    ChangeGuardAttackability$(Guard2$, false);
+    ChangeGuardAttackability$(Guard3$, false);
+    ChangeGuardAttackability$(Guard4$, false);
+}
+void MakeKrugAttackableByGuard$(Scid guardScid$)
+{
+    // we need to find all the items in radius of the collector
+    guardScid$.Go.Mind.TempGopColl1.Clear;
+    
+    guardScid$.Go.Mind.GetVisible( QT_ACTOR, guardScid$.Go.Mind.TempGopColl1, 20.0 );
+                        
+    int i$ = 0;
+    int iend$ = guardScid$.Go.Mind.TempGopColl1.Size();
+    
+    Go temp$;
+
+    // now loop through the items
+    while(i$ < iend$)
+    {
+        temp$ = guardScid$.Go.Mind.TempGopColl1.Get( i$ );
+    
+        if (temp$.GetTemplateName() == "ann_r01_arena_krug_01" || temp$.GetTemplateName() == "ann_r01_arena_krug_02")
+        {
+			temp$.Actor.SSetAlignment( aa_evil );
+        }
+
+        i$ += 1;
+    }
+
+    guardScid$.Go.Mind.ResetSensors();
+}
+void MakeKrugAttackableByGuards$()
+{
+    MakeKrugAttackableByGuard$(Guard1$);
+    MakeKrugAttackableByGuard$(Guard2$);
+    MakeKrugAttackableByGuard$(Guard3$);
+    MakeKrugAttackableByGuard$(Guard4$);
+}
+void AwardPlayerPrice$()
+{
+    int moneyWon$ = 0;
+
+    int winningBets$ = (teamWon$ == 1) ? (PlayerBetsOnTeam1$ + NpcBetsOnTeam1$) : (PlayerBetsOnTeam2$ + NpcBetsOnTeam2$);
+
+    int losingBets$  = (teamWon$ == 1) ? (PlayerBetsOnTeam2$ + NpcBetsOnTeam2$) : (PlayerBetsOnTeam1$ + NpcBetsOnTeam1$);
+
+    int playerBet$   = (teamWon$ == 1) ? PlayerBetsOnTeam1$ : PlayerBetsOnTeam2$;
+
+    if (playerBet$ > 0 && winningBets$ > 0)
+    {
+        // Return the player's bet plus their share of the losing pool.
+        moneyWon$ = playerBet$ + (playerBet$ * losingBets$) / winningBets$;
+    }
+
+    if (moneyWon$ > 0)
+    {
+        DropGold$(moneyWon$);
+    }
+}
+void MakeFightTriggerable$()
+{
+    SendActivateMessage$(FightTrigger$);
+}
+
+// Player can place their bets
+startup state Betting$
+{
+    event OnEnterState$
+	{
+		Report.Generic( "ArenaManager: Betting\n" );
+        RandomizeNpcBets$();
+        MakeFightTriggerable$();
+    }
+    
+    event OnGoHandleMessage$( eWorldEvent e$, WorldMessage )
+	{
+		if( e$ == WE_REQ_ACTIVATE )
+        {
+            CollectAllPlayerBets$();
+            SetState Fighting$;
+        }
+    }
+}
+
+// Player initiated the fight, the krug fight now
+state Fighting$
+{
+    event OnEnterState$
+	{
+		Report.Generic( "ArenaManager: Fighting\n" );
+        StartFight$();
+    }
+
+    event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$)
+	{
+		if( e$ == WE_REQ_ACTIVATE )
+        {
+            teamWon$ = msg$.GetData1();
+            SetState CleaningAfterFight$;
+        }
+    }
+}
+
+// One team has won, let us cleave the other team
+state CleaningAfterFight$
+{
+    event OnEnterState$
+	{
+		Report.Generic( "ArenaManager: CleaningAfterFight\n" );
+        MakeGuardsAggressive$();
+        MakeKrugAttackableByGuards$();
+    }
+
+    event OnGoHandleMessage$( eWorldEvent e$, WorldMessage )
+	{
+		if( e$ == WE_REQ_ACTIVATE )
+        {
+            SetState AfterFight$;
+        }
+    }
+}
+
+// Both teams have been killed, the Player can collect their price
+state AfterFight$
+{
+    event OnEnterState$
+	{
+		Report.Generic( "ArenaManager: AfterFight\n" );
+        MakeGuardsPassive$();
+        AwardPlayerPrice$();
+        SetState Betting$;
+    }
+}

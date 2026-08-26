@@ -1,0 +1,15 @@
+[t:template,n:ann_base_spell_monster_nmagic]
+{
+	doc = "Monster spell base template";
+	specializes = spell;
+
+	aspect:is_visible = false;
+	[attack]{}
+	[common]	{ is_pcontent_allowed = false;	}
+	[gui]		{ is_droppable = false;			}
+	[magic]
+	{
+		magic_class = mc_nature_magic;
+		skill_class = "Nature Magic";
+	}
+}

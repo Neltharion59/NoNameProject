@@ -1,3 +1,43 @@
+[t:ann_generator_projectile_sfx,n:0x00100b94]
+{
+	[ann_projectile_spawner]
+	{
+		child_template_name = "ann_r01_arena_krug_02";
+	  f delay = 0.25;
+		effect_script = "ann_effect_projectile_summon_01_krug_02";
+	  x jump_end = 0x00100B95;
+	  x jump_start = 0x00100B96;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.5,0,0.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382684,0,0.923879;
+	  p position = 0.549216,0,1.13193,0x6730a3c1;
+	}
+}
+[t:ann_generator_projectile_sfx,n:0x00100b91]
+{
+	[ann_projectile_spawner]
+	{
+		child_template_name = "ann_r01_arena_krug_01";
+	  f delay = 0.25;
+		effect_script = "ann_effect_projectile_summon_01_krug_01";
+	  x jump_end = 0x00100B92;
+	  x jump_start = 0x00100B93;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.5,0,0.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 1.49773,0,1.28411,0xc909cbbc;
+	}
+}
 [t:ann_generator_projectile_sfx,n:0x0010040e]
 {
 	[ann_projectile_spawner]
@@ -55,7 +95,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.382683,0,0.92388;
-	  p position = 3.43376,0,1.19067,0x9e2b0b4f;
+	  p position = 3.4349,0,1.17628,0x9e2b0b4f;
 	}
 }
 [t:ann_generator_projectile_sfx,n:0x00100700]

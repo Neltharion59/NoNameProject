@@ -1,0 +1,514 @@
+[t:template,n:ann_amr_hlmt_summonable_skeleton_cmagic_rare]
+{
+	doc = "ann_amr_hlmt_summonable_skeleton_cmagic_rare";
+	specializes = base_helm;
+	[common]
+	{
+        is_pcontent_allowed	= false;
+	}
+    [gui]
+    {
+        is_droppable = false;
+    }
+	[defend]
+	{
+		armor_style = 038;
+		armor_type = type38;
+	  f defense = 1.000000;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_special_defense;
+				special_defense = fireshot;
+				description = "+10% Chance to Cast fireshot (10-30 DMG) on Taking Damage";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 10;
+				special_defense_skrit = world\global\skrits\special_defense.skrit?damage_min=10&damage_max=30&effect_script="fireshot";
+			}
+			[*]
+			{
+				alteration = alter_chance_to_block_cmagic_damage;
+			    description			= "+15% Chance to Block Magic Attacks";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 15;
+			}
+			[*]
+			{
+				alteration = alter_chance_to_block_nmagic_damage;
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 15;
+			}
+		}
+	}
+}
+[t:template,n:ann_amr_hlmt_summonable_skeleton_cmagic_epic]
+{
+	doc = "ann_amr_hlmt_summonable_skeleton_cmagic_epic";
+	specializes = base_helm;
+	[common]
+	{
+        is_pcontent_allowed	= false;
+	}
+    [gui]
+    {
+        is_droppable = false;
+    }
+	[defend]
+	{
+		armor_style = 096;
+		armor_type = type50;
+	  f defense = 3.000000;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_special_defense;
+				special_defense = fireshot;
+				description = "+14% Chance to Cast fireshot (18-40 DMG) on Taking Damage";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 14;
+				special_defense_skrit = world\global\skrits\special_defense.skrit?damage_min=18&damage_max=40&effect_script="fireshot";
+			}
+			[*]
+			{
+				alteration = alter_chance_to_block_cmagic_damage;
+			    description			= "+20% Chance to Block Magic Attacks";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 20;
+			}
+			[*]
+			{
+				alteration = alter_chance_to_block_nmagic_damage;
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 20;
+			}
+		}
+	}
+}
+[t:template,n:ann_amr_hlmt_summonable_skeleton_cmagic_legendary]
+{
+	doc = "ann_amr_hlmt_summonable_skeleton_cmagic_legendary";
+	specializes = base_helm;
+	[common]
+	{
+        is_pcontent_allowed	= false;
+	}
+    [gui]
+    {
+        is_droppable = false;
+    }
+	[defend]
+	{
+		armor_style = 032;
+		armor_type = type32;
+	  f defense = 5.000000;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_special_defense;
+				special_defense = fireshot;
+				description = "+18% Chance to Cast fireshot (25-52 DMG) on Taking Damage";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 18;
+				special_defense_skrit = world\global\skrits\special_defense.skrit?damage_min=25&damage_max=52&effect_script="fireshot";
+			}
+			[*]
+			{
+				alteration = alter_chance_to_block_cmagic_damage;
+			    description			= "+28% Chance to Block Magic Attacks";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 28;
+			}
+			[*]
+			{
+				alteration = alter_chance_to_block_nmagic_damage;
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 28;
+			}
+		}
+	}
+}
+
+[t:template,n:ann_spl_summonable_skeleton_combat_base_leech_life]
+{
+	category_name = "magic";
+	doc = "ann_spl_summonable_skeleton_combat_base_leech_life";
+	specializes = base_spell_monster;
+	[common]
+    {
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script( "leech_life_cast" );
+				condition* = receive_world_message("we_req_cast");
+			}
+			[*]
+			{
+				action* = call_sfx_script( "leech_life_charge" );
+				condition* = receive_world_message("we_req_cast_charge");
+			}
+		}
+	}
+	[magic]
+	{
+		cast_range = 11;
+		cast_reload_delay = 1;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy;
+		usage_context_flags = uc_offensive;
+		apply_enchantments = false;
+	}
+	[spell_instant_hit] 
+	{
+		piercing		= true;
+		apply_enchant	= true;
+	}
+}
+[t:template,n:ann_spl_summonable_skeleton_combat_common_leech_life]
+{
+	category_name = "magic";
+	doc = "ann_spl_summonable_skeleton_combat_common_leech_life";
+	specializes = ann_spl_summonable_skeleton_combat_base_leech_life;
+	[attack]
+	{
+		damage_max = 4;
+		damage_min = 4;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_life;
+				description = "leech life";
+				duration = 1.1;
+				frequency = 0.1;
+				initial_delay = 0.0;
+				is_enhancement = true;
+				is_permanent = true;
+				value = ( ( #src_life > (4) ) ? (4) : ( ( #src_life > 0.0 ) ? #src_life : 0.0 ) )/10.0;
+			}
+		}
+	}
+}
+[t:template,n:ann_spl_summonable_skeleton_combat_uncommon_leech_life]
+{
+	category_name = "magic";
+	doc = "ann_spl_summonable_skeleton_combat_uncommon_leech_life";
+	specializes = ann_spl_summonable_skeleton_combat_base_leech_life;
+	[attack]
+	{
+		damage_max = 8;
+		damage_min = 8;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_life;
+				description = "leech life";
+				duration = 1.1;
+				frequency = 0.1;
+				initial_delay = 0.0;
+				is_enhancement = true;
+				is_permanent = true;
+				value = ( ( #src_life > (8) ) ? (8) : ( ( #src_life > 0.0 ) ? #src_life : 0.0 ) )/10.0;
+			}
+		}
+	}
+}
+[t:template,n:ann_spl_summonable_skeleton_combat_rare_leech_life]
+{
+	category_name = "magic";
+	doc = "ann_spl_summonable_skeleton_combat_rare_leech_life";
+	specializes = ann_spl_summonable_skeleton_combat_base_leech_life;
+	[attack]
+	{
+		damage_max = 12;
+		damage_min = 12;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_life;
+				description = "leech life";
+				duration = 1.1;
+				frequency = 0.1;
+				initial_delay = 0.0;
+				is_enhancement = true;
+				is_permanent = true;
+				value = ( ( #src_life > (12) ) ? (12) : ( ( #src_life > 0.0 ) ? #src_life : 0.0 ) )/10.0;
+			}
+		}
+	}
+}
+[t:template,n:ann_spl_summonable_skeleton_combat_epic_leech_life]
+{
+	category_name = "magic";
+	doc = "ann_spl_summonable_skeleton_combat_epic_leech_life";
+	specializes = ann_spl_summonable_skeleton_combat_base_leech_life;
+	[attack]
+	{
+		damage_max = 16;
+		damage_min = 16;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_life;
+				description = "leech life";
+				duration = 1.1;
+				frequency = 0.1;
+				initial_delay = 0.0;
+				is_enhancement = true;
+				is_permanent = true;
+				value = ( ( #src_life > (16) ) ? (16) : ( ( #src_life > 0.0 ) ? #src_life : 0.0 ) )/10.0;
+			}
+		}
+	}
+}
+[t:template,n:ann_spl_summonable_skeleton_combat_legendary_leech_life]
+{
+	category_name = "magic";
+	doc = "ann_spl_summonable_skeleton_combat_legendary_leech_life";
+	specializes = ann_spl_summonable_skeleton_combat_base_leech_life;
+	[attack]
+	{
+		damage_max = 20;
+		damage_min = 20;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_life;
+				description = "leech life";
+				duration = 1.1;
+				frequency = 0.1;
+				initial_delay = 0.0;
+				is_enhancement = true;
+				is_permanent = true;
+				value = ( ( #src_life > (20) ) ? (20) : ( ( #src_life > 0.0 ) ? #src_life : 0.0 ) )/10.0;
+			}
+		}
+	}
+}
+
+[t:template,n:ann_spl_summonable_skeleton_combat_base_acid_orb]
+{
+	category_name = "magic";
+	doc = "ann_spl_summonable_skeleton_combat_base_acid_orb";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		damage_max = 26;
+		damage_min = 22;
+	}
+	[common]
+	{
+		screen_name = "Orb of Acid";
+	}
+	[magic]
+	{
+		cast_range = 16;
+		cast_reload_delay = 1;
+
+		effect_duration = 60;
+
+		target_type_flags = tt_self;
+		usage_context_flags = uc_offensive;
+		caster_state_name = "Orb_spell_orbiting";
+		require_state_check = false;
+	}
+	[spell_orb]
+	{
+		orbEffect = orb_acid_orbiter;
+		orbSoundEffect = orb_acid_sound;
+		shotEffect = orb_acid_projectile;
+		isLightning = true;
+		casterDescription = "Orb of Acid";
+	}
+}
+[t:template,n:ann_spl_summonable_skeleton_combat_rare_acid_orb]
+{
+	category_name = "magic";
+	doc = "ann_spl_summonable_skeleton_combat_rare_acid_orb";
+	specializes = ann_spl_summonable_skeleton_combat_base_acid_orb;
+	[attack]
+	{
+		damage_max = 11;
+		damage_min = 14;
+	}
+}
+[t:template,n:ann_spl_summonable_skeleton_combat_epic_acid_orb]
+{
+	category_name = "magic";
+	doc = "ann_spl_summonable_skeleton_combat_epic_acid_orb";
+	specializes = ann_spl_summonable_skeleton_combat_base_acid_orb;
+	[attack]
+	{
+		damage_max = 13;
+		damage_min = 19;
+	}
+}
+[t:template,n:ann_spl_summonable_skeleton_combat_legendary_acid_orb]
+{
+	category_name = "magic";
+	doc = "ann_spl_summonable_skeleton_combat_legendary_acid_orb";
+	specializes = ann_spl_summonable_skeleton_combat_base_acid_orb;
+	[attack]
+	{
+		damage_max = 18;
+		damage_min = 24;
+	}
+}
+
+[t:template,n:ann_spl_summonable_skeleton_combat_base_flame_shield]
+{
+	category_name = "magic";
+	doc = "ann_spl_summonable_skeleton_combat_base_flame_shield";
+	specializes = base_spell_monster;
+	[magic]
+	{
+		cast_reload_delay = 2;
+		cast_range = 12;
+		effect_duration = 10;
+		mana_cost = 0;
+		speed_bias = 1;
+		target_type_flags = tt_self;
+		usage_context_flags = uc_offensive;
+		caster_state_name = Farmor;
+	}
+	[spell_fire]
+	{
+		create_omni = true;
+		description = "Flame Shield";
+		effect_script = flame_shield;
+		particle_fit = 0.99;
+	}
+}
+[t:template,n:ann_spl_summonable_skeleton_combat_epic_flame_shield]
+{
+	category_name = "magic";
+	doc = "ann_spl_summonable_skeleton_combat_epic_flame_shield";
+	specializes = ann_spl_summonable_skeleton_combat_base_flame_shield;
+	[attack]
+	{
+		damage_max = 30;
+		damage_min = 20;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_armor;
+				description = "Flame Armor";
+				duration = 10;
+				value = 50;
+				is_single_instance = false;
+			}
+		}
+	}
+}
+[t:template,n:ann_spl_summonable_skeleton_combat_legendary_flame_shield]
+{
+	category_name = "magic";
+	doc = "ann_spl_summonable_skeleton_combat_legendary_flame_shield";
+	specializes = ann_spl_summonable_skeleton_combat_base_flame_shield;
+	[attack]
+	{
+		damage_max = 40;
+		damage_min = 28;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_armor;
+				description = "Flame Armor";
+				duration = 10;
+				value = 75;
+				is_single_instance = false;
+			}
+		}
+	}
+}
+
+[t:template,n:ann_spl_summonable_skeleton_combat_legendary_turncoat]
+{
+	category_name = "magic";
+	doc = "ann_spl_summonable_skeleton_combat_legendary_turncoat";
+	specializes = base_spell_monster;
+
+	[magic]
+	{
+		cast_range = 10;
+		cast_reload_delay = 1;
+		effect_duration = 7;
+		mana_cost = 0;
+
+		apply_enchantments = false;
+
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		target_type_flags_not =	 tt_self | tt_human_party_member;
+		usage_context_flags = uc_offensive;
+		state_name = "Turncoat";
+	}
+
+	[spell_turncoat] 
+	{
+		caster_script = "turncoat_cast";
+		effect_script = "turncoat_effect";
+		state_description = "Turned";
+		immunity = "immune_control";
+	}
+}

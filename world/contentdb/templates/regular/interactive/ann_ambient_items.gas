@@ -69,3 +69,80 @@
 		}
 	}
 }
+[t:template,n:ann_ambient_item_r01_non_blocking_krug_animated_base]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non_blocking krug animated base";
+	specializes = ann_ambient_item_base;
+	[aspect] { model= m_c_eam_kg_pos_1; }
+	[body]
+	{
+		[bone_translator]
+		{
+			body_anterior  = bip01_head;
+			body_mid       = Bip01_Spine3;
+			body_posterior = bip01_pelvis;
+			kill_bone      = Bip01_Spine3;
+			shield_bone    = shield_grip;
+			weapon_bone    = weapon_grip;
+		}
+		initial_chore = chore_default;
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_eam_kg_fs;
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = wl;
+				}
+			}
+		}
+	}
+}
+[t:template,n:ann_ambient_item_r01_non_blocking_krug_animated_01]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non_blocking krug animated 01";
+	specializes = ann_ambient_item_r01_non_blocking_krug_animated_base;
+	[aspect]
+	{
+		scale_base = 0.85;
+		[textures]
+		{
+			0 = b_c_eam_ksv;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_r01_non_blocking_krug_animated_02]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non_blocking krug animated 02";
+	specializes = ann_ambient_item_r01_non_blocking_krug_animated_base;
+	[aspect]
+	{
+		scale_base = 0.9;
+		[textures]
+		{
+			0 = b_c_eam_ksc;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_01_invisible_blocking_rectangle]
+{
+	specializes = ann_ambient_item_base;
+	doc			= "cap_black";
+	category_name       ="node";
+
+	[aspect]
+	{
+		does_block_path = true;
+		draw_selection_indicator	= true;
+		force_no_render = true;
+		force_no_render_click = true;
+		is_collidable   = true;
+		model		= m_i_glb_cap;
+	}
+}

@@ -1,0 +1,326 @@
+[t:template,n:ann_wpn_summonable_skeleton_melee_rare]
+{
+	doc = "ann_wpn_summonable_skeleton_melee_rare";
+	specializes = base_axe;
+	[aspect]
+	{
+		model = m_w_axe_029;
+		selection_indicator_scale = 0.65;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+	  f damage_max = 17.000000;
+	  f damage_min = 13.000000;
+	}
+	[common]
+	{
+        is_pcontent_allowed	= false;
+	}
+    [gui]
+    {
+        is_droppable = false;
+    }
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_life_steal;
+			    description			= "5 Health Stolen Per Hit";
+				duration = #infinite;
+				innate_enchantment = true;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 5;
+                effect_script_equip	= steal_drip_05_lre;
+                effect_script_hit	= hit_spark_10_lre;
+			}
+		}
+	}
+}
+[t:template,n:ann_amr_hlmt_summonable_skeleton_melee_rare]
+{
+	doc = "ann_amr_hlmt_summonable_skeleton_melee_rare";
+	specializes = base_helm;
+	[common]
+	{
+        is_pcontent_allowed	= false;
+	}
+    [gui]
+    {
+        is_droppable = false;
+    }
+	[defend]
+	{
+		armor_style = 019;
+		armor_type = type19;
+	  f defense = 5.000000;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_special_defense;
+				special_defense = fireskull;
+				description = "+10% Chance to Cast Fireskull (5-15 DMG) on Taking Damage";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 10;
+				special_defense_skrit = world\global\skrits\special_defense.skrit?damage_min=5&damage_max=15&effect_script="fireskull";
+			}
+		}
+	}
+}
+[t:template,n:ann_wpn_summonable_skeleton_melee_epic]
+{
+	doc = "ann_wpn_summonable_skeleton_melee_epic";
+	specializes = base_sword;
+	[aspect]
+	{
+		model = m_w_swd_027;
+	}
+	[attack]
+	{
+	  f damage_max = 21.000000;
+	  f damage_min = 16.000000;
+	}
+	[common]
+	{
+        is_pcontent_allowed	= false;
+	}
+    [gui]
+    {
+        is_droppable = false;
+    }
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_life_steal;
+			    description			= "8 Health Stolen Per Hit";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 8;
+                effect_script_equip	= steal_drip_05_lre;
+                effect_script_hit	= hit_spark_10_lre;
+			}
+            [lightning_chance]
+            {
+                alteration		= alter_custom_damage_chance_melee;
+                custom_damage		= lightning;
+                value			= 10;
+                description		= "+10% Chance of Lightning Strike";
+                duration		= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+            }
+            [lightning_damage]
+            {
+                alteration		= alter_custom_damage_melee;
+                custom_damage		= lightning;
+                value			= 10;
+                max_value		= 16;
+                description		= " of 10 to 16 Damage";
+                duration		= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+                effect_script_equip	= lightning_scythe;
+                effect_script_hit	= hit_lightning_scythe;
+            }
+		}
+	}
+}
+[t:template,n:ann_amr_hlmt_summonable_skeleton_melee_epic]
+{
+	doc = "ann_amr_hlmt_summonable_skeleton_melee_epic";
+	specializes = base_helm;
+	[common]
+	{
+        is_pcontent_allowed	= false;
+	}
+    [gui]
+    {
+        is_droppable = false;
+    }
+	[defend]
+	{
+		armor_style = 086;
+		armor_type = type43;
+	  f defense = 8.000000;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_special_defense;
+				special_defense = fireskull;
+				description = "+17% Chance to Cast Fireskull (10-20 DMG) on Taking Damage";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 17;
+				special_defense_skrit = world\global\skrits\special_defense.skrit?damage_min=10&damage_max=20&effect_script="fireskull";
+			}
+		}
+	}
+}
+[t:template,n:ann_amr_shield_summonable_skeleton_melee_epic]
+{
+	doc = "ann_amr_shield_summonable_skeleton_melee_epic";
+	specializes = base_shield;
+	[aspect]
+	{
+		model = m_a_shd_06;
+		[textures]
+		{
+			0 = b_a_shd_008;
+		}
+	}
+	[common]
+	{
+        is_pcontent_allowed	= false;
+	}
+    [gui]
+    {
+        is_droppable = false;
+    }
+	[defend]
+	{
+	  f defense = 45.000000;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_chance_to_block_melee_damage;
+				description = "50% Chance to Block Melee Attack";
+				duration = #infinite;
+				innate_enchantment = true;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 50;
+			}
+			[*]
+			{
+				alteration = alter_chance_to_block_ranged_damage;
+				description = "50% Chance to Block Ranged Attack";
+				duration = #infinite;
+				innate_enchantment = true;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 50;
+			}
+		}
+	}
+}
+[t:template,n:ann_wpn_summonable_skeleton_melee_legendary]
+{
+	doc = "ann_wpn_summonable_skeleton_melee_legendary";
+	specializes = base_sword;
+	[aspect]
+	{
+		model = m_w_swd_054;
+	}
+	[attack]
+	{
+	  f damage_max = 23.000000;
+	  f damage_min = 20.000000;
+		is_two_handed = true;
+	}
+	[common]
+	{
+        is_pcontent_allowed	= false;
+	}
+    [gui]
+    {
+        is_droppable = false;
+    }
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_life_steal;
+			    description			= "10 Health Stolen Per Hit";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 10;
+                effect_script_equip	= steal_drip_05_lre;
+                effect_script_hit	= hit_spark_10_lre;
+			}
+            [lightning_chance]
+            {
+                alteration		= alter_custom_damage_chance_melee;
+                custom_damage		= lightning;
+                value			= 15;
+                description		= "+15% Chance of Lightning Strike";
+                duration		= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+            }
+            [lightning_damage]
+            {
+                alteration		= alter_custom_damage_melee;
+                custom_damage		= lightning;
+                value			= 15;
+                max_value		= 22;
+                description		= " of 15 to 22 Damage";
+                duration		= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+                effect_script_equip	= lightning_scythe;
+                effect_script_hit	= hit_lightning_scythe;
+            }
+		}
+	}
+}
+[t:template,n:ann_amr_hlmt_summonable_skeleton_melee_legendary]
+{
+	doc = "ann_amr_hlmt_summonable_skeleton_melee_legendary";
+	specializes = base_helm;
+	[common]
+	{
+        is_pcontent_allowed	= false;
+	}
+    [gui]
+    {
+        is_droppable = false;
+    }
+	[defend]
+	{
+		armor_style = 040;
+		armor_type = type40;
+	  f defense = 10.000000;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_special_defense;
+				special_defense = fireskull;
+				description = "+25% Chance to Cast Fireskull (15-30 DMG) on Taking Damage";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 25;
+				special_defense_skrit = world\global\skrits\special_defense.skrit?damage_min=15&damage_max=30&effect_script="fireskull";
+			}
+		}
+	}
+}

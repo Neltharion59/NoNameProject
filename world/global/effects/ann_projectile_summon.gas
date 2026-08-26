@@ -75,3 +75,29 @@
 			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
 			]];
 }
+[effect_script*] // - ET
+{
+	name	=ann_effect_projectile_summon_01_krug_01;
+
+	script	=[[
+			///////////////////////////////////////
+			// all we do is call the base firebomb
+			call ann_effect_projectile_summon s<ann_ambient_item_r01_non_blocking_krug_animated_01>;
+
+			waitfor script #POP #DEFAULT_TIMEOUT;
+			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}
+[effect_script*] // - ET
+{
+	name	=ann_effect_projectile_summon_01_krug_02;
+
+	script	=[[
+			///////////////////////////////////////
+			// all we do is call the base firebomb
+			call ann_effect_projectile_summon s<ann_ambient_item_r01_non_blocking_krug_animated_02>;
+
+			waitfor script #POP #DEFAULT_TIMEOUT;
+			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}

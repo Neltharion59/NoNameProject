@@ -241,6 +241,70 @@
 	  p position = 1.10392,-1.5,-4.05174,0xc2748e33;
 	}
 }
+[t:ann_r01_npc_arena_bet_collector_2,n:0x00100ba2]
+{
+	[mind]
+	{
+	  f inner_comfort_zone_range = 3;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 2.35406,0,-1.24662,0x6ac55b6b;
+	}
+}
+[t:ann_r01_npc_arena_principal,n:0x00100ba3]
+{
+	[placement]
+	{
+	  q orientation = 0,-4.69147e-008,0,1;
+	  p position = -1.5993,0,0.403959,0x1f9def9e;
+	}
+}
+[t:ann_r01_npc_arena_guard,n:0x00100b9a]
+{
+	[placement]
+	{
+	  q orientation = 3.27979e-015,1,-1.80857e-008,3.98834e-007;
+	  p position = 0.47937,0,-1.85212,0x1f32713f;
+	}
+}
+[t:ann_r01_npc_arena_guard,n:0x00100b8c]
+{
+	[placement]
+	{
+	  q orientation = -1.27885e-008,0.707106,1.27885e-008,0.707107;
+	  p position = -1.94568,-0.0108643,0.186482,0x696844a8;
+	}
+}
+[t:ann_r01_npc_arena_guard,n:0x00100b99]
+{
+	[placement]
+	{
+	  q orientation = 1.80857e-008,1,-1.31097e-014,5.08969e-007;
+	  p position = 0.208349,0,-0.671371,0x0c0960d5;
+	}
+}
+[t:ann_r01_npc_arena_guard,n:0x00100b98]
+{
+	[placement]
+	{
+	  q orientation = 9.1284e-016,-5.96046e-008,1.80857e-008,1;
+	  p position = -2.54778,0,1.4834,0x6a5ae50b;
+	}
+}
+[t:ann_r01_npc_camp_fb_1,n:0x00100ae5]
+{
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 3.47952,0,-1.37072,0x308b6134;
+	}
+}
 [t:ann_r01_npc_camp_fb_6,n:0x00100af1]
 {
 	[placement]
@@ -433,6 +497,18 @@
 	  p position = 0.132481,0,-1.58104,0xc181cf39;
 	}
 }
+[t:ann_r01_npc_camp_fb_3,n:0x00100aea]
+{
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,-0.707107;
+	  p position = 2.02849,0,0.346516,0x86fc3389;
+	}
+}
 [t:ann_r01_npc_camp_fg_4,n:0x00100aee]
 {
 	[placement]
@@ -517,36 +593,12 @@
 	  p position = -2.24429,0,2.2574,0xe58a6bdb;
 	}
 }
-[t:ann_r01_npc_camp_fb_1,n:0x00100ae5]
-{
-	[mind]
-	{
-	  b actor_auto_fidgets = false;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 3.47952,0,-1.37072,0x308b6134;
-	}
-}
 [t:ann_r01_npc_camp_fg_2,n:0x00100ae6]
 {
 	[placement]
 	{
 	  q orientation = 0,-6.02253e-007,0,1;
 	  p position = -1.78876,0,-0.0256796,0xe58a6bdb;
-	}
-}
-[t:ann_r01_npc_camp_fb_3,n:0x00100aea]
-{
-	[mind]
-	{
-	  b actor_auto_fidgets = false;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,-0.707107;
-	  p position = 2.02849,0,0.346516,0x86fc3389;
 	}
 }
 [t:ann_r01_npc_camp_fb_4,n:0x00100aec]
@@ -770,6 +822,18 @@
 	{
 	  q orientation = 0,0.382683,0,0.92388;
 	  p position = 1.2332,0,-1.91518,0xc792297a;
+	}
+}
+[t:ann_r01_npc_arena_bet_collector_1,n:0x00100ba1]
+{
+	[mind]
+	{
+	  f inner_comfort_zone_range = 3;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 2.37842,0,3.82735,0x5812818e;
 	}
 }
 [t:ann_r01_wolf,n:0x00100363]

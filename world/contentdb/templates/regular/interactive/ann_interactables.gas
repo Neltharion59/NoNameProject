@@ -1,0 +1,17 @@
+[t:template,n:ann_r01_usable_bench]
+{
+	specializes 		= base_usable;
+	doc 				= "ann r01 usable bench";
+    category_name       = "levers";
+    aspect:material     = wood;
+
+    [aspect]
+	{
+		is_collidable				= true;
+        material     = wood;
+
+		model = m_i_glb_bench-02;
+	}
+	[common] { screen_name = "Sit to Spectate the Fights"; }
+ 	[ann_lever_single_use_reusable] { }
+}

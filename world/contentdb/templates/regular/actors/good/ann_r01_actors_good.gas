@@ -232,6 +232,76 @@
         jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
+[t:template,n:ann_r01_shop_scrolls_summon]
+{
+	category_name = "1W_shopkeep";
+	doc = "ann_r01_shop_scrolls_summon";
+	specializes = base_npc_fb;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_jeriah;
+	}
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		is_ghost_usable = TRUE;
+		model = m_c_gbn_ja_pos_1;
+		use_range = 1;
+	}
+	[common]
+	{
+		screen_name = "Nekhrom Dancer";
+	}
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+		[other]
+		{
+			il_main = ann_scroll_summon_skeleton_legendary_melee;
+			il_main = ann_scroll_summon_skeleton_legendary_ranged;
+			il_main = ann_scroll_summon_skeleton_legendary_magic;
+			il_main = ann_scroll_summon_skeleton_legendary_nature;
+		}
+		[equipment] //needs empty block to remove boots -MM
+		{
+		}
+		[store_pcontent]
+		{
+			full_ratio = 0;
+		}
+	}
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+		[item_restock]
+		{
+			ann_scroll_summon_skeleton_common_melee = 6;
+			ann_scroll_summon_skeleton_common_ranged = 6;
+			ann_scroll_summon_skeleton_common_magic_combat = 6;
+			ann_scroll_summon_skeleton_common_magic_nature = 6;
+			
+			ann_scroll_summon_skeleton_uncommon_melee = 4;
+			ann_scroll_summon_skeleton_uncommon_ranged = 4;
+			ann_scroll_summon_skeleton_uncommon_magic_combat = 4;
+			ann_scroll_summon_skeleton_uncommon_magic_nature = 4;
+			
+			ann_scroll_summon_skeleton_rare_melee = 2;
+			ann_scroll_summon_skeleton_rare_ranged = 2;
+			ann_scroll_summon_skeleton_rare_magic_combat = 2;
+			ann_scroll_summon_skeleton_rare_magic_nature = 2;
+			
+			ann_scroll_summon_skeleton_epic_melee = 1;
+			ann_scroll_summon_skeleton_epic_ranged = 1;
+			ann_scroll_summon_skeleton_epic_magic_combat = 1;
+			ann_scroll_summon_skeleton_epic_magic_nature = 1;
+		}
+	}
+}
 
 [t:template,n:ann_r01_companion]
 {
@@ -613,5 +683,143 @@
 	[common]
 	{
 		screen_name = "Dhedulaack";
+	}
+}
+[t:template,n:ann_r01_npc_arena_guard]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc arena guard";
+	specializes = base_npc_fb;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 17, 0;
+			dexterity = 150,  0;
+			intelligence = 13,  0;
+			ranged = 10,  0;
+		}
+	}
+	[aspect]
+	{
+		draw_selection_indicator = true;
+		is_collidable = true;
+        [textures]
+		{
+			0 = b_c_gah_fb_skin_02;
+		}
+	}
+	[attack]
+	{
+		damage_bonus_min_ranged = 300;
+		damage_bonus_max_ranged = 300;
+	}
+	[common]
+	{
+		screen_name = "Krug Herder";
+	}
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_ranged_weapon;
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_fun;
+			es_feet = bo_bo_ch_f_g_c_avg;
+			es_forearms = gl_ga_bl_f_g_c_avg;
+			es_head = he_op_pl_eyes;
+			es_shield_hand = bw_g_c_s_m_c_avg;
+		}
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+        actor_may_be_attacked = false;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+
+		combat_orders = co_free;
+		movement_orders = mo_hold;
+		focus_orders = fo_closest;
+	}
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+}
+[t:template,n:ann_r01_npc_arena_bet_collector_1]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc arena bet collector 1";
+	specializes = base_npc_bk;
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		[textures]
+		{
+			0 = b_c_gbn_bk-02;
+		}
+	}
+	[common]
+	{
+		screen_name = "Imahn the Bet Collector";
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+[t:template,n:ann_r01_npc_arena_bet_collector_2]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc arena bet collector 2";
+	specializes = base_npc_bk;
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		[textures]
+		{
+			0 = b_c_gbn_bk-04;
+		}
+	}
+	[common]
+	{
+		screen_name = "Soleth the Bet Collector";
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+[t:template,n:ann_r01_npc_arena_principal]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc arena principal";
+	specializes = base_npc_bk;
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		[textures]
+		{
+			0 = b_c_gbn_bk-03;
+		}
+	}
+	[common]
+	{
+		screen_name = "Rimarius the Principal";
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }

@@ -1,0 +1,74 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  ann_gold_collector.skrit
+// Author(s):  Emir Ghanawa
+//
+
+property float	radius$			= 8.0	doc = "Radius of the effect, centered on the caster.";
+
+owner = GoSkritComponent;
+
+Goid	target$;
+Goid	caster$;
+
+////////////////////////////////////////
+//	State Machine
+
+startup state Active$
+{
+ 	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
+	{
+		if( e$ == WE_REQ_ACTIVATE )
+        {
+				// we need to find all the items in radius of the owner
+            if ( owner.Go.Hasmind )
+            {
+                caster$.Go.Mind.TempGopColl1.Clear;
+                
+                owner.Go.Mind.GetVisible( QT_ITEM, owner.Go.Mind.TempGopColl1, radius$ );
+                                    
+                int i$ = 0;
+                int iend$ = owner.Go.Mind.TempGopColl1.Size();
+                
+                int total_gold_amount$ = 0;
+                Go temp$;
+
+                // now loop through the items
+                while(i$ < iend$)
+                {
+                    temp$ = owner.Go.Mind.TempGopColl1.Get( i$ );
+                
+                    if (temp$.GetTemplateName() == "gold")
+                    {
+                        total_gold_amount$ = temp$.GetGoldValue();
+                        PostWorldMessage( WE_REQ_DELETE, temp$, temp$, .1 );
+                    }
+
+                    i$ += 1;
+                }
+                
+                SetState Inactive$;
+            }
+            else
+            {
+                // Raise error
+            }
+
+			SetState Finished$;
+		}
+	}
+}
+
+state Inactive$
+{
+    event OnEnterState$
+	{
+    }
+    
+	trigger OnGoHandleMessage$( WE_REQ_ACTIVATE )
+	{
+		SetState Active$;
+	}
+}
+
+state Finished$ { }

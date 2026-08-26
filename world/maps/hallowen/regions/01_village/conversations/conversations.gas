@@ -184,3 +184,51 @@ Gold first, magic after.";
 	  f scroll_rate = 10.000000;
 	}
 }
+[conv_r01_arena_bet_collector_team_1_collecting_bets]
+{
+	[text*]
+	{
+		screen_text = "Test your luck, youth! Make a bet on team 1, the arena's champions. Just place your gold on the ground near me and we will handle the rest. You may withdraw your bets before the fight starts.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r01_arena_bet_collector_team_2_collecting_bets]
+{
+	[text*]
+	{
+		screen_text = "Test your luck, youth! Make a bet on team 2, the best we have. Just place your gold on the ground near me and we will handle the rest. You may withdraw your bets before the fight starts.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r01_arena_bet_collector_during_fight]
+{
+	[text*]
+	{
+		screen_text = "The fight has already begun. The bets are closed now. Wait until the next fight.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r01_arena_principal_b4_fight]
+{
+	[text*]
+	{
+		screen_text = "Step closer, step closer, honorable spectators. Prepare to indulge yourself in the most noble tradition of ancient empires, the gladiator fights. Our gladiators earn honor and glory through your admiration. Make your bets, purchase refreshments, and take a seat to join your fellow noble spectators.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r01_arena_principal_during_fight]
+{
+	[text*]
+	{
+		screen_text = "Behold, the courageous gladiators honoring the ancient tradition. Revel in their greatness!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r01_arena_principal_after_fight]
+{
+	[text*]
+	{
+		screen_text = "The bravest gladiators stand victorious. Collect your prizes, replenish your chalices, and prepare to bask in the purifying experience.";
+	  f scroll_rate = 10.000000;
+	}
+}

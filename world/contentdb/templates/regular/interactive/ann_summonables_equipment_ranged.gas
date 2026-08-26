@@ -1,0 +1,287 @@
+[t:template,n:ann_amr_hlmt_summonable_skeleton_ranged_rare]
+{
+	doc = "ann_amr_hlmt_summonable_skeleton_ranged_rare";
+	specializes = base_helm;
+	[common]
+	{
+        is_pcontent_allowed	= false;
+	}
+    [gui]
+    {
+        is_droppable = false;
+    }
+	[defend]
+	{
+		armor_style = 006;
+		armor_type = type6;
+	  f defense = 3.000000;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_special_defense;
+				special_defense = zap;
+				description = "+33% Chance to Cast Zap (4-8 DMG) on Taking Damage";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 33;
+				special_defense_skrit = world\global\skrits\special_defense.skrit?damage_min=4&damage_max=8&effect_script="zap";
+			}
+			[*]
+			{
+				alteration = alter_chance_to_dodge_hit_melee;
+				description = "+15% Chance to Dodge Physical attacks";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 15;
+			}
+			[*]
+			{
+				alteration = alter_chance_to_dodge_hit_ranged;
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 15;
+			}
+		}
+	}
+}
+[t:template,n:ann_amr_hlmt_summonable_skeleton_ranged_epic]
+{
+	doc = "ann_amr_hlmt_summonable_skeleton_ranged_epic";
+	specializes = base_helm;
+	[common]
+	{
+        is_pcontent_allowed	= false;
+	}
+    [gui]
+    {
+        is_droppable = false;
+    }
+	[defend]
+	{
+		armor_style = 009;
+		armor_type = type9;
+	  f defense = 6.000000;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_special_defense;
+				special_defense = zap;
+				description = "+50% Chance to Cast Zap (6-12 DMG) on Taking Damage";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 50;
+				special_defense_skrit = world\global\skrits\special_defense.skrit?damage_min=6&damage_max=12&effect_script="zap";
+			}
+			[*]
+			{
+				alteration = alter_chance_to_dodge_hit_melee;
+				description = "+20% Chance to Dodge Physical attacks";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 20;
+			}
+			[*]
+			{
+				alteration = alter_chance_to_dodge_hit_ranged;
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 20;
+			}
+		}
+	}
+}
+[t:template,n:ann_amr_hlmt_summonable_skeleton_ranged_legendary]
+{
+	doc = "ann_amr_hlmt_summonable_skeleton_ranged_legendary";
+	specializes = base_helm;
+	[common]
+	{
+        is_pcontent_allowed	= false;
+	}
+    [gui]
+    {
+        is_droppable = false;
+    }
+	[defend]
+	{
+		armor_style = 009;
+		armor_type = type9;
+	  f defense = 9.000000;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_special_defense;
+				special_defense = zap;
+				description = "+100% Chance to Cast Zap (10-16 DMG) on Taking Damage";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 100;
+				special_defense_skrit = world\global\skrits\special_defense.skrit?damage_min=10&damage_max=16&effect_script="zap";
+			}
+			[*]
+			{
+				alteration = alter_chance_to_dodge_hit_melee;
+				description = "+33% Chance to Dodge Physical attacks";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 33;
+			}
+			[*]
+			{
+				alteration = alter_chance_to_dodge_hit_ranged;
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 33;
+			}
+		}
+	}
+}
+
+
+[t:template,n:ann_wpn_summonable_skeleton_ranged_epic]
+{
+	category_name = "weapon";
+	doc = "ann_wpn_summonable_skeleton_ranged_epic";
+	specializes = base_bow;
+	[aspect]
+	{
+		model = m_w_bow_017;
+	}
+	[attack]
+	{
+		attack_range = 13;
+	  f damage_max = 28.000000;
+	  f damage_min = 24.000000;
+		reload_delay = 0.3;
+	}
+	[common]
+	{
+        is_pcontent_allowed	= false;
+	}
+    [gui]
+    {
+        is_droppable = false;
+    }
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_piercing_damage_chance_ranged;
+				description = "+15% chance to inflict a Piercing Hit";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 15;
+			}
+            [lightning_chance]
+            {
+                alteration		= alter_custom_damage_chance_ranged;
+                custom_damage		= lightning;
+                value			= 15;
+                description		= "+15% Chance of Lightning Strike";
+                duration		= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+            }
+            [lightning_damage]
+            {
+                alteration		= alter_custom_damage_chance_ranged;
+                custom_damage		= lightning;
+                value			= 12;
+                max_value		= 17;
+                description		= " of 12 to 17 Damage";
+                duration		= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+                effect_script_equip	= lightning_scythe;
+                effect_script_hit	= hit_lightning_scythe;
+            }
+		}
+	}
+}
+[t:template,n:ann_wpn_summonable_skeleton_ranged_legendary]
+{
+	category_name = "weapon";
+	doc = "ann_wpn_summonable_skeleton_ranged_legendary";
+	specializes = base_bow;
+	[aspect]
+	{
+		model = m_w_bow_038;
+	}
+	[attack]
+	{
+		attack_range = 13;
+	  f damage_max = 37.000000;
+	  f damage_min = 33.000000;
+		reload_delay = 0.15;
+	}
+	[common]
+	{
+        is_pcontent_allowed	= false;
+	}
+    [gui]
+    {
+        is_droppable = false;
+    }
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_piercing_damage_chance_ranged;
+				description = "+25% chance to inflict a Piercing Hit";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 25;
+			}
+            [lightning_chance]
+            {
+                alteration		= alter_custom_damage_chance_ranged;
+                custom_damage		= lightning;
+                value			= 33;
+                description		= "+33% Chance of Lightning Strike";
+                duration		= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+            }
+            [lightning_damage]
+            {
+                alteration		= alter_custom_damage_chance_ranged;
+                custom_damage		= lightning;
+                value			= 17;
+                max_value		= 21;
+                description		= " of 17 to 21 Damage";
+                duration		= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+                effect_script_equip	= lightning_scythe;
+                effect_script_hit	= hit_lightning_scythe;
+            }
+		}
+	}
+}

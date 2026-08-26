@@ -257,6 +257,20 @@
 	  p position = 0.152868,0.103657,1.97943,0x9e2b0b4f;
 	}
 }
+[t:cage_grs_01,n:0x00100b89]
+{
+	[aspect]
+	{
+	  b is_invincible = true;
+	  b is_selectable = false;
+	  f scale_multiplier = 1.2;
+	}
+	[placement]
+	{
+	  q orientation = -5.99662e-009,-0.707107,-3.65674e-009,0.707107;
+	  p position = 0.307693,0.574808,-0.583775,0xb93eb32b;
+	}
+}
 [t:ann_r01_chest_1,n:0x00100a90]
 {
 	[inventory]

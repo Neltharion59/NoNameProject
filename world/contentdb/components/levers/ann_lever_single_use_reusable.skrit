@@ -1,0 +1,48 @@
+// ann_lever_single_use_reusable.skrit
+property Scid SendOnActivate$;
+
+owner = GoSkritComponent;
+
+void SetUseable$( Bool Useable$ )
+{
+	Owner.Go.Aspect.SSetIsSelectable( Useable$ );
+	Owner.Go.Aspect.SSetIsUsable( Useable$ );
+}
+void SendActivateMessage$( scid quest_activated_trigger_scid$ )
+{
+  Go quest_activated_trigger$ = GoDb.FindGoidByScid( quest_activated_trigger_scid$ ).Go;
+  SendWorldMessage( WE_REQ_ACTIVATE, quest_activated_trigger$.Goid, quest_activated_trigger$.Goid );
+}
+
+startup state Usable$
+{
+    event OnEnterState$
+    {
+        SetUseable$(true);
+    }
+
+	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage /*msg$*/ )
+    {
+		if( e$ == WE_REQ_USE )
+		{
+            SendActivateMessage$(SendOnActivate$);
+            SetState Unusable$;
+		}
+    }
+}
+
+state Unusable$
+{
+    event OnEnterState$
+    {
+        SetUseable$(false);
+    }
+
+	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage /*msg$*/ )
+	{
+		if( e$ == WE_REQ_ACTIVATE )
+		{	
+            SetState Usable$;
+		}
+    }
+}
