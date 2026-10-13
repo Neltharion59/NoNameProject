@@ -1,0 +1,7 @@
+[t:tsd,n:b_i_glb_plant-squash_ann_pumpkin_2]
+{
+  b dither = true;
+  b hasalpha = true;
+    layer1texture1 = b_i_glb_plant-squash_ann_pumpkin_2;
+  i texturedetail = 0;
+}

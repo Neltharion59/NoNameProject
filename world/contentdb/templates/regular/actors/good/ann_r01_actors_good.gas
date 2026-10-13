@@ -102,11 +102,10 @@
 		item_markup = 2;
 	}
 }
-
-[t:template,n:ann_r01_shop_potions]
+[t:template,n:ann_r01_innkeep]
 {
 	category_name = "1W_shopkeep";
-	doc = "ann_r01_shop_potions";
+	doc = "ann_r01_innkeep";
 	specializes = base_npc_bk;
 	[actor]
 	{
@@ -114,27 +113,14 @@
 	}
 	[aspect]
 	{
+		use_range = 1.0;
 		draw_selection_indicator = TRUE;
+		is_ghost_usable = TRUE;
 		[textures]
 		{
 			0 = b_c_gbn_sk;
 		}
 	}
-	[store]
-	{
-		item_markup = 2;
-		[item_restock]
-			{
-				potion_health_small = 8;
-				potion_mana_small = 7;
-
-				potion_health_medium = 3;
-				potion_mana_medium = 2;
-
-				potion_rejuvenation_small = 2;
-			}
-	}
-
 	[common]
 	{
 		screen_name = "Bat Tender";
@@ -142,9 +128,27 @@
 	[conversation]
 	{
 	}
+	[mind]
+	{
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[inventory]
+	{
+		[store_pcontent]
+		{
+			full_ratio = 0;
+		}
+	}
+	[respawn_shrine]
+	{
+	}
 	[store]
 	{
 		item_markup = 2;
+		[item_restock]
+		{
+			ann_r01_trs_token_enter_dungeon = 1;
+		}
 	}
 }
 [t:template,n:ann_r01_shop_magic]
@@ -188,15 +192,15 @@
 			{
 				[all*]
 				{
-					il_main = #spell/8-23;
-					max = 20;
-					min = 10;
+					il_main = #spell/5-10;
+					max = 30;
+					min = 30;
 				}
 				[all*]
 				{
-					il_main = #spell/0-15;
-					max = 25;
-					min = 10;
+					il_main = #spell/0-4;
+					max = 50;
+					min = 50;
 				}
 			}
 			[misc]
@@ -204,8 +208,8 @@
 				[all*]
 				{
 					il_main = #spellbook/5-15;
-					max = 3;
-					min = 1;
+					max = 9;
+					min = 5;
 				}
 			}
         }
@@ -247,6 +251,10 @@
 		is_ghost_usable = TRUE;
 		model = m_c_gbn_ja_pos_1;
 		use_range = 1;
+		[textures]
+		{
+			0 = b_c_gbn_ja_ann_02;
+		}
 	}
 	[common]
 	{
@@ -261,8 +269,8 @@
 		{
 			il_main = ann_scroll_summon_skeleton_legendary_melee;
 			il_main = ann_scroll_summon_skeleton_legendary_ranged;
-			il_main = ann_scroll_summon_skeleton_legendary_magic;
-			il_main = ann_scroll_summon_skeleton_legendary_nature;
+			il_main = ann_scroll_summon_skeleton_legendary_magic_combat;
+			il_main = ann_scroll_summon_skeleton_legendary_magic_nature;
 		}
 		[equipment] //needs empty block to remove boots -MM
 		{
@@ -271,6 +279,12 @@
 		{
 			full_ratio = 0;
 		}
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 	[respawn_shrine]
 	{
@@ -299,6 +313,192 @@
 			ann_scroll_summon_skeleton_epic_ranged = 1;
 			ann_scroll_summon_skeleton_epic_magic_combat = 1;
 			ann_scroll_summon_skeleton_epic_magic_nature = 1;
+		}
+	}
+}
+[t:template,n:ann_r01_shop_spellbooks_chanelling]
+{
+	category_name = "1W_shopkeep";
+	doc = "ann_r01_shop_spellbooks_chanelling";
+	specializes = base_npc_fb;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_john;
+	}
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		is_ghost_usable = TRUE;
+		model = m_c_gah_fb_pos_a7;
+		use_range = 1;
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_11;
+			1 = b_c_pos_a7_040;
+		}
+	}
+	[common]
+	{
+		screen_name = "Ell Ementhal";
+	}
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+		[store_pcontent]
+		{
+			full_ratio = 0;
+		}
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+		[item_restock]
+		{
+			ann_spellbook_chanelling_fire_stronger_01 = 1;
+			ann_spellbook_chanelling_fire_stronger_02 = 1;
+			ann_spellbook_chanelling_fire_stronger_03 = 1;
+			ann_spellbook_chanelling_fire_stronger_04 = 1;
+			ann_spellbook_chanelling_fire_stronger_05 = 1;
+			ann_spellbook_chanelling_fire_stronger_06 = 1;
+			
+			ann_spellbook_chanelling_fire_cheaper_01 = 1;
+			ann_spellbook_chanelling_fire_cheaper_02 = 1;
+			ann_spellbook_chanelling_fire_cheaper_03 = 1;
+			ann_spellbook_chanelling_fire_cheaper_04 = 1;
+			ann_spellbook_chanelling_fire_cheaper_05 = 1;
+			ann_spellbook_chanelling_fire_cheaper_06 = 1;
+
+			ann_spellbook_chanelling_ice_stronger_01 = 1;
+			ann_spellbook_chanelling_ice_stronger_02 = 1;
+			ann_spellbook_chanelling_ice_stronger_03 = 1;
+			ann_spellbook_chanelling_ice_stronger_04 = 1;
+			ann_spellbook_chanelling_ice_stronger_05 = 1;
+			ann_spellbook_chanelling_ice_stronger_06 = 1;
+			
+			ann_spellbook_chanelling_ice_cheaper_01 = 1;
+			ann_spellbook_chanelling_ice_cheaper_02 = 1;
+			ann_spellbook_chanelling_ice_cheaper_03 = 1;
+			ann_spellbook_chanelling_ice_cheaper_04 = 1;
+			ann_spellbook_chanelling_ice_cheaper_05 = 1;
+			ann_spellbook_chanelling_ice_cheaper_06 = 1;
+
+			ann_spellbook_chanelling_electric_stronger_01 = 1;
+			ann_spellbook_chanelling_electric_stronger_02 = 1;
+			ann_spellbook_chanelling_electric_stronger_03 = 1;
+			ann_spellbook_chanelling_electric_stronger_04 = 1;
+			ann_spellbook_chanelling_electric_stronger_05 = 1;
+			ann_spellbook_chanelling_electric_stronger_06 = 1;
+			
+			ann_spellbook_chanelling_electric_cheaper_01 = 1;
+			ann_spellbook_chanelling_electric_cheaper_02 = 1;
+			ann_spellbook_chanelling_electric_cheaper_03 = 1;
+			ann_spellbook_chanelling_electric_cheaper_04 = 1;
+			ann_spellbook_chanelling_electric_cheaper_05 = 1;
+			ann_spellbook_chanelling_electric_cheaper_06 = 1;
+
+			ann_spellbook_chanelling_area_effect_stronger_01 = 1;
+			ann_spellbook_chanelling_area_effect_stronger_02 = 1;
+			ann_spellbook_chanelling_area_effect_stronger_03 = 1;
+			ann_spellbook_chanelling_area_effect_stronger_04 = 1;
+			ann_spellbook_chanelling_area_effect_stronger_05 = 1;
+			ann_spellbook_chanelling_area_effect_stronger_06 = 1;
+			
+			ann_spellbook_chanelling_area_effect_cheaper_01 = 1;
+			ann_spellbook_chanelling_area_effect_cheaper_02 = 1;
+			ann_spellbook_chanelling_area_effect_cheaper_03 = 1;
+			ann_spellbook_chanelling_area_effect_cheaper_04 = 1;
+			ann_spellbook_chanelling_area_effect_cheaper_05 = 1;
+			ann_spellbook_chanelling_area_effect_cheaper_06 = 1;
+
+			ann_spellbook_chanelling_curse_cheaper_01 = 1;
+			ann_spellbook_chanelling_curse_cheaper_02 = 1;
+			ann_spellbook_chanelling_curse_cheaper_03 = 1;
+			ann_spellbook_chanelling_curse_cheaper_04 = 1;
+			ann_spellbook_chanelling_curse_cheaper_05 = 1;
+			ann_spellbook_chanelling_curse_cheaper_06 = 1;
+
+			ann_spellbook_chanelling_healing_cheaper_01 = 1;
+			ann_spellbook_chanelling_healing_cheaper_02 = 1;
+			ann_spellbook_chanelling_healing_cheaper_03 = 1;
+			ann_spellbook_chanelling_healing_cheaper_04 = 1;
+			ann_spellbook_chanelling_healing_cheaper_05 = 1;
+			ann_spellbook_chanelling_healing_cheaper_06 = 1;
+
+			ann_spellbook_chanelling_summon_cheaper_01 = 1;
+			ann_spellbook_chanelling_summon_cheaper_02 = 1;
+			ann_spellbook_chanelling_summon_cheaper_03 = 1;
+			ann_spellbook_chanelling_summon_cheaper_04 = 1;
+			ann_spellbook_chanelling_summon_cheaper_05 = 1;
+			ann_spellbook_chanelling_summon_cheaper_06 = 1;
+
+			ann_spellbook_chanelling_transform_cheaper_01 = 1;
+			ann_spellbook_chanelling_transform_cheaper_02 = 1;
+			ann_spellbook_chanelling_transform_cheaper_03 = 1;
+			ann_spellbook_chanelling_transform_cheaper_04 = 1;
+			ann_spellbook_chanelling_transform_cheaper_05 = 1;
+			ann_spellbook_chanelling_transform_cheaper_06 = 1;
+
+			ann_spellbook_chanelling_tricky_cheaper_01 = 1;
+			ann_spellbook_chanelling_tricky_cheaper_02 = 1;
+			ann_spellbook_chanelling_tricky_cheaper_03 = 1;
+			ann_spellbook_chanelling_tricky_cheaper_04 = 1;
+			ann_spellbook_chanelling_tricky_cheaper_05 = 1;
+			ann_spellbook_chanelling_tricky_cheaper_06 = 1;
+		}
+	}
+}
+[t:template,n:ann_r01_shop_bowl_token]
+{
+	category_name = "1W_shopkeep";
+	doc = "ann_r01_shop_bowl_token";
+	specializes = base_npc_ft;
+	[actor] { portrait_icon = b_gui_ig_i_ic_c_zaod; }
+	[aspect]
+	{
+		[textures] { 0 = b_c_gbn_ft_ann_01; }
+		is_ghost_usable = true;
+		use_range = 1.0;
+	}
+	[common] { screen_name="Faitheemah"; }
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+		[equipment] //needs empty block to remove boots -MM
+		{
+		}
+		[store_pcontent]
+		{
+			full_ratio = 0;
+		}
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+		[item_restock]
+		{
+			ann_r01_trs_token_bowl_flip = 1;
 		}
 	}
 }
@@ -352,6 +552,123 @@
         }
 	}
 }
+[t:template,n:ann_r01_companion_child]
+{
+	doc = "ann_r01_companion_child";
+	specializes = base_pm_fb;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_andiemus;
+		[skills]
+		{
+			strength =   		0, 0, 1;
+			dexterity =   		0, 0, 5;
+			intelligence =  	0, 0, 9;
+
+            dark_aptitude 	=  	1, 0, 0;
+            combat_magic 	=  	1, 0, 0;
+            uber 			=  	1, 0, 0;
+		}
+	}
+	[aspect]
+	{
+		gold_value = 0;
+		model = m_c_gah_fb_pos_a1;
+		scale_base = 0.55;
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_15;
+			1 = b_c_pos_a1_064;
+		}
+	}
+	[common]
+	{
+		screen_name = "Little Tibby";
+	}
+	[inventory]
+	{
+		// TODO - give him drain spell - combine leech life and rip mana
+		// TODO - give him Goldenland Shadow Magic Attack Spell
+		selected_active_location = il_active_primary_spell;
+		[equipment]
+		{
+            es_feet = bo_bo_le_light;
+            es_chest = bd_ro_m_g_c_002;
+		}
+		[other]
+		{
+			il_active_primary_spell = ann_01_spell_satanic_book;
+			il_active_secondary_spell = ann_01_spell_dark_leech;
+			il_main = potion_mana_small;
+		}
+	}
+	[mind]
+	{
+		actor_auto_heals_self_life = true;
+		actor_auto_heals_self_mana = true;
+        actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+
+[t:template,n:ann_r01_child_buyer]
+{
+	category_name = "1W_character";
+	doc = "ann_r01_child_buyer";
+	specializes = base_npc_pmo;
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		is_ghost_usable = TRUE;
+		use_range = 1;
+		[textures]
+		{
+			0 = b_c_gbn_pmo_ann_02;
+		}
+	}
+	[common]
+	{
+		screen_name = "Mole Esther";
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+[t:template,n:ann_r01_child_seller]
+{
+	category_name = "1W_character";
+	doc = "ann_r01_child_seller";
+	specializes = base_npc_fg;
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		is_ghost_usable = TRUE;
+		model = m_c_gah_fg_pos_a7;
+		use_range = 1;
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_12;
+			1 = b_c_pos_a7_018;
+		}
+	}
+	[common]
+	{
+		screen_name = "Vthulthera";
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
 [t:template,n:ann_r01_farmer_male_old]
 {
 	category_name = "1W_character";
@@ -374,6 +691,58 @@
 
 	}
 }
+[t:template,n:ann_r01_npc_goblin_01]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp goblin 01";
+	specializes = ann_npc_goblin_base;
+	[common] { screen_name = "Gondilo"; }
+}
+[t:template,n:ann_r01_npc_goblin_02]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp goblin 02";
+	specializes = ann_npc_goblin_base;
+	[common] { screen_name = "Rakilli"; }
+}
+[t:template,n:ann_r01_npc_goblin_03]
+{
+	category_name = "1W_character";
+	doc = "ann r01 npc camp goblin 03";
+	specializes = ann_npc_goblin_base;
+	[common] { screen_name = "Liezo"; }
+}
+[t:template,n:ann_r01_farmer_woman]
+{
+	category_name = "1W_townsperson";
+	doc = "ann_r01_farmer_woman";
+	specializes = base_npc_fg_multiplayer;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_09;
+			1 = b_c_pos_a1_020;
+		}
+	}
+	[common]
+	{
+		screen_name = "Farmer's Wife";
+	}
+	[conversation] {}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_feet = bo_bo_le_light;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+
 [t:template,n:ann_r01_npc_camp_fb_base]
 {
 	category_name = "1W_character";
@@ -685,6 +1054,9 @@
 		screen_name = "Dhedulaack";
 	}
 }
+
+
+
 [t:template,n:ann_r01_npc_arena_guard]
 {
 	category_name = "1W_character";

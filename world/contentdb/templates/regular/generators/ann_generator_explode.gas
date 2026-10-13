@@ -1,0 +1,42 @@
+[t:template,n:ann_generator_lump_carcassy]
+{
+	specializes = base_breakable_wood;
+	doc = "ann_generator_lump_carcassy";
+    category_name = "1w_generator";
+	[aspect]
+	{
+		model = m_i_csl_column-spider-01;
+        material = flesh;
+		is_selectable = false;
+        is_invincible = true;
+		does_block_path = true;
+        scale_base = 0.50;
+	}
+    [common]
+    {
+    	rollover_display = false;
+		rollover_life = false;
+    }
+	[physics]
+	{
+		explosion_magnitude = 2.5;
+		bone_box_collision = true;
+		gib_gore_good = true;
+		break_effect = blood_mist;
+		explode_when_killed = true;
+		break_sound = s_e_meat_explosion;
+		[break_particulate]
+		{
+			frag_glb_googore_grub_01 = 8;
+			frag_glb_googore_grub_02 = 8;
+			frag_glb_googore_grub_03 = 8;
+			frag_glb_googore_grub_04 = 8;
+			frag_glb_googore_grub_05 = 8;
+		}
+	}
+    [generator_breakable]
+    {
+        spawn_range = 0;
+        spawn_sfx = blood_mist;
+    }
+}

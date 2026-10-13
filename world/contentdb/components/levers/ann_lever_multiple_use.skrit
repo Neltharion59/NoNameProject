@@ -1,0 +1,18 @@
+// ann_lever_multiple_use.skrit
+property Scid SendOnActivate$;
+
+owner = GoSkritComponent;
+
+void SendActivateMessage$( scid quest_activated_trigger_scid$ )
+{
+  Go quest_activated_trigger$ = GoDb.FindGoidByScid( quest_activated_trigger_scid$ ).Go;
+  SendWorldMessage( WE_REQ_ACTIVATE, quest_activated_trigger$.Goid, quest_activated_trigger$.Goid );
+}
+
+event OnGoHandleMessage$( eWorldEvent e$, WorldMessage /*msg$*/ )
+{
+    if( e$ == WE_REQ_USE )
+    {
+        SendActivateMessage$(SendOnActivate$);
+    }
+}

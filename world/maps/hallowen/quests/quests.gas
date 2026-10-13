@@ -37,31 +37,54 @@
 		victory_sample  = s_e_level_up_quest;
 		quest_image     = b_gui_ig_mnu_jnl_quest_01;
 
-		// krok 0 posli ma za innkeeper
 		[*]
 		{
 			order       = 0;
-			speaker     = "Village innkeeper";
-			description = "Talk to the village innkeeper about the strange gray mist.";
-			address     = 01_village:conversations:conversation_innkeeper;
+			description = "Find someone to talk to about this strange place. Perhaps the local innkeeper might help.";
 		}
 
-		// krok 1 najdi dungeon
 		[*]
 		{
 			order       = 1;
-			description = "Find the entrance to the old catacombs.";
-			// voliteľné: address na marker pri vchode, ak ho máš
-			// address  = 01_village:world:catacombs_entrance;
+			description = "Buy a permit to enter the catacombs from the innkeeper. Drop it near the entry to the catacombs.";
+			speaker     = "Village Innkeeper";
+			address     = 01_village:conversations:ann_conv_01_innkeep_b4_quest;
 		}
 
-		// krok 2 vojdi do dungeon
 		[*]
 		{
 			order       = 2;
-			description = "Enter the catacombs and investigate the source of the mist.";
-			required    = true;
-			is_complete = true;
+			description = "Approach the catacombs.";
+		}
+
+		[*]
+		{
+			order       = 3;
+			description = "Enter the catacombs.";
+		}
+
+		[*]
+		{
+			order       = 4;
+			description = "Investigate the source of the mist.";
+		}
+
+		[*]
+		{
+			order       = 5;
+			description = "Destroy the abomination.";
+		}
+
+		[*]
+		{
+			order       = 6;
+			description = "Enter the castle.";
+		}
+
+		[*]
+		{
+			order       = 7;
+			description = "Explore the castle.";
 		}
 	}
 
@@ -74,42 +97,82 @@
 		screen_name		= "Side Quest: The Pumpkin Sniffers"; 
 		victory_sample	= s_e_level_up_quest;
 		quest_image 	= b_gui_ig_mnu_jnl_quest_02;              
-				
-		// STAV 0 (Nárazenie na monštrá)
+		
 		[*]
 		{
 			order		    = 0;
-			description     = "I need to find the owner of this farmhouse to figure out how to get past these weird sniffing creatures.";
+			description     = "Find a way to defeat these creatures.";
 		}
 
-		// STAV 1 (Rozhovor s farmárom)
 		[*]
 		{
 			order		    = 1;
-			speaker         = "Angry Farmer";
+			description     = "Speak with the farmer on the farm near the mill.";
+			speaker         = "Garrioth";
 			address		    = 01_village:conversations:conversation_farmer;
-			description     = "The farmer told me to distract the Pumpkin Sniffers by throwing a large pumpkin away from the door.";
 		}
 
-		// STAV 2 (Tekvica hodená)
 		[*]
 		{
 			order		    = 2;
-			description     = "The creatures rushed to sniff the thrown pumpkin, leaving the path to the house completely clear.";
+			description     = "Enter the pumpkin field.";
+			speaker         = "Pumpkin Farmer";
+			address		    = 01_village:conversations:ann_conv_01_pumpkin_farmer_asking_for_first_pumpkin;
 		}
 
-		// STAV 3 (Cesta voľná)
 		[*]
 		{
 			order		    = 3;
-			description     = "I must now enter the house and retrieve the farmer's item while the monsters are distracted.";
+			description     = "Find the prize-winning pumpkin.";
 		}
 
-		// STAV 4 (Hotovo)
 		[*]
 		{
 			order		    = 4;
-			description     = "I successfully recovered the item from the house and solved the farmer's problem.";
+			description     = "Take the prize-winning pumpkin.";
+		}
+
+		[*]
+		{
+			order		    = 5;
+			description     = "Defeat the pumpkin monster.";
+			is_complete     = true; 
+		}
+
+		[*]
+		{
+			order		    = 6;
+			description     = "Speak with the farmer.";
+			is_complete     = true; 
+		}
+
+		[*]
+		{
+			order		    = 7;
+			description     = "Take the prize-winning pumpkin from the field.";
+			is_complete     = true;
+			speaker         = "Pumpkin Farmer";
+			address		    = 01_village:conversations:ann_conv_01_pumpkin_farmer_asking_for_second_pumpkin;
+		}
+
+		[*]
+		{
+			order		    = 8;
+			description     = "Drop the pumpkin near the pumpkin-sniffers.";
+			is_complete     = true; 
+		}
+
+		[*]
+		{
+			order		    = 9;
+			description     = "Collect the prize from the ruined house.";
+			is_complete     = true; 
+		}
+
+		[*]
+		{
+			order		    = 10;
+			description     = "You have dealt with the pumpkin sniffer menace. One less horror for the local folk.";
 			is_complete     = true; 
 		}
 	}
@@ -172,7 +235,7 @@
 		[*]
 		{
 			order			= 3;		
-			description     = "You helped Johnothros as much as you could";
+			description     = "Johnothros's cart is safe now";
 		}
 	}
 }

@@ -1,0 +1,25 @@
+[t:template,n:ann_r02_red_crystal_shard_06]
+{
+	specializes = ice_shard;
+	[aspect]
+	{
+		model=m_i_glb_frag-ice-11;
+		scale_base = 3;
+		[textures]
+		{
+			0 = b_c_edm_ann_frostnid;
+		}
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("ann_red_shard_trace");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+		}
+	}
+}

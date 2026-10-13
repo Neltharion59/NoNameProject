@@ -39,6 +39,46 @@
 		}
 	}
 }
+[t:template,n:ann_r02_basket]
+{
+	category_name = "container";
+	doc = "ann_r02_basket";
+	specializes = ann_base_open_basket;
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.40;
+					max = 22;
+					min = 3;
+				}
+				[oneof*]
+				{
+					chance = 0.40;
+					il_main = #weapon/7-15;
+					il_main = #body/12-28;
+					il_main = #spell/1-6;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+					il_main = #weapon/-rare(1)/7-15;
+					il_main = #body/-rare(1)/12-28;
+				}
+				[oneof*]
+				{
+					chance = 0.40;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+			}
+		}
+	}
+}
 [t:template,n:ann_r02_sarcophagus]
 {
 	specializes			= base_chest_use_toggle;

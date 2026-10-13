@@ -1,0 +1,229 @@
+[effect_script*]
+{
+	name	=ann_effect_shadow_strike;
+
+	script	=[[
+			set $page_flip_time 0.50;
+			
+			set $coordinates_orb_1 0,1,1;
+			set $coordinates_orb_2 0,1.95,.31;
+			set $coordinates_orb_3 0,1.59,-.81;
+			set $coordinates_orb_4 0,.41,-.81;
+			set $coordinates_orb_5 0,.05,.31;
+			
+            sound play s_e_spell_undermine_cast at #SOURCE_POSITION dist 3 20;
+
+			sfx create orbiter #TARGET
+				"must_update()scale(2.6)tin(.3)tout(.7)color0(0,0,0)invisible()
+				radius(0)";
+			set $orb_middle #POP;
+			//sfx freeze_targets $orb_middle;
+			
+			// 3rd is x, 1st is y
+			sfx create orbiter #TARGET
+				"must_update()offset($coordinates_orb_1)scale(2.6)tin(.3)tout(.7)color0(1,0,0)invisible()
+				radius(0)";
+			set $orb_1 #POP;
+			sfx rat $orb_1;
+			sfx target $orb_1 $orb_middle;
+			sfx attach $orb_middle $orb_1;
+
+			sfx create orbiter #TARGET
+				"must_update()offset($coordinates_orb_2)scale(2.6)tin(.3)tout(.7)color0(0,1,0)invisible()
+				radius(0)";
+			set $orb_2 #POP;
+			sfx rat $orb_2;
+			sfx target $orb_2 $orb_middle;
+			sfx attach $orb_middle $orb_2;
+
+			sfx create orbiter #TARGET
+				"must_update()offset($coordinates_orb_3)scale(2.6)tin(.3)tout(.7)color0(0,0,1)invisible()
+				radius(0)";
+			set $orb_3 #POP;
+			sfx rat $orb_3;
+			sfx target $orb_3 $orb_middle;
+			sfx attach $orb_middle $orb_3;
+
+			sfx create orbiter #TARGET
+				"must_update()offset($coordinates_orb_4)scale(2.6)tin(.3)tout(.7)color0(1,1,0)invisible()
+				radius(0)";
+			set $orb_4 #POP;
+			sfx rat $orb_4;
+			sfx target $orb_4 $orb_middle;
+			sfx attach $orb_middle $orb_4;
+			
+			sfx create orbiter #TARGET
+				"must_update()offset($coordinates_orb_5)scale(2.6)tin(.3)tout(.7)color0(1,0,1)invisible()
+				radius(0)";
+			set $orb_5 #POP;
+			sfx rat $orb_5;
+			sfx target $orb_5 $orb_middle;
+			sfx attach $orb_middle $orb_5;
+
+			sfx create lightning #TARGET
+				"must_update()scale(2)bolt_life(1)subd(.01)minsubd(.01)
+				mindisplace(0)maxdisplace(0)color0(.6,.6,1)";
+			sfx rat #PEEK;
+			sfx target #PEEK $orb_1;
+			sfx target #PEEK $orb_2;
+			sfx attach $orb_middle #POP;
+
+			sfx create lightning #TARGET
+				"must_update()scale(2)bolt_life(1)subd(.01)minsubd(.01)
+				mindisplace(0)maxdisplace(0)color0(.6,.6,1)";
+			sfx rat #PEEK;
+			sfx target #PEEK $orb_1;
+			sfx target #PEEK $orb_3;
+			sfx attach $orb_middle #POP;
+
+			sfx create lightning #TARGET
+				"must_update()scale(2)bolt_life(1)subd(.01)minsubd(.01)
+				mindisplace(0)maxdisplace(0)color0(.6,.6,1)";
+			sfx rat #PEEK;
+			sfx target #PEEK $orb_1;
+			sfx target #PEEK $orb_4;
+			sfx attach $orb_middle #POP;
+
+			sfx create lightning #TARGET
+				"must_update()scale(2)bolt_life(1)subd(.01)minsubd(.01)
+				mindisplace(0)maxdisplace(0)color0(.6,.6,1)";
+			sfx rat #PEEK;
+			sfx target #PEEK $orb_1;
+			sfx target #PEEK $orb_5;
+			sfx attach $orb_middle #POP;
+
+			sfx create lightning #TARGET
+				"must_update()scale(2)bolt_life(1)subd(.01)minsubd(.01)
+				mindisplace(0)maxdisplace(0)color0(.6,.6,1)";
+			sfx rat #PEEK;
+			sfx target #PEEK $orb_2;
+			sfx target #PEEK $orb_3;
+			sfx attach $orb_middle #POP;
+
+			sfx create lightning #TARGET
+				"must_update()scale(2)bolt_life(1)subd(.01)minsubd(.01)
+				mindisplace(0)maxdisplace(0)color0(.6,.6,1)";
+			sfx rat #PEEK;
+			sfx target #PEEK $orb_2;
+			sfx target #PEEK $orb_4;
+			sfx attach $orb_middle #POP;
+
+			sfx create lightning #TARGET
+				"must_update()scale(2)bolt_life(1)subd(.01)minsubd(.01)
+				mindisplace(0)maxdisplace(0)color0(.6,.6,1)";
+			sfx rat #PEEK;
+			sfx target #PEEK $orb_2;
+			sfx target #PEEK $orb_5;
+			sfx attach $orb_middle #POP;
+
+			sfx create lightning #TARGET
+				"must_update()scale(2)bolt_life(1)subd(.01)minsubd(.01)
+				mindisplace(0)maxdisplace(0)color0(.6,.6,1)";
+			sfx rat #PEEK;
+			sfx target #PEEK $orb_3;
+			sfx target #PEEK $orb_4;
+			sfx attach $orb_middle #POP;
+
+			sfx create lightning #TARGET
+				"must_update()scale(2)bolt_life(1)subd(.01)minsubd(.01)
+				mindisplace(0)maxdisplace(0)color0(.6,.6,1)";
+			sfx rat #PEEK;
+			sfx target #PEEK $orb_3;
+			sfx target #PEEK $orb_5;
+			sfx attach $orb_middle #POP;
+
+			sfx create lightning #TARGET
+				"must_update()scale(2)bolt_life(1)subd(.01)minsubd(.01)
+				mindisplace(0)maxdisplace(0)color0(.6,.6,1)";
+			sfx rat #PEEK;
+			sfx target #PEEK $orb_4;
+			sfx target #PEEK $orb_5;
+			sfx attach $orb_middle #POP;
+
+			sfx start $orb_middle;
+
+            sound play s_e_env_creepy_04 at #SOURCE_POSITION dist 3 20;
+
+			// Now, the book page flipping
+
+
+
+			sfx create orbiter #TARGET 
+				"must_update()scale(1)radius(0)theta(0)iphi(0)itheta(0)model(ann_ambient_item_satanic_book_00)rotate(0,90,90)offset(0,1,0)";
+			set $book0 #POP;
+			sfx rat $book0;
+			sfx target $book0 $orb_middle;
+			sfx start $book0;
+			pause $page_flip_time;
+			sound play s_e_ds2_ui_inv_drop_flip at #SOURCE_POSITION dist 3 20;
+
+			sfx create orbiter #TARGET 
+				"must_update()scale(1)radius(0)theta(0)iphi(0)itheta(0)model(ann_ambient_item_satanic_book_01)rotate(0,90,90)offset(0,1,0)";
+			set $book1 #POP;
+			sfx destroy $book0;
+			sfx rat $book1;
+			sfx target $book1 $orb_middle;
+			sfx start $book1;
+			pause $page_flip_time;
+			sound play s_e_ds2_ui_inv_drop_flip at #SOURCE_POSITION dist 3 20;
+
+			sfx create orbiter #TARGET 
+				"must_update()scale(1)radius(0)theta(0)iphi(0)itheta(0)model(ann_ambient_item_satanic_book_02)rotate(0,90,90)offset(0,1,0)";
+			set $book2 #POP;
+			sfx destroy $book1;
+			sfx rat $book2;
+			sfx target $book2 $orb_middle;
+			sfx start $book2;
+			pause $page_flip_time;
+			sound play s_e_ds2_ui_inv_drop_flip at #SOURCE_POSITION dist 3 20;
+
+			sfx create orbiter #TARGET 
+				"must_update()scale(1)radius(0)theta(0)iphi(0)itheta(0)model(ann_ambient_item_satanic_book_03)rotate(0,90,90)offset(0,1,0)";
+			set $book3 #POP;
+			sfx destroy $book2;
+			sfx rat $book3;
+			sfx target $book3 $orb_middle;
+			sfx start $book3;
+			pause $page_flip_time;
+			sound play s_e_ds2_ui_inv_drop_flip at #SOURCE_POSITION dist 3 20;
+
+			sfx create orbiter #TARGET 
+				"must_update()scale(1)radius(0)theta(0)iphi(0)itheta(0)model(ann_ambient_item_satanic_book_04)rotate(0,90,90)offset(0,1,0)";
+			set $book4 #POP;
+			sfx destroy $book3;
+			sfx rat $book4;
+			sfx target $book4 $orb_middle;
+			sfx start $book4;
+			pause $page_flip_time;
+			sound play s_e_ds2_ui_inv_drop_flip at #SOURCE_POSITION dist 3 20;
+
+			sfx create orbiter #TARGET 
+				"must_update()scale(1)radius(0)theta(0)iphi(0)itheta(0)model(ann_ambient_item_satanic_book_05)rotate(0,90,90)offset(0,1,0)";
+			set $book5 #POP;
+			sfx destroy $book4;
+			sfx rat $book5;
+			sfx target $book5 $orb_middle;
+			sfx start $book5;
+			pause $page_flip_time;
+			sound play s_e_ds2_ui_inv_drop_flip at #SOURCE_POSITION dist 3 20;
+
+			sfx create orbiter #TARGET 
+				"must_update()scale(1)radius(0)theta(0)iphi(0)itheta(0)model(ann_ambient_item_satanic_book_06)rotate(0,90,90)offset(0,1,0)";
+			set $book6 #POP;
+			sfx destroy $book5;
+			sfx rat $book6;
+			sfx target $book6 $orb_middle;
+			sfx start $book6;
+
+			pause $page_flip_time;
+			
+            sound play s_e_hit_lost_queen at #SOURCE_POSITION dist 3 20;
+
+			worldmsg WE_SPELL_SYNC_MID #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+
+			pause $page_flip_time;
+
+			sfx destroy $orb_middle;
+			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}

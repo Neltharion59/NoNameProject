@@ -1,0 +1,24 @@
+[t:template,n:ann_base_open_basket] // From DS2: base_open_dryad
+{
+	specializes = base_chest;
+
+	[aspect]
+	{
+		material = wood;
+		model = m_i_jng_basket-01;
+		textures:0 = b_i_jng_baskets-01;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_jng;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=basket-01-open; }
+			}
+		}
+	}
+	[common] { screen_name="Basket"; }
+}

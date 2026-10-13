@@ -1,3 +1,59 @@
+[t:generator_generic,n:0x00100e31]
+{
+	[generator_basic]
+	{
+		child_template_name = "swamp_switch_skeleton";
+	  i num_children_incubating = 999999999;
+	  f spawn_period = 7;
+	}
+	[placement]
+	{
+	  q orientation = -1.11619e-024,0.707107,-1.11619e-024,0.707107;
+	  p position = -1.99104,2,0.457845,0xe7e5cfa1;
+	}
+}
+[t:generator_generic,n:0x00100e2f]
+{
+	[generator_basic]
+	{
+		child_template_name = "swamp_switch_skeleton";
+	  i num_children_incubating = 999999999;
+	  f spawn_period = 7;
+	}
+	[placement]
+	{
+	  q orientation = -1.11619e-024,-0.707107,1.11619e-024,0.707107;
+	  p position = -3.51131,0,0.442576,0x6c4eceed;
+	}
+}
+[t:generator_generic,n:0x00100e30]
+{
+	[generator_basic]
+	{
+		child_template_name = "swamp_switch_skeleton";
+	  i num_children_incubating = 999999999;
+	  f spawn_period = 7;
+	}
+	[placement]
+	{
+	  q orientation = -9.40877e-032,1,-4.93038e-032,-5.96046e-008;
+	  p position = 1.38917,0,-1.18687,0x47c46781;
+	}
+}
+[t:generator_generic,n:0x00100e2e]
+{
+	[generator_basic]
+	{
+		child_template_name = "swamp_switch_skeleton";
+	  i num_children_incubating = 999999999;
+	  f spawn_period = 7;
+	}
+	[placement]
+	{
+	  q orientation = -1.11619e-024,-0.707107,1.11619e-024,0.707107;
+	  p position = -3.40891,0,-1.1396,0x7f4eee62;
+	}
+}
 [t:ann_generator_projectile_sfx,n:0x00100b94]
 {
 	[ann_projectile_spawner]

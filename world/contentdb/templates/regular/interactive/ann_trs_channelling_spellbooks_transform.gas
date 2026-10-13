@@ -1,0 +1,219 @@
+[t:template,n:ann_spellbook_chanelling_transform_base]
+{
+	doc = "ann_spellbook_chanelling_transform_base";
+	specializes = ann_spellbook_chanelling_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_glb_book-magic-04;
+		}
+	}
+    [common]
+    {
+        screen_name = "Channelling Spellbook of Transforming";
+    }
+	[gui]
+	{
+
+		inventory_icon = b_gui_ig_i_it_magic-book-04;
+	}
+}
+[t:template,n:ann_spellbook_chanelling_transform_cheaper_01]
+{
+	doc = "ann_spellbook_chanelling_transform_cheaper_01";
+	specializes = ann_spellbook_chanelling_transform_base;
+	[magic]
+	{
+		[enchantments]
+		{
+            [*]
+            {
+                alteration = alter_spell_cost;
+			    imbued_spell_group = spells_transform;
+                is_imbued = true;
+                multiply_value = true;
+                value = 0.85;
+			    description = "Decreases the mana cost of Transform spells in this spellbook by 15% at the cost of mana capacities of the wearer";
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+            [*]
+            {
+                alteration = alter_max_mana;
+                multiply_value = true;
+                value = 0.95;
+			    description = "-5% Max Mana";
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+        }
+	}
+}
+[t:template,n:ann_spellbook_chanelling_transform_cheaper_02]
+{
+	doc = "ann_spellbook_chanelling_transform_cheaper_02";
+	specializes = ann_spellbook_chanelling_transform_base;
+	[magic]
+	{
+		[enchantments]
+		{
+            [*]
+            {
+                alteration = alter_spell_cost;
+			    imbued_spell_group = spells_transform;
+                is_imbued = true;
+                multiply_value = true;
+                value = 0.70;
+			    description = "Decreases the mana cost of Transform spells in this spellbook by 30% at the cost of mana capacities of the wearer";
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+            [*]
+            {
+                alteration = alter_max_mana;
+                multiply_value = true;
+                value = 0.90;
+			    description = "-10% Max Mana";
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+        }
+	}
+}
+[t:template,n:ann_spellbook_chanelling_transform_cheaper_03]
+{
+	doc = "ann_spellbook_chanelling_transform_cheaper_03";
+	specializes = ann_spellbook_chanelling_transform_base;
+	[magic]
+	{
+		[enchantments]
+		{
+            [*]
+            {
+                alteration = alter_spell_cost;
+			    imbued_spell_group = spells_transform;
+                is_imbued = true;
+                multiply_value = true;
+                value = 0.55;
+			    description = "Decreases the mana cost of Transform spells in this spellbook by 45% at the cost of mana capacities of the wearer";
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+            [*]
+            {
+                alteration = alter_max_mana;
+                multiply_value = true;
+                value = 0.85;
+			    description = "-15% Max Mana";
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+        }
+	}
+}
+[t:template,n:ann_spellbook_chanelling_transform_cheaper_04]
+{
+	doc = "ann_spellbook_chanelling_transform_cheaper_04";
+	specializes = ann_spellbook_chanelling_transform_base;
+	[magic]
+	{
+		[enchantments]
+		{
+            [*]
+            {
+                alteration = alter_spell_cost;
+			    imbued_spell_group = spells_transform;
+                is_imbued = true;
+                multiply_value = true;
+                value = 0.40;
+			    description = "Decreases the mana cost of Transform spells in this spellbook by 60% at the cost of mana capacities of the wearer";
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+            [*]
+            {
+                alteration = alter_max_mana;
+                multiply_value = true;
+                value = 0.80;
+			    description = "-20% Max Mana";
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+        }
+	}
+}
+[t:template,n:ann_spellbook_chanelling_transform_cheaper_05]
+{
+	doc = "ann_spellbook_chanelling_transform_cheaper_05";
+	specializes = ann_spellbook_chanelling_transform_base;
+	[magic]
+	{
+		[enchantments]
+		{
+            [*]
+            {
+                alteration = alter_spell_cost;
+			    imbued_spell_group = spells_transform;
+                is_imbued = true;
+                multiply_value = true;
+                value = 0.25;
+			    description = "Decreases the mana cost of Transform spells in this spellbook by 75% at the cost of mana capacities of the wearer";
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+            [*]
+            {
+                alteration = alter_max_mana;
+                multiply_value = true;
+                value = 0.75;
+			    description = "-25% Max Mana";
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+        }
+	}
+}
+[t:template,n:ann_spellbook_chanelling_transform_cheaper_06]
+{
+	doc = "ann_spellbook_chanelling_transform_cheaper_06";
+	specializes = ann_spellbook_chanelling_transform_base;
+	[magic]
+	{
+		[enchantments]
+		{
+            [*]
+            {
+                alteration = alter_spell_cost;
+			    imbued_spell_group = spells_transform;
+                is_imbued = true;
+                multiply_value = true;
+                value = 0.10;
+			    description = "Decreases the mana cost of Transform spells in this spellbook by 90% at the cost of mana capacities of the wearer";
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+            [*]
+            {
+                alteration = alter_max_mana;
+                multiply_value = true;
+                value = 0.70;
+			    description = "-30% Max Mana";
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+        }
+	}
+}

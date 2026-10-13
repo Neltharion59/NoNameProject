@@ -1,3 +1,39 @@
+[t:spell_explosive_powder,n:0x00200601]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 1.99155,-0.821679,1.68266,0xd9ad1f5d;
+		use_point_scids = 0x00200603;
+	}
+}
+[t:spell_flash,n:0x00200602]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 1.08792,-0.788526,-0.701286,0x7c2408ac;
+		use_point_scids = 0x00200604;
+	}
+}
+[t:bw_ra_g_c_s_s_c_stopper,n:0x002005fe]
+{
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = 1.61612,0.701203,-1.87811,0xd9950ccd;
+		use_point_scids = 0x00200603,0x00200605;
+	}
+}
+[t:ax_g_o_1h1b_low,n:0x00200600]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,-0.707107;
+	  p position = 1.35904,0.666688,-1.11784,0xd9950ccd;
+		use_point_scids = 0x00200604,0x00200605;
+	}
+}
 [t:ann_ambient_item_bortusk,n:0x0020007e]
 {
 	[placement]

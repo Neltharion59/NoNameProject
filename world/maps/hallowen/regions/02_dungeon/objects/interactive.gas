@@ -22,6 +22,133 @@
 		use_point_scids = 0x00200084,0x00200086;
 	}
 }
+[t:ann_generator_lump_carcassy,n:0x0020063b]
+{
+	[generator_breakable]
+	{
+		child_template_name = "ann_r02_rat_2";
+	  i max_alive_children = 3;
+	  i num_children_incubating = 3;
+	  f spawn_period = 0.01;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.66939e-007;
+	  p position = 1.32753,-1.5,-1.45583,0xf379fbba;
+	}
+}
+[t:ann_generator_lump_carcassy,n:0x0020063d]
+{
+	[generator_breakable]
+	{
+		child_template_name = "ann_r02_rat_2";
+	  i max_alive_children = 3;
+	  i num_children_incubating = 3;
+	  f spawn_period = 0.01;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.923879;
+	  p position = 1.82759,0,-0.446472,0x04ec05f8;
+	}
+}
+[t:ann_generator_lump_carcassy,n:0x00200662]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.66;
+	}
+	[generator_breakable]
+	{
+		child_template_name = "ann_r02_rat_2_boss_01";
+	  i max_alive_children = 1;
+	  i num_children_incubating = 1;
+	  f spawn_period = 0.01;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 0.272522,0,0.467796,0x4820a3a0;
+	}
+}
+[t:lever_glb_01,n:0x002006ae]
+{
+	[on_off_lever]
+	{
+		on_message = we_req_use;
+		on_message_2 = we_req_use;
+	  x on_scid = 0x00200684;
+	  x on_scid_2 = 0x00200660;
+	  b one_shot = true;
+	}
+	[placement]
+	{
+	  q orientation = 0.374709,0.599661,0.59966,-0.37471;
+	  p position = -0.0751495,1.01006,0.384026,0x4820a3a0;
+		use_point_scids = 0x002006b0,0x002006b1,0x002006b2;
+	}
+}
+[t:door_glb_crypt_01,n:0x00200660]
+{
+	[placement]
+	{
+	  q orientation = 0.0540252,0.617462,0.059178,0.782509;
+	  p position = -1.56123,-0.0425129,1.87169,0x28310a80;
+	}
+}
+[t:door_glb_crypt_01,n:0x00200684]
+{
+	[placement]
+	{
+	  q orientation = -0.171691,0.906042,0.101159,-0.373333;
+	  p position = 1.5704,-0.363064,-0.725891,0x28310a80;
+	}
+}
+[t:ann_generator_lump_carcassy,n:0x0020063f]
+{
+	[generator_breakable]
+	{
+		child_template_name = "ann_r02_rat_2";
+	  i max_alive_children = 3;
+	  i num_children_incubating = 3;
+	  f spawn_period = 0.01;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,0.382684;
+	  p position = 1.40186,0,1.50078,0xc06d9ee2;
+	}
+}
+[t:ann_generator_lump_carcassy,n:0x0020063e]
+{
+	[generator_breakable]
+	{
+		child_template_name = "ann_r02_rat_2";
+	  i max_alive_children = 3;
+	  i num_children_incubating = 3;
+	  f spawn_period = 0.01;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.66939e-007;
+	  p position = -1.86819,1,-0.775528,0x7ba7a39b;
+	}
+}
+[t:ann_generator_lump_carcassy,n:0x0020063c]
+{
+	[generator_breakable]
+	{
+		child_template_name = "ann_r02_rat_2";
+	  i max_alive_children = 3;
+	  i num_children_incubating = 3;
+	  f spawn_period = 0.01;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -1.97102,0,-1.36595,0xf53bb623;
+	}
+}
 [t:door_glb_crypt_01,n:0x00200060]
 {
 	[placement]

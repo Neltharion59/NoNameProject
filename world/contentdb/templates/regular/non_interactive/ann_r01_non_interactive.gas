@@ -76,3 +76,36 @@
 		}
 	}
 }
+[t:template,n:ann_r01_non_blocking_pumpkin]
+{
+	category_name = "foliage";
+	doc = "ann_r01_non_blocking_pumpkin";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.8;
+		lodfi_upper = 1.0;
+		model = m_i_glb_plant-squash-01;
+		[textures]
+		{
+			0 = b_i_glb_plant-squash_ann_pumpkin_2;
+		}
+	}
+}
+[t:template,n:ann_r01_non_blocking_pumpkin_round]
+{
+	category_name = "foliage";
+	doc = "ann_r01_non_blocking_pumpkin_round";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.8;
+		lodfi_upper = 1.0;
+		model		= m_i_glb_frag-fury-eye;
+		scale_base = 0.70;
+		[textures]
+		{
+			0 = b_i_glb_pumpkin;
+		}
+	}
+}

@@ -1,18 +1,25 @@
-[ann_conv_01_infested_cart_b4_quest_first]
+[ambient_man_stables]
 {
 	[text*]
 	{
-		activate_quest* = quest_haunted_cart,0;
-	  b quest_dialog = true;
-		screen_text = "Terror and horror, that's all there is left of this world! This cart of hay is the only thing I managed to salvage from my home. It could have been used for feeding animals in this village, for which I was hoping to be granted a shelter. But woe is me! Only gods know what possed my cart, my poor last pile of hay, and laid eggs in it. I tried to reach for some hay to feed the mules, but all I grabbed was slime and dirt. Most horrible things linger in my hay - spiders, maggots, frogs, and lizards. I had believed the world was doomed when my home was shred to pieces, but this sight was beyond all horrors comprehensible. Just try knocking on the cart wheel, and you'll see for yourself.";
+		screen_text = "Welcome to the horror town. We do not sell any pack mules right now, as we recently had a mucosa break-in. The damned thing dissolved two of our mules before I managed to hit it with a brick. Now we do not have enough to spare. Curse this gods-forsaken horror of a town.";
 	  f scroll_rate = 10.000000;
 	}
 }
-[ann_conv_01_infested_cart_b4_quest_next]
+[ambient_stone_cat]
 {
 	[text*]
 	{
-		screen_text = "I will not ever eat again. What if I reach for my oats just to feel slimy crawling beneath my hands? Oh no, this is the end of me.";
+		screen_text = "My kitten feels hunger, my kitten feels thirst,
+which of the little gremals will feed her first?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ambient_woman_01]
+{
+	[text*]
+	{
+		screen_text = "Last week a tree ate my grandmother in front of my eyes. Do you think you have anything to say that I would care about?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -32,6 +39,24 @@
 	[text*]
 	{
 		screen_text = "Creeping and crawling they are, in the damp darkness, their legs seeking solid ground, the one thing they took from me. The end draws near.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_conv_01_infested_cart_b4_quest_first]
+{
+	[text*]
+	{
+		activate_quest* = quest_haunted_cart,0;
+	  b quest_dialog = true;
+		screen_text = "Terror and horror, that's all there is left of this world! This cart of hay is the only thing I managed to salvage from my home. It could have been used for feeding animals in this village, for which I was hoping to be granted a shelter. But woe is me! Only gods know what possed my cart, my poor last pile of hay, and laid eggs in it. I tried to reach for some hay to feed the mules, but all I grabbed was slime and dirt. Most horrible things linger in my hay - spiders, maggots, frogs, and lizards. I had believed the world was doomed when my home was shred to pieces, but this sight was beyond all horrors comprehensible. Just try knocking on the cart wheel, and you'll see for yourself.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_conv_01_infested_cart_b4_quest_next]
+{
+	[text*]
+	{
+		screen_text = "I will not ever eat again. What if I reach for my oats just to feel slimy crawling beneath my hands? Oh no, this is the end of me.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -83,6 +108,14 @@
 	  f scroll_rate = 10.000000;
 	}
 }
+[ann_conv_01_thief_default]
+{
+	[text*]
+	{
+		screen_text = "The shine of jewels,\nthe cling of gold,\nI stash in sewers,\ntill I'm too old. Hahahaha!";
+	  f scroll_rate = 10.000000;
+	}
+}
 [ann_conv_01_thief_when_escaping]
 {
 	[text*]
@@ -91,11 +124,120 @@
 	  f scroll_rate = 10.000000;
 	}
 }
-[ann_conv_01_thief_default]
+[ann_r01_conv_corpse_carrier]
 {
 	[text*]
 	{
-		screen_text = "The shine of jewels,\nthe cling of gold,\nI stash in sewers,\ntill I'm too old. Hahahaha!";
+		screen_text = "I was on my way driving a wagon of coffins with the dead to be burried when I was dragged into this horror. I wonder what use to my cargo is there now? Do we bury them here or turn them into jerky for when the times get tough?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_r01_conv_farmer_wife]
+{
+	[text*]
+	{
+		screen_text = "I tell you, among the rats scratches, I can hear gears and clanks from the toolshed. Why won't anybody listen to me?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_r01_conv_goblin_02]
+{
+	[text*]
+	{
+		screen_text = "Aah, more sweet barrels for our machines. Just a few more, and we can have our first blaster working.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_r01_conv_goblin_03_boss]
+{
+	[text*]
+	{
+		screen_text = "Argh, we left a little bribe in the toolshed to leave us alone. And you keep coming asking for more?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_r01_conv_miller_man]
+{
+	[text*]
+	{
+		screen_text = "Amazingly enouh, we keep finding new stuff to process in our mill. Meadow grass seeds, wild nuts,acorns...people need to eat something. Luckily, the spiders we first considered a menace hunt for rats before they can reach our supplies.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_r01_conv_roast_near_coffins]
+{
+	[text*]
+	{
+		screen_text = "No offense to the coffin lady, but I will roast those stinking beasts that lurk around even if I had to eat their butts, rather than eating those dessicated corpses in her wagon. I suggest you do not fall to the temptation, not matter how bad your food smells.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_r01_conv_shop_spellbooks]
+{
+	[text*]
+	{
+		choice = shop;
+		screen_text = "Welcome, friend. Care to see my selection of channelling spellbooks?
+
+Oh, I see. Let me explain to you. Some mages are not content with the amount of mana they have to use for their spells. Some prefer to spend more mana and conjure spells to amaze the audience - quite often the enemies. Other mages prefer to travel lightly without a supply of mana potions on them, while being content to cast weaker spells.
+
+All these needs and many more, I can satisfy.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_r01_goblin]
+{
+	[text*]
+	{
+		screen_text = "Hush, you want that farmer goose to hear you?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r01_arena_bet_collector_during_fight]
+{
+	[text*]
+	{
+		screen_text = "The fight has already begun. The bets are closed now. Wait until the next fight.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r01_arena_bet_collector_team_1_collecting_bets]
+{
+	[text*]
+	{
+		screen_text = "Test your luck, youth! Make a bet on team 1, the arena's champions. Just place your gold on the ground near me and we will handle the rest. You may withdraw your bets before the fight starts.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r01_arena_bet_collector_team_2_collecting_bets]
+{
+	[text*]
+	{
+		screen_text = "Test your luck, youth! Make a bet on team 2, the best we have. Just place your gold on the ground near me and we will handle the rest. You may withdraw your bets before the fight starts.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r01_arena_principal_after_fight]
+{
+	[text*]
+	{
+		screen_text = "The bravest gladiators stand victorious. Collect your prizes, replenish your chalices, and prepare to bask in the purifying experience.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r01_arena_principal_b4_fight]
+{
+	[text*]
+	{
+		screen_text = "Step closer, step closer, honorable spectators. Prepare to indulge yourself in the most noble tradition of ancient empires, the gladiator fights. Our gladiators earn honor and glory through your admiration. Make your bets, purchase refreshments, and take a seat to join your fellow noble spectators.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r01_arena_principal_during_fight]
+{
+	[text*]
+	{
+		screen_text = "Behold, the courageous gladiators honoring the ancient tradition. Revel in their greatness!";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -109,24 +251,100 @@
 	  f scroll_rate = 10.000000;
 	}
 }
-[conversation_farmer]
+[ann_conv_01_pumpkin_farmer_b4_quest_first]
 {
 	[text*]
 	{
-		activate_quest* = quest_pumpkin_sniffers,0;
-		activate_quest* = quest_pumpkin_sniffers,1;
-	  b quest_dialog = true;
-		screen_text = "Listen here, hero! Sadly, pumpkin season is already over. The patch is empty, the glory is gone, but those Pumpkin Sniffers still haven’t lost interest! Luckily, I’ve got this strange ball that kind of looks like a pumpkin. Try using it to lure those weirdos away from here. It just might work… assuming they’re as dumb as they look!";
+		screen_text = "A new face, huh? Welcome to hell, friend. Before you ask - no, you are not allowed to take any pumpkins without permission. We are rationing, and you have not been here for long enough to apply for any.";
 	  f scroll_rate = 10.000000;
 	}
 }
-[conversation_innkeeper]
+[ann_conv_01_pumpkin_farmer_b4_quest_next]
 {
 	[text*]
 	{
-		activate_quest* = quest_main_story,0;
+		screen_text = "Do I need to repeat myself? No pumpkins for you!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_conv_01_pumpkin_farmer_asking_for_first_pumpkin]
+{
+	[text*]
+	{
+		activate_quest* = quest_pumpkin_sniffers,2;
 	  b quest_dialog = true;
+		screen_text = "Ah, you want to try your luck with the pumpkin sniffer monsters, huh? Well, I have no desire to stop you. Besides, if you succeed, the burnt house could be restored. Might as well move our children there someday.\n\nHelp yourself to the prize-winning pumpkin in my field.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_conv_01_pumpkin_farmer_after_asked_for_1st_pumpkin]
+{
+	[text*]
+	{
+		screen_text = "The field is across the path to my farm. Just find the fence gate. Last time a couple of juveniles tried jumping over the fence, the rotten pieces broke. Took a week to fix.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_conv_01_pumpkin_farmer_asking_for_second_pumpkin]
+{
+	[text*]
+	{
+		activate_quest* = quest_pumpkin_sniffers,7;
+	  b quest_dialog = true;
+		screen_text = "Ah, so you met the mimic? Ah, well, you see...I kind of needed someone to take care of it. Well, you are right, am sorry. You see, I have another prize-winning piece geowing. How about you take that one? No mimics this time, I swear.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_conv_01_pumpkin_farmer_after_quest_first]
+{
+	[text*]
+	{
+		screen_text = "Guess you will not be willing to let me take the pumpkin sniffer house, right? Ah, well, I blew it. It is not like it is a good idea to have children in this cursed prison of a village.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_conv_01_pumpkin_farmer_after_quest_next]
+{
+	[text*]
+	{
+		screen_text = "My wife is driving me all crazy. She keeps talking about how she hears metal gears and grinds...you hear all kinds of weird sounds in this goodamn village for no reason. Why would I pay attention to these in specific?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_conv_01_innkeep_b4_quest]
+{
+	[text*]
+	{
+		choice = shop;
+		activate_quest* = quest_main_story,1;
+	  b quest_dialog = true;
+		screen_text = "Hola hola!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_conv_01_innkeep_b4_gold_dropped]
+{
+	[text*]
+	{
+		choice = shop;
+		screen_text = "Hola hola!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_conv_01_innkeep_after_quest]
+{
+	[text*]
+	{
 		screen_text = "Look at this gray mist creeping from the catacombs! It is an absolute disaster... it doesn't drink, it doesn't tip, and it's scaring away all my paying customers! I can't run a tavern if the only thing at the bar is an evil fog. Please, find the entrance to the underground and punch the source of this evil right in the face! Oh, and if you need supplies before you go... just ask. I'll even give you regular prices!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[placeholder_child]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "Help me!";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -164,6 +382,17 @@
 	  f scroll_rate = 10.000000;
 	}
 }
+[shop_bowl_token]
+{
+	[text*]
+	{
+		choice = shop;
+		screen_text = "Welcome darling, welcome. Care to play a game with me? I show you which bowl hides the treasure, flip the bowls real quick and if you guess the one with treasure, you win! Simple enough.
+
+To play the game, drop the token on the ground, and sharpen your eyes.";
+	  f scroll_rate = 10.000000;
+	}
+}
 [shop_magic]
 {
 	[text*]
@@ -184,51 +413,20 @@ Gold first, magic after.";
 	  f scroll_rate = 10.000000;
 	}
 }
-[conv_r01_arena_bet_collector_team_1_collecting_bets]
+[shop_scrolls]
 {
 	[text*]
 	{
-		screen_text = "Test your luck, youth! Make a bet on team 1, the arena's champions. Just place your gold on the ground near me and we will handle the rest. You may withdraw your bets before the fight starts.";
+		choice = shop;
+		screen_text = "Welcome, friend! We offer the finest occult scrolls for your next necromantic session. Summon the skeletons that best match your needs today!";
 	  f scroll_rate = 10.000000;
 	}
 }
-[conv_r01_arena_bet_collector_team_2_collecting_bets]
+[ann_r01_conv_wizard_by_barkrunners]
 {
 	[text*]
 	{
-		screen_text = "Test your luck, youth! Make a bet on team 2, the best we have. Just place your gold on the ground near me and we will handle the rest. You may withdraw your bets before the fight starts.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_r01_arena_bet_collector_during_fight]
-{
-	[text*]
-	{
-		screen_text = "The fight has already begun. The bets are closed now. Wait until the next fight.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_r01_arena_principal_b4_fight]
-{
-	[text*]
-	{
-		screen_text = "Step closer, step closer, honorable spectators. Prepare to indulge yourself in the most noble tradition of ancient empires, the gladiator fights. Our gladiators earn honor and glory through your admiration. Make your bets, purchase refreshments, and take a seat to join your fellow noble spectators.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_r01_arena_principal_during_fight]
-{
-	[text*]
-	{
-		screen_text = "Behold, the courageous gladiators honoring the ancient tradition. Revel in their greatness!";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_r01_arena_principal_after_fight]
-{
-	[text*]
-	{
-		screen_text = "The bravest gladiators stand victorious. Collect your prizes, replenish your chalices, and prepare to bask in the purifying experience.";
+		screen_text = "Hello! Worry not, we contained the walking trees or whatever they are between the carts. You are welcome to use one of the carts, just make sure not to sleep too close to the window. The poor girl's grandmother got eaten recently.";
 	  f scroll_rate = 10.000000;
 	}
 }

@@ -15,3 +15,39 @@
 	[common] { screen_name = "Sit to Spectate the Fights"; }
  	[ann_lever_single_use_reusable] { }
 }
+[t:template,n:ann_invisible_lever]
+{
+	specializes 		= base_usable;
+	doc 				= "ann r01 invisible usable object";
+    category_name       = "levers";
+    aspect:material     = wood;
+
+    [aspect]
+	{
+		is_collidable				= true;
+        force_no_render = true;
+		force_no_render_click = true;
+	}
+	[common] { screen_name = "Peek Under This Bowl"; }
+ 	[ann_lever_multiple_use] { }
+}
+[t:template,n:ann_pumpkin_lever]
+{
+	specializes 		= base_usable;
+	doc 				= "ann_pumpkin_lever";
+    category_name       = "levers";
+
+    //This object needs to get animated.
+
+    [aspect]
+	{
+		is_collidable				= true;
+		model		= m_i_glb_frag-fury-eye;
+		[textures]
+		{
+			0 = b_i_glb_pumpkin;
+		}
+	}
+	[common] { screen_name = "Prize-Winning Pumpkin"; }
+ 	[on_off_lever] { }
+}

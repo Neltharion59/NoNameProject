@@ -1,0 +1,39 @@
+[t:emt_generic_act,n:0x001011d7]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "cold_resist";
+	  x target = 0x00100369;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,-0.707107;
+	  p position = 0.805523,0,1.62134,0x9e0c02c3;
+	}
+}
+[t:emt_generic_act,n:0x001011d8]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "cold_resist";
+	  x target = 0x00100A80;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,-0.707107;
+	  p position = 0.738373,0,1.10822,0x9e0c02c3;
+	}
+}
+[t:emt_generic_act,n:0x001011d9]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "cold_resist";
+	  x target = 0x00100A81;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,-0.707107;
+	  p position = 0.757469,0,0.607918,0x9e0c02c3;
+	}
+}

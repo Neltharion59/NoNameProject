@@ -478,4 +478,142 @@
 		}
 	}
 }
+[t:template,n:ann_r01_rector_pumpkin]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r01_rector_pumpkin";
+	specializes = base_rector;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	3, 0;
+			intelligence =  3, 0;
+			dexterity =  	3, 0;
+            combat_magic =  2,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 44;
+		life = 72;
+        max_life = 72;
+        mana = 14;
+        max_mana = 14;
+		scale_base = 0.60;
+		[textures]
+		{
+			0 = b_c_edm_rt_pumpkin;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 8;
+		damage_min = 3;
+	}
+	[common] { screen_name="Pumpkin Mimic"; }
+	[defend] { defense=10; }
+	[inventory]
+	{
+   		selected_active_location = il_active_secondary_spell;
+		[other]
+		{
+			il_active_primary_spell = ann_r01_spell_rector_burn;
+			il_active_secondary_spell = ann_r01_spell_rector_flame;
+		}
 
+    	[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 60;
+					min = 20;
+				}
+				[oneof*]
+				{
+	            	il_main = #weapon/-rare(1)/19-28;
+	                il_main = #armor/-rare(1)/18-66;
+                    il_main = #*/-rare(1)/19-28;
+                }
+			}
+		}
+	}
+	[mind]
+	{
+		jat_cast 						= world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true
+			&rand_target				= true;
+	}
+}
+[t:template,n:ann_r01_golem]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r01_golem";
+	specializes = base_golem;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		10, 0;
+			dexterity = 	7, 0;
+			intelligence = 	7, 0;
+
+            melee =         1, 0;
+            combat_magic =         1, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 30;
+		life = 20;
+		max_life = 20;
+		mana = 10;
+        max_mana = 10;
+		material = flesh;
+		scale_base = 1.35;
+		textures:0	= b_c_edm_rg_ann_flesh;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 6;
+		damage_min = 4;
+		reload_delay = 0;
+	}
+	[common] { screen_name="Flesh Golem"; }
+    [defend] { defense=30; }
+   	[inventory]
+	{
+		[other] { il_active_primary_spell=ann_r01_spell_golem_flesh; }
+	}
+	[mind]
+	{
+        actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= true;
+		actor_auto_switches_to_melee	= true;
+		actor_auto_heals_self_life = true;
+		
+		flee_count = 1000;
+		actor_life_ratio_low_threshold = 0.33;
+		on_life_ratio_low_flee = true;
+
+		jat_guard = world\ai\jobs\common\job_guard.skrit;
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+	[physics]
+	{
+		break_effect = blood_mist;
+		explode_when_killed = true;
+		break_sound = s_e_meat_explosion;
+		[break_particulate]
+		{
+		}
+	}
+}

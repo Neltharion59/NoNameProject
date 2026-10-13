@@ -146,3 +146,1090 @@
 		model		= m_i_glb_cap;
 	}
 }
+[t:template,n:ann_ambient_item_satanic_book_base]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item satanic book base";
+	specializes = ann_ambient_item_base;
+	[aspect]
+	{
+		model = m_i_twn_book-open-plate-02;
+		scale_base = 2.00;
+	}
+}
+[t:template,n:ann_ambient_item_satanic_book_00]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item satanic book 00";
+	specializes = ann_ambient_item_satanic_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_satanic_00;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_satanic_book_01]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item satanic book 01";
+	specializes = ann_ambient_item_satanic_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_satanic_01;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_satanic_book_02]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item satanic book 02";
+	specializes = ann_ambient_item_satanic_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_satanic_02;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_satanic_book_03]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item satanic book 03";
+	specializes = ann_ambient_item_satanic_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_satanic_03;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_satanic_book_04]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item satanic book 04";
+	specializes = ann_ambient_item_satanic_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_satanic_04;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_satanic_book_05]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item satanic book 05";
+	specializes = ann_ambient_item_satanic_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_satanic_05;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_satanic_book_06]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item satanic book 06";
+	specializes = ann_ambient_item_satanic_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_satanic_06;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_big_bowl]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item big bowl";
+	specializes = ann_ambient_item_base;
+	[aspect]
+	{
+		model = m_i_csl_bowl;
+		scale_base = 2.0;
+		[textures]
+		{
+			0 = b_i_glb_plate;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_treasure_under_bowl]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item treasure under bowl";
+	specializes = ann_ambient_item_base;
+	[aspect]
+	{
+		model = m_i_glb_crystal;
+	}
+}
+[t:template,n:ann_ambient_item_rat_running]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non_blocking rat running";
+	specializes = ann_ambient_item_base;
+	[aspect] { model= m_c_edm_gr_pos_1; }
+	[body]
+	{
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine;
+			body_posterior = bip01_tail;
+			kill_bone = bip01_spine;
+			shield_bone = bip01_spine;
+			weapon_bone = bip01_head;
+		}
+		initial_chore = chore_default;
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_gr_fs;
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = rl;
+				}
+			}
+		}
+	}
+}
+[t:template,n:ann_ambient_item_spider_base]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non_blocking spider base";
+	specializes = ann_ambient_item_base;
+	[aspect]
+	{
+		model= m_c_edm_as_pos_1;
+	}
+	[body]
+	{
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = bone01;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		initial_chore = chore_default;
+	}
+}
+[t:template,n:ann_ambient_item_spider_running]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non_blocking spider running";
+	specializes = ann_ambient_item_spider_base;
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_as_fs;
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = wl;
+				}
+			}
+		}
+	}
+}
+[t:template,n:ann_ambient_item_spider_fidgeting]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non_blocking spider fidgeting";
+	specializes = ann_ambient_item_spider_base;
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_as_fs;
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+		}
+	}
+}
+[t:template,n:ann_ambient_item_spider_defaulting]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non_blocking spider defaulting";
+	specializes = ann_ambient_item_spider_base;
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_as_fs;
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = ds;
+				}
+			}
+		}
+	}
+}
+[t:template,n:ann_ambient_item_spider_attacking]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non_blocking spider attacking";
+	specializes = ann_ambient_item_spider_base;
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_as_fs;
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = at;
+				}
+			}
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_base]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy base";
+	specializes = ann_ambient_item_base;
+	[aspect]
+	{
+		model= m_c_gah_fb_pos_a1;
+	}
+	[body]
+	{
+		armor_version = gah_fb;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		initial_chore = chore_default;
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_base]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting base";
+	specializes = ann_ambient_item_fb_base;
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_fb_fs;
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = dsf-09;
+				}
+			}
+		}
+	}
+}
+
+[t:template,n:ann_ambient_item_fb_sitting2_base]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting base";
+	specializes = ann_ambient_item_fb_base;
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_fb_fs;
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = dsf-10;
+				}
+			}
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_01]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 01";
+	specializes = ann_ambient_item_fb_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_01;
+			1 = b_c_pos_a1_023;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_02]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 02";
+	specializes = ann_ambient_item_fb_sitting2_base;
+	[aspect]
+	{
+		model= m_c_gah_fb_pos_a2;
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_02;
+			1 = b_c_pos_a2_024;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_03]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 03";
+	specializes = ann_ambient_item_fb_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_03;
+			1 = b_c_pos_a1_042;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_04]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 04";
+	specializes = ann_ambient_item_fb_sitting2_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_04;
+			1 = b_c_pos_a1_071;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_05]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 05";
+	specializes = ann_ambient_item_fb_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_05;
+			1 = b_c_pos_a1_031;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_06]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 06";
+	specializes = ann_ambient_item_fb_sitting2_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_06;
+			1 = b_c_pos_a1_001;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_07]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 07";
+	specializes = ann_ambient_item_fb_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_07;
+			1 = b_c_pos_a1_029;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_08]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 08";
+	specializes = ann_ambient_item_fb_sitting2_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_08;
+			1 = b_c_pos_a1_009;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_09]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 09";
+	specializes = ann_ambient_item_fb_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_09;
+			1 = b_c_pos_a1_017;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_10]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 10";
+	specializes = ann_ambient_item_fb_sitting2_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_10;
+			1 = b_c_pos_a1_023;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_11]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 11";
+	specializes = ann_ambient_item_fb_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_11;
+			1 = b_c_pos_a1_028;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_12]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 12";
+	specializes = ann_ambient_item_fb_sitting2_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_12;
+			1 = b_c_pos_a1_047;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_13]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 13";
+	specializes = ann_ambient_item_fb_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_13;
+			1 = b_c_pos_a1_051;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_14]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 14";
+	specializes = ann_ambient_item_fb_sitting2_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_14;
+			1 = b_c_pos_a1_060;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_15]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 15";
+	specializes = ann_ambient_item_fb_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_15;
+			1 = b_c_pos_a1_057;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_16]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 16";
+	specializes = ann_ambient_item_fb_sitting2_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_16;
+			1 = b_c_pos_a1_067;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_17]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 17";
+	specializes = ann_ambient_item_fb_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_17;
+			1 = b_c_pos_a1_068;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_18]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 18";
+	specializes = ann_ambient_item_fb_sitting2_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_18;
+			1 = b_c_pos_a1_064;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_19]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 19";
+	specializes = ann_ambient_item_fb_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_19;
+			1 = b_c_pos_a1_055;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_20]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 20";
+	specializes = ann_ambient_item_fb_sitting2_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_20;
+			1 = b_c_pos_a1_045;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_21]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 21";
+	specializes = ann_ambient_item_fb_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_21;
+			1 = b_c_pos_a1_047;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_22]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 22";
+	specializes = ann_ambient_item_fb_sitting2_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_22;
+			1 = b_c_pos_a1_048;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_23]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 23";
+	specializes = ann_ambient_item_fb_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_23;
+			1 = b_c_pos_a1_044;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_24]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 24";
+	specializes = ann_ambient_item_fb_sitting2_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_24;
+			1 = b_c_pos_a1_021;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_25]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 25";
+	specializes = ann_ambient_item_fb_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_025;
+			1 = b_c_pos_a1_027;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_26]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 26";
+	specializes = ann_ambient_item_fb_sitting2_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_26;
+			1 = b_c_pos_a1_025;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_27]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 27";
+	specializes = ann_ambient_item_fb_sitting2_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_31;
+			1 = b_c_pos_a1_037;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_28]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 28";
+	specializes = ann_ambient_item_fb_sitting2_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_28;
+			1 = b_c_pos_a1_046;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_29]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 29";
+	specializes = ann_ambient_item_fb_sitting2_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_29;
+			1 = b_c_pos_a1_013;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_sitting_30]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy sitting 30";
+	specializes = ann_ambient_item_fb_sitting2_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_30;
+			1 = b_c_pos_a1_020;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fg_base]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl base";
+	specializes = ann_ambient_item_base;
+	[aspect]
+	{
+		model= m_c_gah_fg_pos_a1;
+	}
+	[body]
+	{
+		armor_version = gah_fg;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		initial_chore = chore_default;
+	}
+}
+[t:template,n:ann_ambient_item_fg_sitting_base]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl sitting base";
+	specializes = ann_ambient_item_fg_base;
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_fg_fs;
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = dsf-08;
+				}
+			}
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fg_sitting_01]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl sitting 01";
+	specializes = ann_ambient_item_fg_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_01;
+			1 = b_c_pos_a1_037;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fg_sitting_02]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl sitting 02";
+	specializes = ann_ambient_item_fg_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_02;
+			1 = b_c_pos_a1_057;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fg_sitting_03]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl sitting 03";
+	specializes = ann_ambient_item_fg_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_03;
+			1 = b_c_pos_a1_046;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fg_sitting_04]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl sitting 04";
+	specializes = ann_ambient_item_fg_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_04;
+			1 = b_c_pos_a1_035;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fg_sitting_05]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl sitting 05";
+	specializes = ann_ambient_item_fg_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_05;
+			1 = b_c_pos_a1_013;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fg_sitting_06]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl sitting 06";
+	specializes = ann_ambient_item_fg_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_06;
+			1 = b_c_pos_a1_002;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fg_sitting_07]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl sitting 07";
+	specializes = ann_ambient_item_fg_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_07;
+			1 = b_c_pos_a1_052;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fg_sitting_08]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl sitting 08";
+	specializes = ann_ambient_item_fg_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_08;
+			1 = b_c_pos_a1_059;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fg_sitting_09]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl sitting 09";
+	specializes = ann_ambient_item_fg_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_09;
+			1 = b_c_pos_a1_012;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fg_sitting_10]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl sitting 10";
+	specializes = ann_ambient_item_fg_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_10;
+			1 = b_c_pos_a1_049;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fg_sitting_11]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl sitting 11";
+	specializes = ann_ambient_item_fg_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_11;
+			1 = b_c_pos_a1_008;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fg_sitting_12]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl sitting 12";
+	specializes = ann_ambient_item_fg_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_12;
+			1 = b_c_pos_a1_017;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fg_sitting_13]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl sitting 13";
+	specializes = ann_ambient_item_fg_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_13;
+			1 = b_c_pos_a1_027;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fg_sitting_14]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl sitting 14";
+	specializes = ann_ambient_item_fg_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_14;
+			1 = b_c_pos_a1_062;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fg_sitting_15]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl sitting 15";
+	specializes = ann_ambient_item_fg_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_15;
+			1 = b_c_pos_a1_019;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fg_sitting_16]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl sitting 16";
+	specializes = ann_ambient_item_fg_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_16;
+			1 = b_c_pos_a1_062;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fg_sitting_17]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl sitting 17";
+	specializes = ann_ambient_item_fg_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_17;
+			1 = b_c_pos_a1_040;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fg_sitting_18]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl sitting 18";
+	specializes = ann_ambient_item_fg_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_18;
+			1 = b_c_pos_a1_034;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fg_sitting_19]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl sitting 19";
+	specializes = ann_ambient_item_fg_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_19;
+			1 = b_c_pos_a1_002;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fg_sitting_20]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmgirl sitting 20";
+	specializes = ann_ambient_item_fg_sitting_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_20;
+			1 = b_c_pos_a1_003;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+[t:template,n:ann_spellbook_chanelling_base]
+{
+	doc = "ann_spellbook_chanelling_base";
+	specializes = base_book_spell;
+	[aspect]
+	{
+		gold_value = 140;
+	}
+	[common]
+	{
+        is_pcontent_allowed = false;
+	}
+}

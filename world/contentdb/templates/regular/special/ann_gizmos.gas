@@ -24,3 +24,16 @@
 	}
 	[ann_arena_manager] { }
 }
+[t:template,n:ann_r01_bowl_flipping_game_manager]
+{
+	specializes		= trigger;
+
+	doc				= "ann r01 flipping game manager";
+	category_name	= "special";
+	[common]
+	{
+		auto_expiration_class = never;
+		forced_expiration_class = never;
+	}
+	[ann_bowl_flipping_game] { }
+}

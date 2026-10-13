@@ -1,0 +1,66 @@
+
+[t:template,n:frag_glb_ice_red_crystal_01]
+{
+	doc = "ann red crystal fragment";
+	specializes = fragment;
+	[aspect]
+    {
+        model=m_i_glb_frag-ice-01;
+		[textures]
+		{
+			0 = b_c_edm_ann_frostnid;
+		}
+    }
+}
+[t:template,n:frag_glb_ice_red_crystal_02]
+{
+	doc = "ann red crystal fragment";
+	specializes = fragment;
+	[aspect]
+    {
+        model=m_i_glb_frag-ice-02;
+		[textures]
+		{
+			0 = b_c_edm_ann_frostnid;
+		}
+    }
+}
+[t:template,n:frag_glb_ice_red_crystal_03]
+{
+	doc = "ann red crystal fragment";
+	specializes = fragment;
+	[aspect]
+    {
+        model=m_i_glb_frag-ice-03;
+		[textures]
+		{
+			0 = b_c_edm_ann_frostnid;
+		}
+    }
+}
+[t:template,n:frag_glb_ice_red_crystal_04]
+{
+	doc = "ann red crystal fragment";
+	specializes = fragment;
+	[aspect]
+    {
+        model=m_i_glb_frag-ice-04;
+		[textures]
+		{
+			0 = b_c_edm_ann_frostnid;
+		}
+    }
+}
+[t:template,n:frag_glb_ice_red_crystal_05]
+{
+	doc = "ann red crystal fragment";
+	specializes = fragment;
+	[aspect]
+    {
+        model=m_i_glb_frag-ice-05;
+		[textures]
+		{
+			0 = b_c_edm_ann_frostnid;
+		}
+    }
+}

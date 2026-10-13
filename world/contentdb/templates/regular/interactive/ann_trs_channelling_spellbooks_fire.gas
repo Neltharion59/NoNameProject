@@ -1,0 +1,441 @@
+[t:template,n:ann_spellbook_chanelling_fire_base]
+{
+	doc = "ann_spellbook_chanelling_fire_base";
+	specializes = ann_spellbook_chanelling_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_glb_book-magic-04;
+		}
+	}
+    [common]
+    {
+        screen_name = "Channelling Spellbook of Fire";
+    }
+	[gui]
+	{
+
+		inventory_icon = b_gui_ig_i_it_magic-book-04;
+	}
+}
+[t:template,n:ann_spellbook_chanelling_fire_stronger_01]
+{
+	doc = "ann_spellbook_chanelling_fire_stronger_01";
+	specializes = ann_spellbook_chanelling_fire_base;
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_spell_damage;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = 25;
+			    description = "Increases the damage of Fire spells in this spellbook by 25% at the proportional cost of mana";
+				duration = #infinite;
+				innate_enchantment = true;
+				is_permanent = true;
+				is_single_instance = false;
+			}
+            [*]
+            {
+                alteration = alter_spell_cost;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = -25;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+        }
+	}
+}
+[t:template,n:ann_spellbook_chanelling_fire_stronger_02]
+{
+	doc = "ann_spellbook_chanelling_fire_stronger_02";
+	specializes = ann_spellbook_chanelling_fire_base;
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_spell_damage;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = 50;
+			    description = "Increases the damage of Fire spells in this spellbook by 50% at the proportional cost of mana";
+				duration = #infinite;
+				innate_enchantment = true;
+				is_permanent = true;
+				is_single_instance = false;
+			}
+            [*]
+            {
+                alteration = alter_spell_cost;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = -50;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+        }
+	}
+}
+[t:template,n:ann_spellbook_chanelling_fire_stronger_03]
+{
+	doc = "ann_spellbook_chanelling_fire_stronger_03";
+	specializes = ann_spellbook_chanelling_fire_base;
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_spell_damage;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = 75;
+			    description = "Increases the damage of Fire spells in this spellbook by 75% at the proportional cost of mana";
+				duration = #infinite;
+				innate_enchantment = true;
+				is_permanent = true;
+				is_single_instance = false;
+			}
+            [*]
+            {
+                alteration = alter_spell_cost;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = -75;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+        }
+	}
+}
+[t:template,n:ann_spellbook_chanelling_fire_stronger_04]
+{
+	doc = "ann_spellbook_chanelling_fire_stronger_04";
+	specializes = ann_spellbook_chanelling_fire_base;
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_spell_damage;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = 100;
+			    description = "Increases the damage of Fire spells in this spellbook by 100% at the proportional cost of mana";
+				duration = #infinite;
+				innate_enchantment = true;
+				is_permanent = true;
+				is_single_instance = false;
+			}
+            [*]
+            {
+                alteration = alter_spell_cost;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = -100;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+        }
+	}
+}
+[t:template,n:ann_spellbook_chanelling_fire_stronger_05]
+{
+	doc = "ann_spellbook_chanelling_fire_stronger_05";
+	specializes = ann_spellbook_chanelling_fire_base;
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_spell_damage;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = 125;
+			    description = "Increases the damage of Fire spells in this spellbook by 125% at the proportional cost of mana";
+				duration = #infinite;
+				innate_enchantment = true;
+				is_permanent = true;
+				is_single_instance = false;
+			}
+            [*]
+            {
+                alteration = alter_spell_cost;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = -125;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+        }
+	}
+}
+[t:template,n:ann_spellbook_chanelling_fire_stronger_06]
+{
+	doc = "ann_spellbook_chanelling_fire_stronger_06";
+	specializes = ann_spellbook_chanelling_fire_base;
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_spell_damage;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = 150;
+			    description = "Increases the damage of Fire spells in this spellbook by 150% at the proportional cost of mana";
+				duration = #infinite;
+				innate_enchantment = true;
+				is_permanent = true;
+				is_single_instance = false;
+			}
+            [*]
+            {
+                alteration = alter_spell_cost;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = -150;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+        }
+	}
+}
+[t:template,n:ann_spellbook_chanelling_fire_cheaper_01]
+{
+	doc = "ann_spellbook_chanelling_fire_cheaper_01";
+	specializes = ann_spellbook_chanelling_fire_base;
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_spell_damage;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = -15;
+			    description = "Decreases the damage of Fire spells in this spellbook by 15% with proportionally reduced damage";
+				duration = #infinite;
+				innate_enchantment = true;
+				is_permanent = true;
+				is_single_instance = false;
+			}
+            [*]
+            {
+                alteration = alter_spell_cost;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = 15;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+        }
+	}
+}
+[t:template,n:ann_spellbook_chanelling_fire_cheaper_02]
+{
+	doc = "ann_spellbook_chanelling_fire_cheaper_02";
+	specializes = ann_spellbook_chanelling_fire_base;
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_spell_damage;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = -30;
+			    description = "Decreases the damage of Fire spells in this spellbook by 30% with proportionally reduced damage";
+				duration = #infinite;
+				innate_enchantment = true;
+				is_permanent = true;
+				is_single_instance = false;
+			}
+            [*]
+            {
+                alteration = alter_spell_cost;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = 30;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+        }
+	}
+}
+[t:template,n:ann_spellbook_chanelling_fire_cheaper_03]
+{
+	doc = "ann_spellbook_chanelling_fire_cheaper_03";
+	specializes = ann_spellbook_chanelling_fire_base;
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_spell_damage;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = -45;
+			    description = "Decreases the damage of Fire spells in this spellbook by 45% with proportionally reduced damage";
+				duration = #infinite;
+				innate_enchantment = true;
+				is_permanent = true;
+				is_single_instance = false;
+			}
+            [*]
+            {
+                alteration = alter_spell_cost;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = 45;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+        }
+	}
+}
+[t:template,n:ann_spellbook_chanelling_fire_cheaper_04]
+{
+	doc = "ann_spellbook_chanelling_fire_cheaper_04";
+	specializes = ann_spellbook_chanelling_fire_base;
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_spell_damage;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = -60;
+			    description = "Decreases the damage of Fire spells in this spellbook by 60% with proportionally reduced damage";
+				duration = #infinite;
+				innate_enchantment = true;
+				is_permanent = true;
+				is_single_instance = false;
+			}
+            [*]
+            {
+                alteration = alter_spell_cost;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = 60;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+        }
+	}
+}
+[t:template,n:ann_spellbook_chanelling_fire_cheaper_05]
+{
+	doc = "ann_spellbook_chanelling_fire_cheaper_05";
+	specializes = ann_spellbook_chanelling_fire_base;
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_spell_damage;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = -75;
+			    description = "Decreases the damage of Fire spells in this spellbook by 75% with proportionally reduced damage";
+				duration = #infinite;
+				innate_enchantment = true;
+				is_permanent = true;
+				is_single_instance = false;
+			}
+            [*]
+            {
+                alteration = alter_spell_cost;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = 75;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+        }
+	}
+}
+[t:template,n:ann_spellbook_chanelling_fire_cheaper_06]
+{
+	doc = "ann_spellbook_chanelling_fire_cheaper_06";
+	specializes = ann_spellbook_chanelling_fire_base;
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_spell_damage;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = -90;
+			    description = "Decreases the damage of Fire spells in this spellbook by 90% with proportionally reduced damage";
+				duration = #infinite;
+				innate_enchantment = true;
+				is_permanent = true;
+				is_single_instance = false;
+			}
+            [*]
+            {
+                alteration = alter_spell_cost;
+			    imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = 90;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+            }
+        }
+	}
+}

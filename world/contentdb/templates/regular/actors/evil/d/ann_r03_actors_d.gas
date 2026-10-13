@@ -95,6 +95,7 @@
 			as_staff	= 1.8, 1.8, 1.8;
 		}
 	}
+	// TODO - give him effects and looks worthy of being a "SOUL" sweeper - cape-like apearance, dead witch spawn, spirit orbiters/frags?
 	[common] { screen_name="Soul Sweeper"; }
 	[defend] { defense=44; }
    	[inventory]

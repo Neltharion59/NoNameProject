@@ -1,0 +1,78 @@
+property string texture_prefix$ = "";
+property int max_suffix$ = 0;
+property float switch_delay$ = 0.0;
+property bool inifinite_loop$ = false;
+property string effect_script$ = "";
+
+owner = GoSkritComponent;
+
+int current_suffix$ = 0;
+GoAspect aspect$;
+
+startup state Begin$
+{
+    event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
+    {
+        if( e$ == WE_ENTERED_WORLD )
+        {
+            SetState Switching$;
+        }
+    }
+}
+
+state Switching$
+{
+    event OnEnterState$
+	{
+        Goid goid$ = owner.Goid;
+        if ( goid$.IsValid && goid$.Go.HasAspect )
+        {
+            aspect$ = goid$.Go.Aspect;
+        }
+        else
+        {
+            Report.WarningF( "Bad content! Command Scid 0x%08x has invalid target\n", owner.Scid );
+            SetState Finished$;
+        }
+
+        string new_texture$ = texture_prefix$;
+        StringTool.AppendF( new_texture$, "%d", current_suffix$);		
+        aspect$.SSetCurrentAspectTexture( 0, new_texture$ );
+        
+        if( effect_script$ != "" )
+        {
+            SiegeFx.SRunMpScript( effect_script$, owner.Goid, owner.Goid, "", owner.Goid, WE_REQ_ACTIVATE );
+        }
+
+        current_suffix$ = current_suffix$ + 1;
+
+        if (inifinite_loop$)
+        {
+            current_suffix$ = current_suffix$ % (max_suffix$ + 1);
+        }
+
+        if (current_suffix$ > max_suffix$)
+        {
+            SetState Finished$;
+        }
+        else
+        {
+            SetState Waiting$;
+        }
+    }
+}
+
+state Waiting$
+{
+    event OnEnterState$
+	{
+		this.CreateTimer( 1, switch_delay$ );
+    }
+
+    trigger OnTimer$(1)
+	{
+        SetState Switching$;
+    }
+}
+
+state Finished$ {}

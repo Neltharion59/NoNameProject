@@ -68,7 +68,9 @@
 	0x00100a0f = t_xxx_wal_08-thck;
 	0x00100a10 = t_xxx_wal_08-thin;
 	0x00100c1b = t_grs01_fence_generic_wood-04x04-a;
+	0x00100c1c = t_grs01_fence_generic_wood-04x04-b;
 	0x00100c1e = t_grs01_fence_generic_wood-04x04-d-l;
+	0x00100c20 = t_grs01_fence_generic_wood-04x04-entry-a;
 	0x00100c21 = t_grs01_fence_generic_wood-04x08-a;
 	0x00100c23 = t_grs01_fence_generic_wood-cnvx-a;
 	0x00100c26 = t_grs01_houses_cellar-roof;

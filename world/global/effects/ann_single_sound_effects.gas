@@ -1,0 +1,16 @@
+[effect_script*]
+{
+	name	=ann_ambient_item_satanic_book_00;
+
+	script	=[[
+			    sound play s_e_ds2_ui_inv_drop_flip at #SOURCE_POSITION dist 3 30;
+			]];
+}
+[effect_script*]
+{
+	name	=ann_effect_single_sound_paper_page_flip;
+
+	script	=[[
+			    call ann_effect_single_sound_base s<s_e_ds2_ui_inv_drop_flip>;
+			]];
+}

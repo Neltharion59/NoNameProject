@@ -2,7 +2,7 @@
 {
 	category_name = "1W_evil_d";
 	doc = "ann_r02_rat";
-	specializes = actor_evil;
+	specializes = ann_base_rat;
 	[actor]
 	{
 		[skills]
@@ -19,141 +19,19 @@
 		life = 5;
 		max_life = 5;
 		mana = 4;
-		material = teeth;
         max_mana = 4;
-		model = m_c_edm_gr_pos_1;
         scale_base = 0.50;
-		[voice]
-		{
-			[die]
-			{
-				* = s_e_die_rat;
-			}
-			[hit_critical]
-			{
-				* = s_e_hit_rat_SED;
-			}
-			[hit_glance]
-			{
-				* = s_e_hit_rat_SED;
-			}
-			[hit_solid]
-			{
-				* = s_e_hit_rat_SED;
-			}
-		}
 	}
 	[attack]
 	{
-		attack_range = 0.5;
 		damage_max = 6;
 		damage_min = 4;
 	}
-	[body]
-	{
-		avg_move_velocity = 3.000000;
-		max_move_velocity = 5;
-		[bone_translator]
-		{
-			body_anterior = bip01_head;
-			body_mid = bip01_spine;
-			body_posterior = bip01_tail;
-			kill_bone = bip01_spine;
-			shield_bone = bip01_spine;
-			weapon_bone = bip01_head;
-		}
-		[chore_dictionary]
-		{
-			chore_prefix = a_c_edm_gr_fs;
-			[chore_attack]
-			{
-				chore_stances = 0;
-				skrit = select_attack;
-				[anim_files] { 00=at; }
-			}
-			[chore_default]
-			{
-				chore_stances = 0;
-				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
-			}
-			[chore_die]
-			{
-				chore_stances = 0;
-				skrit = select_transition;
-				[anim_files] { 00=di; }
-			}
-			[chore_fidget]
-			{
-				chore_stances = 0;
-				skrit = select_fidget;
-				[anim_files] { 00=dff; }
-			}
-			[chore_walk]
-			{
-				chore_stances = 0;
-				skrit = select_walk;
-				[anim_files] { 00=rl; }
-			}
-		}
-	}
 	[common]
-	{	screen_name="Candy Snatcher";
-		membership = rat, monster;
+	{	screen_name="Rat";
 	}
 	[defend] { defense=10; }
-   	
-	[mind]
-	{
-		jat_brain						 = world\ai\jobs\common\brain_hero.skrit
-			?actor_joins_existing_party		= true;
-
-		jat_attack_object_melee 			= world\ai\jobs\common\job_attack_object_melee.skrit
-			?run_chance 					= 1.0;
-
-		jat_fidget = world\ai\jobs\common\job_fidget.skrit
-			?social				= 0.8
-			&social_limit		= 2
-			&move_distance		= 3.00
-			&delay_min			= 7.0
-			&delay_max			= 17.0
-			&approach_dist		= 1.75
-			&friends			= "rat"
-			&still				= false;
-
-		melee_engage_range = 14.0;
-		personal_space_range = 0.7;
-		ranged_engage_range = 14.0;
-		sight_range = 14.0;
-		sight_origin_height = 1.5;
-	}
-	[physics]
-	{
-		break_effect = blood_mist;
-		break_sound = s_e_meat_explosion;
-		[break_particulate]
-		{
-			frag_glb_generic_01 = 1;
-			frag_glb_generic_02 = 1;
-			frag_glb_generic_03 = 1;
-			frag_glb_generic_04 = 1;
-			frag_glb_generic_05 = 1;
-			frag_glb_generic_06 = 1;
-			frag_glb_generic_07 = 1;
-			frag_glb_generic_08 = 1;
-		}
-	}
 	[water_effects] {}
-	[inventory]
-	{
-		[pcontent]
-		{
-			[all*]
-			{
-				il_main = ann_item_candy;
-			}
-		}
-	}
 }
 [t:template,n:ann_r02_snapper]
 {
@@ -232,28 +110,13 @@
 			&still		= false;
 	}
 }
-[t:template,n:ann_r02_spider]
+[t:template,n:ann_r02_spider_base]
 {
 	category_name = "1W_evil_d";
-	doc = "ann_r02_spider";
+	doc = "ann_r02_spider_base";
 	specializes = spider_frostnid_base;
-	[actor]
-	{
-		[skills]
-		{
-			strength =  1, 0;
-			intelligence =  1, 0;
-			dexterity =  3, 0;
-            combat_magic =  3,  0;
-		}
-	}
 	[aspect]
 	{
-		experience_value = 35;
-		life = 24;
-        max_life = 24;
-        mana = 8;
-		max_mana = 8;
 		material = ice;
 		[voice]
 		{
@@ -272,13 +135,6 @@
 		damage_max = 16;
 		damage_min = 8;
 	}
-	[inventory]
-	{
-		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=ann_r02_spell_frostnid; }
-	}
-	[common] { screen_name="Crystal Spitter"; }
-    [defend] { defense=13; }
 	[mind]
 	{
 		actor_weapon_preference			= WP_MAGIC;
@@ -286,6 +142,144 @@
 		actor_auto_switches_to_karate	= false;
 		actor_auto_switches_to_melee	= false;
 	}
+}
+[t:template,n:ann_r02_spider]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r02_spider";
+	specializes = ann_r02_spider_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  1, 0;
+			intelligence =  1, 0;
+			dexterity =  3, 0;
+            combat_magic =  3,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 35;
+		life = 24;
+        max_life = 24;
+        mana = 8;
+		max_mana = 8;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=ann_r02_spell_frostnid; }
+	}
+	[common]
+	{
+		screen_name="Crystal Spitter";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits=true;
+				action* = call_sfx_script("unique_light_red(sgx)");
+			}
+		}
+	}
+    [defend] { defense=13; }
+}
+[t:template,n:ann_r02_spider_boss_01]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r02_spider_boss_01";
+	specializes = ann_r02_spider_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  1, 0;
+			dexterity =  5, 0;
+			intelligence =  5, 0;
+
+            combat_magic =  4,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 90;
+		life = 51;
+        max_life = 51;
+        mana = 20;
+		max_mana = 20;
+		scale_base = 1.75;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=ann_r02_spell_frostnid_blast; }
+	}
+	[common]
+	{
+		screen_name="Crystal Shatterer";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits=true;
+				action* = call_sfx_script("unique_ray_red(sgx)");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			}
+		}
+	}
+    [defend] { defense=40; }
+}
+[t:template,n:ann_r02_spider_boss_02]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r02_spider_boss_02";
+	specializes = ann_r02_spider_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  1, 0;
+			dexterity =  5, 0;
+			intelligence =  5, 0;
+
+            combat_magic =  4,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 90;
+		life = 51;
+        max_life = 51;
+        mana = 20;
+		max_mana = 20;
+		scale_base = 1.75;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=ann_r02_spell_frostnid_stream; }
+	}
+	[common]
+	{
+		screen_name="Crystal Streamer";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits=true;
+				action* = call_sfx_script("unique_ray_red(sgx)");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			}
+		}
+	}
+    [defend] { defense=40; }
 }
 [t:template,n:ann_r02_bortusk_base]
 {
@@ -495,4 +489,257 @@
 		{
 		}
 	}
+}
+
+//////////////////////////////////////////
+//////////// PART 2 //////////////////////
+
+[t:template,n:ann_r02_rat_2]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r02_rat_2";
+	specializes = ann_base_rat;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  2, 0;
+			intelligence =  2, 0;
+			dexterity =  3, 0;
+			melee =  4,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 20;
+		life = 27;
+		max_life = 27;
+		mana = 9;
+        max_mana = 9;
+        scale_base = 0.75;
+		textures:0 = b_c_edm_gr-02;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 11;
+		damage_min = 8;
+	}
+	[body]
+	{
+		avg_move_velocity = 4.000000;
+		max_move_velocity = 5;
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_gr_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=at; }
+		 	  	[anim_durations] { fs0 = 0.66; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=rl; }
+			}
+		}
+	}
+	[common]
+	{
+		screen_name="Ravenous Rat";
+	}
+	[defend] { defense=30; }
+}
+[t:template,n:ann_r02_rat_2_boss_01]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r02_rat_2_boss_01";
+	specializes = ann_base_rat;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  5, 0;
+			intelligence =  5, 0;
+			dexterity =  6, 0;
+			melee =  4,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 200;
+		life = 71;
+		max_life = 71;
+		mana = 22;
+        max_mana = 22;
+        scale_base = 1.33;
+		textures:0 = b_c_edm_gr-02;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 16;
+		damage_min = 13;
+	}
+	[body]
+	{
+		avg_move_velocity = 5.15;
+		max_move_velocity = 5.15;
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_gr_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=at; }
+		 	  	[anim_durations] { fs0 = 0.33; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=rl; }
+			}
+		}
+	}
+	[common]
+	{
+		screen_name="Maddened Rat King";
+		membership = rat,monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_red(sgx)");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			}
+		}
+	}
+	[defend] { defense=30; }
+}
+[t:template,n:ann_r02_snapper_2]
+{
+	doc = "ann_r02_snapper_2";
+	specializes = base_mangler;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 	16, 0;
+			intelligence = 	8, 0;
+			dexterity = 	8, 0;
+			melee =  		4,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 35;
+		life = 38;
+		max_life = 38;
+		mana = 10;
+		max_mana = 10;
+		scale_base = 1.42;
+		[textures]	{0=b_c_edm_mn-02;}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 19;
+		damage_min = 15;
+	}
+	[common] { screen_name="Chewey Lizz"; }
+	[defend] { defense=35; }
+	[mind] 
+	{ 
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit;
+        personal_space_range = 0.2;
+	}
+}
+[t:template,n:ann_r02_spider_2]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r02_spider_2";
+	specializes = ann_r02_spider_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  1, 0;
+			intelligence =  3, 0;
+			dexterity =  1, 0;
+            combat_magic =  5,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 70;
+		life = 93;
+        max_life = 93;
+        mana = 100;
+		max_mana = 100;
+		scale_base = 1.15;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=ann_r02_spell_frostnid; }
+	}
+	[common]
+	{
+		screen_name="Crystal Vomitter";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits=true;
+				action* = call_sfx_script("unique_light_red(sgx)");
+			}
+		}
+	}
+    [defend] { defense=30; }
 }

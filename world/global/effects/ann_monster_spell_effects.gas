@@ -1,5 +1,106 @@
 [effect_script*]
 {
+	name	=dsx_golem_red_crystal_blast_base;
+
+	script	=[[
+
+			sfx create spawn #SOURCE
+				"must_update()model(frag_glb_ice_red_crystal_01)lvel(0,0,15)lvel_var(0,4,0)
+				spawn_int(0.15)count(5)";
+			sfx attach_point #PEEK [0] target;
+			sfx friendly party #PEEK;
+			sfx start #POP;
+
+			sfx create spawn #SOURCE
+				"must_update()model(frag_glb_ice_red_crystal_05)lvel(0,0,15)lvel_var(0,4,0)
+				spawn_int(0.15)count(5)";
+			sfx attach_point #PEEK [0] target;
+			sfx friendly party #PEEK;
+			sfx start #POP;
+            
+			sfx create spawn #SOURCE
+				"must_update()model(frag_glb_ice_red_crystal_02)lvel(0,0,15)lvel_var(0,4,0)
+				spawn_int(0.15)count(5)";	
+			sfx attach_point #PEEK [0] target;
+			sfx friendly party #PEEK;
+			sfx start #POP;
+		]];
+}
+
+[effect_script*]
+{
+	name	=dsx_golem_red_crystal_blast_effect;
+
+	script	=[[
+			sound play s_e_attack_frost_golem_SED at #TARGET_POSITION dist 3 25;
+
+			sfx create fireb #SOURCE
+				"must_update()dur(.5)offset(0,0,0)color0(.1,.1,.1)dark()velocity(0,3,150)scale(.1)
+				accel(0,-30,-10)cvel(1)ts(.6)light_freq(0)alphafade(1)
+				lower_r0(0)lower_r1(1.5)upper_r0(3)upper_r1(20)count(25)
+				flamesize(1)";
+			sfx friendly party #PEEK;
+			sfx start #POP;
+			
+			call dsx_golem_red_crystal_blast_base s<Bip01_L_Hand>;
+			call dsx_golem_red_crystal_blast_base s<Bip01_R_Hand>; 
+
+			pause 3;
+
+			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+
+		]];
+}
+[effect_script*]
+{
+	name	=ann_red_shard_trace;
+
+	script	=[[
+			pause .05;
+			
+			sfx create linetracer #TARGET
+				"fade_rate(4)dur(#DEFAULT_TIMEOUT)color0(0.7,0.2,0.15)
+				color1(.8,0,0)";
+			sfx target #PEEK target;
+			sfx attach_point #PEEK ap_tip target;
+			sfx attach_point #PEEK ap_tip source;
+			sfx offset_bone #PEEK v<0 .05 -0.3> target;
+			sfx offset_bone #PEEK v<0 -.05 -0.3> source;
+			set $tracer #POP;
+
+			sfx start $tracer;
+			
+			waitfor sig we_collided #DEFAULT_TIMEOUT;
+			if ( #POP )
+			{
+				sound play s_e_FBbow_hit at #TARGET_POSITION dist 1 30;
+			}
+			sfx finish $tracer;
+			
+			
+			]];
+}
+[effect_script*] // - ET
+{
+	name	=ann_red_crystal_iceshard_charge;
+
+	script	=[[
+			sfx create fire #SOURCE 
+				"alphafade(.4)flamesize(.6)ts(.8)velocity(0,3,0)accel(0,-4,0)
+				dur(.5)scale(1)color0(0.6,0.3,0.3)color1(0,0,0)max_radius(2)";
+			sfx attach_point #PEEK @weapon_bone target;
+			sfx start #POP;
+			
+			sfx create fire #SOURCE 
+				"texture(b_sfx_sparkle01)alphafade(.4)flamesize(.25)
+				ts(.8)velocity(0,3,0)accel(0,-4,0)dur(.5)scale(1)color0(1,0.5,0,5)
+				color1(0,0,0)max_radius(2)";
+			sfx attach_point #PEEK @weapon_bone target;
+			sfx start #POP;
+			]];
+}
+[effect_script*]
+{
 	name	=ann_effect_bortusk_acid;
 
 	script	=[[
