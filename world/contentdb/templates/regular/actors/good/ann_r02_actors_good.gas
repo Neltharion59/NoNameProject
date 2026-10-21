@@ -1,0 +1,232 @@
+[t:template,n:ann_r02_shop_general]
+{
+	category_name = "1W_shopkeep";
+	doc = "ann_r02_shop_general";
+	specializes = base_npc_bk;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_shopkeep;
+	}
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		use_range = 1.0;
+		is_ghost_usable = TRUE;
+		[textures]
+		{
+			0 = b_c_gbn_bk-04;
+		}
+	}
+	[common]
+	{
+		screen_name = "Yannis";
+	}
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+		[store_pcontent]
+		{
+			full_ratio = 0;
+			[armor]
+			{
+				[all*]
+				{
+					il_main = #body,ro/16-73;
+					max = 4;
+					min = 4;
+				}
+
+				[all*]
+				{
+					il_main = #body/16-22;
+					max = 7;
+					min = 7;
+				}
+				[all*]
+				{
+					il_main = #body/23-54;
+					max = 16;
+					min = 16;
+				}
+				[all*]
+				{
+					il_main = #body/55-73;
+					max = 3;
+					min = 3;
+				}
+
+
+				[all*]
+				{
+					il_main = #gloves/2-22;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #gloves/23-54;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #gloves/55-73;
+					max = 4;
+					min = 4;
+				}
+
+
+				[all*]
+				{
+					il_main = #helm/2-22;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #helm/23-54;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #helm/55-73;
+					max = 4;
+					min = 4;
+				}
+
+				[all*]
+				{
+					il_main = #boots/2-22;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #boots/23-54;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #boots/55-73;
+					max = 4;
+					min = 4;
+				}
+			}
+			[shields]
+			{
+				[all*]
+				{
+					il_main = #shield/2-22;
+					max = 5;
+					min = 5;
+				}
+				[all*]
+				{
+					il_main = #shield/23-54;
+					max = 6;
+					min = 6;
+				}
+				[all*]
+				{
+					il_main = #shield/55-73;
+					max = 4;
+					min = 4;
+				}
+			}
+
+			[weapons]
+			{
+				[all*]
+				{
+					il_main = #melee/10-11;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #melee/12-27;
+					max = 18;
+					min = 18;
+				}
+				[all*]
+				{
+					il_main = #melee/28-35;
+					max = 6;
+					min = 6;
+				}
+				[all*]
+				{
+					il_main = #ranged/10-11;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #ranged/12-27;
+					max = 18;
+					min = 18;
+				}
+				[all*]
+				{
+					il_main = #ranged/28-35;
+					max = 6;
+					min = 6;
+				}
+			}
+
+			[magic]
+			{
+				[all*]
+				{
+					il_main = #spell/3-12;
+					max = 25;
+					min = 25;
+				}
+				[all*]
+				{
+					il_main = #spell/0-2;
+					max = 5;
+					min = 5;
+				}
+			}
+			[misc]
+			{
+				[all*]
+				{
+					il_main = book_glb_magic_01;
+					max = 3;
+					min = 3;
+				}
+			}
+		}
+	}
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+
+		[item_restock]
+		{
+			potion_health_medium = 3;
+			potion_mana_medium = 3;
+
+			potion_health_small = 12;
+			potion_mana_small = 12;
+			potion_rejuvenation_small = 4;
+
+			scroll_resurrect = 2;
+            spell_resurrect = 2;
+            spell_revive = 2;
+            spell_healing_hands = 2;
+
+            spell_zap = 2;
+            spell_fireshot = 2;
+		}
+	}
+}

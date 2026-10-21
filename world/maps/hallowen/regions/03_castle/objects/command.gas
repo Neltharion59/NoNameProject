@@ -1,0 +1,246 @@
+[t:cmd_ai_t_patrol,n:0x00300156]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x00300041;
+	}
+	[placement]
+	{
+	  p position = -2.71634,0,-1.91549,0xa0d711ee;
+	}
+}
+[t:cmd_ai_t_patrol,n:0x00300157]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x00300040;
+	}
+	[placement]
+	{
+	  p position = -1.27494,0,-1.80317,0xa0d711ee;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x003002a1]
+{
+	[gizmo]
+	{
+	  v diffuse_color = 0.5,0,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 2.7598,0,-0.907341,0xa0d711ee;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x003002a2]
+{
+	[gizmo]
+	{
+	  v diffuse_color = 0.5,0,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 2.83096,0,1.08178,0xa0d711ee;
+	}
+}
+[t:cmd_ai_t_patrol,n:0x00300159]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x00300042;
+	}
+	[placement]
+	{
+	  p position = -0.970322,0,-1.91596,0x7c240dcf;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x003002a0]
+{
+	[gizmo]
+	{
+	  v diffuse_color = 0.5,0,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.681122,0,0.679786,0x2bea1a14;
+	}
+}
+[t:cmd_ai_t_patrol,n:0x00300158]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x00300043;
+	}
+	[placement]
+	{
+	  p position = 0.441231,0,-0.998737,0x7ee5edb1;
+	}
+}
+[t:cmd_selection_toggle,n:0x0030013b]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x00300057;
+	  i start_state = 1;
+	  b toggle_usability = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.79997,-2,1.28355,0xf6086d24;
+	}
+}
+[t:cmd_selection_toggle,n:0x0030013c]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x0030005C;
+	  i start_state = 1;
+	  b toggle_usability = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 1.54659,-2,1.37376,0xf6086d24;
+	}
+}
+[t:cmd_selection_toggle,n:0x0030013d]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x003000C0;
+	  i start_state = 1;
+	  b toggle_usability = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.4483,-2,1.28563,0xec037ed1;
+	}
+}
+[t:cmd_selection_toggle,n:0x0030013e]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x003000C1;
+	  i start_state = 1;
+	  b toggle_usability = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 1.89825,-2,1.37583,0xec037ed1;
+	}
+}
+[t:cmd_selection_toggle,n:0x00300139]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x00300048;
+	  i start_state = 1;
+	  b toggle_usability = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.97189,-2,1.57916,0xa2b962f9;
+	}
+}
+[t:cmd_selection_toggle,n:0x0030013a]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x0030004B;
+	  i start_state = 1;
+	  b toggle_usability = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 1.37468,-2,1.66936,0xa2b962f9;
+	}
+}
+[t:cmd_ai_t_patrol,n:0x00300154]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x0030003F;
+	}
+	[placement]
+	{
+	  p position = 0.858688,0,-0.846436,0xeaf8a3c9;
+	}
+}
+[t:cmd_ai_t_patrol,n:0x00300155]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x0030003E;
+	}
+	[placement]
+	{
+	  p position = -0.582706,0,-0.958752,0xeaf8a3c9;
+	}
+}
+[t:cmd_selection_toggle,n:0x00300137]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x00300032;
+	  i start_state = 1;
+	  b toggle_usability = true;
+	}
+	[placement]
+	{
+	  p position = -1.62602,-2,1.3949,0xa0d8a37a;
+	}
+}
+[t:cmd_selection_toggle,n:0x00300138]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x00300033;
+	  i start_state = 1;
+	  b toggle_usability = true;
+	}
+	[placement]
+	{
+	  p position = 1.72054,-2,1.48511,0xa0d8a37a;
+	}
+}
+[t:cmd_ai_t_patrol,n:0x00300151]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x0030003D;
+	}
+	[placement]
+	{
+	  p position = -2.5582,0,-1.62375,0xb4a39c37;
+	}
+}
+[t:cmd_ai_t_patrol,n:0x00300153]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x0030003C;
+	}
+	[placement]
+	{
+	  p position = -1.159,0,-1.55019,0xb4a39c37;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x0030039c]
+{
+	[gizmo]
+	{
+	  v diffuse_color = 0.5,0,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,4.00177e-014;
+	  p position = -2.2141,0,-0.144699,0x812a0185;
+	}
+}

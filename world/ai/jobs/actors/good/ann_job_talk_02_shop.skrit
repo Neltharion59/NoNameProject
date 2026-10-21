@@ -63,30 +63,19 @@ state Talk$
 			}
 		}
 	}
-	
-	trigger OnWorldMessage$( WE_ANIM_DONE )
-	{
-		TryAnim$('talk');
-	}
-	
 	event OnEnterState$
 	{
-		// ------------------------------------------------------------------
-		// LOGIKA PRE KRČMÁRA (Cez GameAuditor premennú)
-		// ------------------------------------------------------------------
-		if ( GameAuditor.GetDb.GetBool( "region_01_bat_tender_talked_to" ) )
-		{
-			// Ak je premenná true (už sme s ním hovorili) -> Otvorí obchod
-			m_Go$.GetConversation.RSSelectConversation( "shop_potions" );
-		}
-		else
-		{
-			// Prvé kliknutie -> Zadá quest a zapíše do databázy, že sme s ním hovorili
-			m_Go$.GetConversation.RSSelectConversation( "conversation_innkeeper" );
-			GameAuditor.GetDb.SetBool( "region_01_bat_tender_talked_to", true );
-		}
 
-		TryAnim$('talk');
+        if ( GameAuditor.GetDb.GetBool( "ann_conv_02_shop_talked_to" ) )
+        {
+            m_Go$.GetConversation.RSSelectConversation( "ann_conv_02_shop_next" );
+        }
+        else
+        {
+            m_Go$.GetConversation.RSSelectConversation( "ann_conv_02_shop_first" );
+            GameAuditor.GetDb.SetBool( "ann_conv_02_shop_talked_to", true );
+        }
+
 		m_Go$.GetConversation.RSActivateDialogue();
 	}
 }

@@ -22,3 +22,100 @@
 	}
 	[common] { screen_name="Basket"; }
 }
+[t:template,n:ann_base_chest_of_drawers]
+{
+	category_name = "container";
+	doc = "chest_of drawers_open";
+	specializes = base_chest;
+
+	common:screen_name = "Chest of Drawers";
+
+	[aspect]
+	{
+		model = m_i_glb_chest-of-drawers-01;
+		textures:0 = b_i_csl_chest-03;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=chest-of-drawers-01-open; }
+			}
+		}
+	}
+}
+[t:template,n:ann_base_locker]
+{
+	category_name = "container";
+	doc = "ann_base_locker";
+	specializes = base_chest;
+
+	common:screen_name	= "Locker";
+
+	[aspect]
+	{
+		model = m_i_glb_locker-01;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=locker-01-open; }
+			}
+		}
+	}
+}
+[t:template,n:ann_base_rack_wpn]
+{
+	category_name =	"container";
+	doc	= "ann_base_rack_wpn";
+	specializes	= prop;
+	[aspect]
+	{
+		model =	m_i_csl_rack-weapon;
+		[textures]
+		{
+			0 =	b_w_weapons;
+			1 =	b_i_csl_rack-weapon;
+		}
+	}
+	[generator_object_pcontent]
+	{
+		create_msg = WE_REQ_USE;
+		one_shot = true;
+	}
+	[common]
+	{
+		screen_name = "Weapon Rack";
+		rollover_display = true;
+	}
+}
+[t:template,n:ann_base_rack_amr]
+{
+	category_name =	"container";
+	doc	= "ann_base_rack_amr";
+	specializes	= prop;
+	[aspect]
+	{
+		model =	m_i_csl_rack-armor;
+		[textures]	{0=b_i_csl_rack-armor;}
+	}
+	[generator_object_pcontent]
+	{
+		create_msg = WE_REQ_USE;
+		one_shot = true;
+	}
+	[common]
+	{
+		screen_name = "Armor Stand";
+		rollover_display = true;
+	}
+}

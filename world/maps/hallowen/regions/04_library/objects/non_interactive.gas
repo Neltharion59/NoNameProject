@@ -386,7 +386,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707106,0,0.707108;
-	  p position = 5.85747,0,5.24388,0x2cbb0d0c;
+	  p position = 5.87954,0,5.30008,0x2cbb0d0c;
 	}
 }
 [t:bookcase_glb_01,n:0x00500138]

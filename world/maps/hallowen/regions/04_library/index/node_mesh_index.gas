@@ -1,5 +1,7 @@
 [node_mesh_index]
 {
+	0x005004e1 = t_xxx_brdg_rck-12;
+	0x005004f7 = t_xxx_brdg_tx-rck-ramp;
 	0x005006a5 = t_xxx_flr_04x04-v0;
 	0x005006a8 = t_xxx_flr_04x04-v3;
 	0x005006aa = t_xxx_flr_08x08-v0;
@@ -15,8 +17,12 @@
 	0x0050073d = t_xxx_keep_cnr_outside-cnvx-a;
 	0x00500743 = t_xxx_keep_flr_04x02-a;
 	0x00500746 = t_xxx_keep_flr_04x04-b;
+	0x00500747 = t_xxx_keep_flr_08x04-a;
 	0x00500749 = t_xxx_keep_flr_16x08-a;
 	0x0050074a = t_xxx_keep_flr_16x16-a;
+	0x00500760 = t_xxx_keep_flr_dgn-portal-top-a;
+	0x00500768 = t_xxx_keep_flr_path-08x04-a;
+	0x00500769 = t_xxx_keep_flr_path-cap-08x04-a;
 	0x00500795 = t_xxx_keep_wall_clm-win-a;
 	0x0050079b = t_xxx_keep_wall_clmn-tall-a;
 	0x005007a4 = t_xxx_keep_wall_outside-a;
@@ -27,6 +33,12 @@
 	0x005007c9 = t_xxx_keep_wall_thin-tall-a;
 	0x005007e1 = t_xxx_keep_spiral-floor-base-a;
 	0x005007e2 = t_xxx_keep_spiral-floor-base-plug-a;
+	0x00500853 = t_xxx_pth_08x04-d;
+	0x00500877 = t_xxx_rmp_ctx-04-l;
+	0x00500878 = t_xxx_rmp_ctx-04-r;
+	0x0050087e = t_xxx_rmp_pth-staircase;
+	0x0050089b = t_xxx_rvr_12-left-a;
+	0x0050089f = t_xxx_rvr_12-right-a;
 	0x005008dd = t_xxx_ruin_block-04x04-a;
 	0x005008df = t_xxx_ruin_block-04x04-c;
 	0x005008e1 = t_xxx_ruin_flr-04x04-b;

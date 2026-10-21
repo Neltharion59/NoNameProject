@@ -1233,3 +1233,63 @@
 		}
 	}
 }
+[t:template,n:ann_ambient_item_fb_lay_01]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy laying 01";
+	specializes = ann_ambient_item_fb_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_03;
+			1 = b_c_pos_a1_045;
+		}
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_fb_fs;
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = dsf-13;
+				}
+			}
+		}
+	}
+}
+[t:template,n:ann_ambient_item_fb_lay_02]
+{
+	category_name = "outdoor";
+	doc = "ann r01 Ambient Item non-blocking farmboy laying 02";
+	specializes = ann_ambient_item_fb_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_09;
+			1 = b_c_pos_a1_032;
+		}
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_fb_fs;
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = dsf-05;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,269 @@
+[t:template,n:ann_r02_skeleton_mercenary_base]
+{
+	category_name = "1W_evil_c";
+	doc = "ann_r02_skeleton_mercenary_base";
+	specializes = base_skeleton;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	17, 0;
+			intelligence =  4, 0;
+			dexterity =  	3, 0;
+			melee =  		3,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 45;
+		life = 43;
+		max_life = 43;
+		mana = 10;
+		max_mana = 10;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 4;
+		damage_min = 2;
+	}
+	[common]
+	{
+		screen_name="Skeleton Fighter";
+		membership = monster, party_skeleton_mercenary_archer;
+	}
+	[defend] { defense=20; }
+
+   	[mind]
+	{
+		jat_fidget		= world\ai\jobs\common\job_fidget.skrit
+			?curious		= 0.65
+			&interest		= interest
+			&still			= false;
+
+		jat_brain						 = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		 = true;
+
+		sight_origin_height	= 1.3;
+		melee_engage_range = 14.0;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+    				es_weapon_hand = mc_g_c_f_1h_avg;
+					es_weapon_hand = ax_g_c_1h1b_avg;
+					es_weapon_hand = mc_g_c_s_1h_fun;
+					es_weapon_hand = mc_g_c_s_1h_low;
+					es_weapon_hand = ss_g_c_bl_1h_fun;
+				}
+				es_shield_hand = #shield/-no_mod/20-50;
+				es_chest = #body,f/-no_mod/20-50;
+			}
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #*/15-30;
+					il_main = #armor/20-50;
+        	        il_main = #nmagic/1-5;
+            	    il_main = #cmagic/1-5;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/15-30;
+	                il_main = #armor/-rare(1)/20-50;
+                    il_main = #*/-rare(1)/15-30;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/15-30;
+	                il_main = #armor/-unique(2)/20-50;
+                    il_main = #*/-unique(2)/15-30;
+	            }
+				[gold*]
+				{
+					chance = 0.125;
+					max = 140;
+					min = 46;
+				}
+			}
+		}
+	}
+}
+[t:template,n:ann_r02_skeleton_mercenary_reveal]
+{
+	category_name = "1W_evil_c";
+	doc = "ann_r02_skeleton_mercenary_reveal";
+	specializes = ann_r02_skeleton_mercenary_base;
+	[aspect]
+	{
+		[voice]
+		{
+			[enemy_spotted]	{ priority = high; * = ; }
+		}
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("we_req_activate");
+				action* = call_sfx_script("skeleton_reveal");
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain	= world\ai\jobs\common\brain_hero.skrit;
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible = true
+			&construct_anim = true
+			&activate = true;
+		sight_origin_height = 1;
+		actor_auto_fidgets = false;
+	}
+}
+[t:template,n:ann_r02_skeleton_archer_base]
+{
+	category_name = "1W_evil_c";
+	doc = "ann_r02_skeleton_archer_base";
+	specializes = base_skeleton;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  16, 0;
+			intelligence =  3, 0;
+			dexterity =  5, 0;
+			ranged =  3,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 39;
+		life = 37;
+		max_life = 37;
+		mana = 1;
+		max_mana = 1;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 4;
+		damage_min = 2;
+	}
+	[common]
+	{
+		screen_name= "Skeleton Ranger";
+		membership = monster, party_skeleton_mercenary_archer;
+	}
+	[defend] { defense=20; }
+
+   	[mind]
+	{
+		sight_origin_height	= 1.3;
+		melee_engage_range = 14.0;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party		= true
+			&actor_joins_existing_party		= true
+			&party_template					= "party_skeleton_mercenary_archer";
+
+		jat_fidget							= world\ai\jobs\common\job_fidget.skrit
+			?meander						= false
+			&still							= false;
+	}
+
+	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+
+		[pcontent]
+		{
+			[all*]
+			{
+				es_shield_hand = bw_g_c_s_m_c_fun;
+				es_chest = #body,r/-no_mod/20-60;
+			}
+
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #*/15-30;
+					il_main = #armor/20-50;
+        	        il_main = #nmagic/1-5;
+            	    il_main = #cmagic/1-5;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/15-30;
+	                il_main = #armor/-rare(1)/20-50;
+                    il_main = #*/-rare(1)/15-30;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/15-30;
+	                il_main = #armor/-unique(2)/20-50;
+                    il_main = #*/-unique(2)/15-30;
+	            }
+				[gold*]
+				{
+					chance = 0.125;
+					max = 140;
+					min = 46;
+				}
+            }
+		}
+	}
+}
+[t:template,n:ann_r02_skeleton_archer_reveal]
+{
+	category_name = "1W_evil_c";
+	doc = "ann_r02_skeleton_archer_reveal";
+	specializes = ann_r02_skeleton_archer_base;
+	[aspect]
+	{
+		[voice]
+		{
+			[enemy_spotted]	{ priority = high; * = ; }
+		}
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("we_req_activate");
+				action* = call_sfx_script("skeleton_reveal");
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain 	= world\ai\jobs\common\brain_hero.skrit;
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible = true
+			&construct_anim = true
+			&activate = true;
+		sight_origin_height = 1;
+		actor_auto_fidgets = false;
+	}
+}

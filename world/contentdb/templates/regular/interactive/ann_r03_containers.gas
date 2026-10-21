@@ -1,0 +1,346 @@
+[t:template,n:ann_r03_chest_of_drawers]
+{
+	category_name = "container";
+	doc = "ann_r03_chest_of_drawers";
+	specializes = ann_base_chest_of_drawers;
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.20;
+					max = 112;
+					min = 56;
+				}
+				[oneof*]
+				{
+					chance = 0.20;
+					il_main = #spell/3-10;
+				}
+				[oneof*]
+				{
+					chance = 0.20;
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+				[oneof*]
+				{
+					chance = 0.20;
+					il_main = #gloves/20-50;
+					il_main = #boots/20-50;
+					il_main = #helm/20-50;
+					il_main = #ring/5-30;
+					il_main = #amulet/5-30;
+				}
+				[oneof*]
+				{
+					chance = 0.20;
+					il_main = #gloves/-mod(1)/20-50;
+					il_main = #boots/-mod(1)/20-50;
+					il_main = #helm/-mod(1)/20-50;
+					il_main = #ring/5-30;
+					il_main = #amulet/5-30;
+				}
+				[oneof*]
+				{
+					chance = 0.10;
+					il_main = #gloves/-rare(1)/20-50;
+					il_main = #boots/-rare(1)/20-50;
+					il_main = #helm/-rare(1)/20-50;
+					il_main = #ring/-rare(1)/5-30;
+					il_main = #amulet/-rare(1)/5-30;
+				}
+				[oneof*]
+				{
+					chance = 0.05;
+					il_main = #gloves/-unique(2)/20-50;
+					il_main = #boots/-unique(2)/20-50;
+					il_main = #helm/-unique(2)/20-50;
+					il_main = #ring/-unique(2)/5-30;
+					il_main = #amulet/-unique(2)/5-30;
+				}
+			}
+		}
+	}
+}
+[t:template,n:ann_r03_basket]
+{
+	category_name = "container";
+	doc = "ann_r03_basket";
+	specializes = ann_base_open_basket;
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					chance = 0.50;
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+                    min = 1;
+                    max = 3;
+				}
+				[oneof*]
+				{
+					chance = 0.33;
+					il_main = #gloves/20-50;
+					il_main = #boots/20-50;
+					il_main = #helm/20-50;
+				}
+				[oneof*]
+				{
+					chance = 0.33;
+					il_main = #gloves/-mod(1)/20-50;
+					il_main = #boots/-mod(1)/20-50;
+					il_main = #helm/-mod(1)/20-50;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+					il_main = #gloves/-rare(1)/20-50;
+					il_main = #boots/-rare(1)/20-50;
+					il_main = #helm/-rare(1)/20-50;
+				}
+				[oneof*]
+				{
+					chance = 0.075;
+					il_main = #gloves/-unique(2)/20-50;
+					il_main = #boots/-unique(2)/20-50;
+					il_main = #helm/-unique(2)/20-50;
+				}
+			}
+		}
+	}
+}
+[t:template,n:ann_r03_locker]
+{
+	category_name = "container";
+	doc = "ann_r03_locker";
+	specializes = ann_base_locker;
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					chance = 0.33;
+					il_main = #body,ro/20-50;
+                    min = 2;
+                    max = 3;
+				}
+				[oneof*]
+				{
+					chance = 0.33;
+					il_main = #body,ro/-mod(1)/20-50;
+                    min = 1;
+                    max = 2;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+					il_main = #body,ro/-rare(1)/20-50;
+				}
+				[oneof*]
+				{
+					chance = 0.075;
+					il_main = #body,ro/-unique(2)/20-50;
+				}
+			}
+		}
+	}
+}
+[t:template,n:ann_r03_rack_wpn]
+{
+	category_name = "container";
+	doc = "ann_r03_rack_wpn";
+	specializes = ann_base_rack_wpn;
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.75;
+					il_main = #weapon/15-35;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+					il_main = #weapon/-mod(1)/15-35;
+				}
+				[oneof*]
+				{
+					chance = 0.07;
+					il_main = #weapon/-rare(1)/15-35;
+				}
+				[oneof*]
+				{
+					chance = 0.03;
+					il_main = #weapon/-unique(2)/15-35;
+				}
+			}
+		}
+	}
+}
+[t:template,n:ann_r03_rack_amr]
+{
+	category_name = "container";
+	doc = "ann_r03_rack_amr";
+	specializes = ann_base_rack_amr;
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[all*]
+				{
+					chance = 0.75;
+					il_main = #body/15-35;
+					il_main = #helm/15-35;
+				}
+				[all*]
+				{
+					chance = 0.15;
+					il_main = #body/-mod(1)/15-35;
+					il_main = #helm/-mod(1)/15-35;
+				}
+				[all*]
+				{
+					chance = 0.07;
+					il_main = #body/-rare(1)/15-35;
+					il_main = #helm/-rare(1)/15-35;
+				}
+				[all*]
+				{
+					chance = 0.03;
+					il_main = #body/-unique(2)/15-35;
+					il_main = #helm/-unique(2)/15-35;
+				}
+			}
+		}
+	}
+}
+[t:template,n:ann_r03_chest_1]
+{
+	category_name = "container";
+	doc = "ann_r03_chest_1";
+	specializes = base_chest;
+	[common] { screen_name="Chest"; }
+	[aspect]
+	{
+		material = steel;
+		model = m_i_glb_chest-03;
+		[textures]		{ 0 = b_i_glb_chest-01; }
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.50;
+					max = 500;
+					min = 200;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/15-35;
+					il_main = #body/20-50;
+					il_main = #*/15-35;
+					max = 2;
+					min = 2;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+					il_main = #weapon/-rare(1)/15-35;
+					il_main = #body/-rare(1)/20-50;
+					il_main = #*/-rare(1)/15-35;
+				}
+				[oneof*]
+				{
+					chance = 0.075;
+					il_main = #weapon/-unique(2)/15-35;
+					il_main = #body/-unique(2)/20-50;
+					il_main = #*/-unique(2)/15-35;
+				}
+			}
+		}
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_ice;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=chest-open; }
+			}
+		}
+	}
+}
+[t:template,n:ann_r03_chest_2]
+{
+	category_name = "container";
+	doc = "ann_r03_chest_2";
+	specializes = base_chest;
+	[common] { screen_name="Chest"; }
+	[aspect]
+	{
+		material = steel;
+		model = m_i_glb_chest-03;
+		[textures]		{ 0 = b_i_glb_locker-01; }
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 500;
+					min = 200;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-rare(1)/15-35;
+					il_main = #body/-rare(1)/20-50;
+					il_main = #*/-rare(1)/15-35;
+				}
+				[oneof*]
+				{
+					chance = 0.50;
+					il_main = #weapon/-unique(2)/15-35;
+					il_main = #body/-unique(2)/20-50;
+					il_main = #*/-unique(2)/15-35;
+				}
+			}
+		}
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_ice;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=chest-open; }
+			}
+		}
+	}
+}

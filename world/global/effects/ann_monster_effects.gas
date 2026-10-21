@@ -1,0 +1,88 @@
+[effect_script*]
+{
+	name	=ann_effect_r02_spore_explode;
+
+	script	=[[
+			set $dur 1;
+			set $alpha .1;
+			
+			sfx create cylinder #TARGET
+				"alpha($alpha)scale(1)texture(b_sfx_cyl_03)hp0(-.5,-.5,0)
+				hp1(0,0,0)rp0(1.25,2.25,3)rp1(.25,3.25,3)tin(.20)tout(.5)
+				dur($dur)color0(.1,.8,.2)spin(15)segments(10)";
+			sfx freeze_targets #PEEK;
+			set $ring #PEEK;
+			sfx start #POP;
+			
+			get target_position $ring target;
+			sound play s_e_FBFireball_hit at #POP dist 5 40;
+			
+			sfx create cylinder #TARGET
+				"alpha($alpha)scale(.66)texture(b_sfx_cyl_03)hp0(-.5,-.5,0)
+				hp1(0,0,0)rp0(1.25,2.25,3)rp1(.25,3.25,3)tin(.20)tout(.5)
+				dur($dur)color0(.1,.8,.2)spin(20)segments(8)";
+			sfx freeze_targets #PEEK;
+			sfx start #POP;
+
+			sfx create cylinder #TARGET
+				"alpha($alpha)scale(.33)texture(b_sfx_cyl_03)hp0(-.5,-.5,0)
+				hp1(0,0,0)rp0(1.25,2.25,3)rp1(.25,3.25,3)tin(.20)tout(.5)
+				dur($dur)color0(.1,.8,.2)spin(25)segments(6)";
+			sfx freeze_targets #PEEK;
+			sfx start #POP;
+			
+			// create a small explosion of particles with a sparkle texture
+			sfx create explosion #TARGET 
+				"dur(1)scale(1)texture(b_sfx_sparkle01)offset(0,.2,0)
+				color0(.9,.3,.1)color1(.1,.6,.1)omni_dir()";
+			sfx start #POP;
+			
+			// create a small explosion of particles
+			sfx create explosion #TARGET 
+				"dur(1)scale(1.2)offset(0,.2,0)color0(.3,.9,.1)color1(.1,.6,.1)
+				omni_dir()";
+			sfx start #POP;
+			
+			pause .15;
+			
+			// create a small explosion of particles with a sparkle texture
+			sfx create explosion #TARGET 
+				"dur(1)scale(1)texture(b_sfx_sparkle01)offset(0,.2,0)
+				color0(.3,.9,.1)color1(.1,.6,.1)omni_dir()";
+			sfx start #POP;
+			
+			// create a small explosion of particles
+			sfx create explosion #TARGET 
+				"dur(1)scale(1.2)offset(0,.2,0)color0(.3,.9,.1)color1(.1,.6,.1)
+				omni_dir()";
+			sfx start #POP;
+			
+			pause .15;
+			
+			// create a small explosion of particles with a sparkle texture
+			sfx create explosion #TARGET 
+				"dur(1)scale(1)texture(b_sfx_sparkle01)offset(0,.2,0)
+				color0(.3,.9,.1)color1(.1,.6,.1)omni_dir()";
+			sfx start #POP;
+			
+			// create a small explosion of particles
+			sfx create explosion #TARGET 
+				"dur(1)scale(1.2)offset(0,.2,0)color0(.3,.9,.1)color1(.1,.6,.1)
+				omni_dir()";
+			sfx start #POP;
+			
+			pause .15;
+			
+			// create a small explosion of particles with a sparkle texture
+			sfx create explosion #TARGET 
+				"dur(1)scale(1)texture(b_sfx_sparkle01)offset(0,.2,0)
+				color0(.3,.9,.1)color1(.1,.6,.1)omni_dir()";
+			sfx start #POP;
+			
+			// create a small explosion of particles
+			sfx create explosion #TARGET 
+				"dur(1)scale(1.2)offset(0,.2,0)color0(.3,.9,.1)color1(.1,.6,.1)
+				omni_dir()";
+			sfx start #POP;
+			]];
+}

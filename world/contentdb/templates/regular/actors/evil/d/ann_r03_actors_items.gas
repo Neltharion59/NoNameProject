@@ -1,47 +1,4 @@
-[t:template,n:ann_r03_helmet_static]
-{
-	doc = "ann_r03_helmet_static";
-	specializes = non_interactive_nonblocking;
-	[aspect]
-	{
-		is_selectable = false;
-		model = m_a_hlmt_type23;
-        [textures]
-        {
-            0 = b_a_hlmt_023;
-        }
-	}
-}
 
-[t:template,n:ann_r03_shield_static]
-{
-	doc = "ann_r03_shield_static";
-	specializes = non_interactive_nonblocking;
-	[aspect]
-	{
-		is_selectable = false;
-		model = m_a_shd_18;
-		[textures]
-		{
-			0 = b_a_shd_065;
-		}
-	}
-	[placement]
-	{
-	  q orientation = -0.707106,0,0,0.707106;
-	}
-}
-
-[t:template,n:ann_r03_sword_static]
-{
-	doc = "ann_r03_sword_static";
-	specializes = non_interactive_nonblocking;
-    [aspect]
-	{
-		is_selectable = false;
-		model = m_w_swd_038;
-	}
-}
 
 
 
@@ -123,20 +80,151 @@
 
 
 
-
-[t:template,n:ann_r03_possessed_helmet]
+[t:template,n:ann_r03_possessed_helmet_base]
 {
 	category_name = "1W_evil_d";
-	doc = "ann_r03_possessed_helmet";
+	doc = "ann_r03_possessed_helmet_base";
 	specializes = ann_r03_item_base;
 	[common]
 	{
-		screen_name = "Vornhelm's Helmet";
+		screen_name = "Possessed Helmet";
+	}
+}
+[t:template,n:ann_r03_possessed_helmet_01]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_helmet_01";
+	specializes = ann_r03_possessed_helmet_base;
+	[common]
+	{
 		[template_triggers]
 		{
 			[*]
 				{
-					action* = call_sfx_script("ann_flying_effect_helmet");
+					action* = call_sfx_script("ann_flying_effect_helmet_01");
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					single_shot = true;
+				}
+		}
+	}
+}[t:template,n:ann_r03_possessed_helmet_02]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_helmet_02";
+	specializes = ann_r03_possessed_helmet_base;
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+				{
+					action* = call_sfx_script("ann_flying_effect_helmet_02");
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					single_shot = true;
+				}
+		}
+	}
+}[t:template,n:ann_r03_possessed_helmet_03]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_helmet_03";
+	specializes = ann_r03_possessed_helmet_base;
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+				{
+					action* = call_sfx_script("ann_flying_effect_helmet_03");
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					single_shot = true;
+				}
+		}
+	}
+}
+[t:template,n:ann_r03_possessed_helmet_04]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_helmet_04";
+	specializes = ann_r03_possessed_helmet_base;
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+				{
+					action* = call_sfx_script("ann_flying_effect_helmet_04");
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					single_shot = true;
+				}
+		}
+	}
+}
+[t:template,n:ann_r03_possessed_helmet_05]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_helmet_05";
+	specializes = ann_r03_possessed_helmet_base;
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+				{
+					action* = call_sfx_script("ann_flying_effect_helmet_05");
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					single_shot = true;
+				}
+		}
+	}
+}
+[t:template,n:ann_r03_possessed_helmet_06]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_helmet_06";
+	specializes = ann_r03_possessed_helmet_base;
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+				{
+					action* = call_sfx_script("ann_flying_effect_helmet_06");
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					single_shot = true;
+				}
+		}
+	}
+}[t:template,n:ann_r03_possessed_helmet_07]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_helmet_07";
+	specializes = ann_r03_possessed_helmet_base;
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+				{
+					action* = call_sfx_script("ann_flying_effect_helmet_07");
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					single_shot = true;
+				}
+		}
+	}
+}
+[t:template,n:ann_r03_possessed_helmet_08]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_helmet_08";
+	specializes = ann_r03_possessed_helmet_base;
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+				{
+					action* = call_sfx_script("ann_flying_effect_helmet_08");
 					condition* = receive_world_message("WE_ENTERED_WORLD");
 					single_shot = true;
 				}
@@ -144,10 +232,10 @@
 	}
 }
 
-[t:template,n:ann_r03_possessed_shield]
+[t:template,n:ann_r03_possessed_shield_base]
 {
 	category_name = "1W_evil_d";
-	doc = "ann_r03_possessed_shield";
+	doc = "ann_r03_possessed_shield_base";
 	specializes = ann_r03_item_base;
 	[common]
 	{
@@ -163,23 +251,302 @@
 		}
 	}
 }
-
-[t:template,n:ann_r03_possessed_sword]
+[t:template,n:ann_r03_possessed_shield_01]
 {
 	category_name = "1W_evil_d";
-	doc = "ann_r03_possessed_sword";
-	specializes = ann_r03_item_base;
-    [common]
+	doc = "ann_r03_possessed_shield_01";
+	specializes = ann_r03_possessed_shield_base;
+	[common]
 	{
-		screen_name = "Vornhelm's Sword";
 		[template_triggers]
 		{
 			[*]
 				{
-					action* = call_sfx_script("ann_flying_effect_sword");
+					action* = call_sfx_script("ann_flying_effect_shield_01");
 					condition* = receive_world_message("WE_ENTERED_WORLD");
 					single_shot = true;
 				}
+		}
+	}
+}
+[t:template,n:ann_r03_possessed_shield_02]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_shield_02";
+	specializes = ann_r03_possessed_shield_base;
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+				{
+					action* = call_sfx_script("ann_flying_effect_shield_02");
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					single_shot = true;
+				}
+		}
+	}
+}
+[t:template,n:ann_r03_possessed_shield_03]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_shield_03";
+	specializes = ann_r03_possessed_shield_base;
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+				{
+					action* = call_sfx_script("ann_flying_effect_shield_03");
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					single_shot = true;
+				}
+		}
+	}
+}
+[t:template,n:ann_r03_possessed_shield_04]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_shield_04";
+	specializes = ann_r03_possessed_shield_base;
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+				{
+					action* = call_sfx_script("ann_flying_effect_shield_04");
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					single_shot = true;
+				}
+		}
+	}
+}
+[t:template,n:ann_r03_possessed_shield_05]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_shield_05";
+	specializes = ann_r03_possessed_shield_base;
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+				{
+					action* = call_sfx_script("ann_flying_effect_shield_05");
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					single_shot = true;
+				}
+		}
+	}
+}
+[t:template,n:ann_r03_possessed_shield_06]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_shield_06";
+	specializes = ann_r03_possessed_shield_base;
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+				{
+					action* = call_sfx_script("ann_flying_effect_shield_06");
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					single_shot = true;
+				}
+		}
+	}
+}
+[t:template,n:ann_r03_possessed_shield_07]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_shield_07";
+	specializes = ann_r03_possessed_shield_base;
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+				{
+					action* = call_sfx_script("ann_flying_effect_shield_07");
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					single_shot = true;
+				}
+		}
+	}
+}
+[t:template,n:ann_r03_possessed_shield_08]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_shield_08";
+	specializes = ann_r03_possessed_shield_base;
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+				{
+					action* = call_sfx_script("ann_flying_effect_shield_08");
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					single_shot = true;
+				}
+		}
+	}
+}
+
+[t:template,n:ann_r03_possessed_sword_base]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_sword_base";
+	specializes = ann_r03_item_base;
+    [common]
+	{
+		screen_name = "Possessed Sword";
+	}
+}
+[t:template,n:ann_r03_possessed_sword_01]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_sword_01";
+	specializes = ann_r03_possessed_sword_base;
+    [common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("ann_flying_effect_sword_01");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+		}
+	}
+}
+[t:template,n:ann_r03_possessed_sword_02]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_sword_02";
+	specializes = ann_r03_possessed_sword_base;
+    [common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("ann_flying_effect_sword_02");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+		}
+	}
+}
+[t:template,n:ann_r03_possessed_sword_03]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_sword_03";
+	specializes = ann_r03_possessed_sword_base;
+    [common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("ann_flying_effect_sword_03");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+		}
+	}
+}
+[t:template,n:ann_r03_possessed_sword_04]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_sword_04";
+	specializes = ann_r03_possessed_sword_base;
+    [common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("ann_flying_effect_sword_04");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+		}
+	}
+}
+[t:template,n:ann_r03_possessed_sword_05]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_sword_05";
+	specializes = ann_r03_possessed_sword_base;
+    [common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("ann_flying_effect_sword_05");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+		}
+	}
+}
+[t:template,n:ann_r03_possessed_sword_06]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_sword_06";
+	specializes = ann_r03_possessed_sword_base;
+    [common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("ann_flying_effect_sword_06");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+		}
+	}
+}
+[t:template,n:ann_r03_possessed_sword_07]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_sword_07";
+	specializes = ann_r03_possessed_sword_base;
+    [common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("ann_flying_effect_sword_07");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+		}
+	}
+}
+[t:template,n:ann_r03_possessed_sword_08]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r03_possessed_sword_08";
+	specializes = ann_r03_possessed_sword_base;
+    [common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("ann_flying_effect_sword_08");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
 		}
 	}
 }

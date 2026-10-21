@@ -1,0 +1,42 @@
+[drunk_01]
+{
+	[text*]
+	{
+		screen_text = "Now, that was a blast!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[drunk_02]
+{
+	[text*]
+	{
+		screen_text = "Noooooo! You destroyed the slurm cocoon. Where will we get more of our sweet juice?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[drunk_3]
+{
+	[text*]
+	{
+		screen_text = "Mark...hic...are you here with me?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_conv_02_shop_first]
+{
+	[text*]
+	{
+		choice = shop;
+		screen_text = "Ah, you, um...startled us, friend? Allright, my dealings with the castle inhabitants might not have been the most honorable, but I place a lot of value on my life, allright? In exchange for getting them a rare artifact here and there, they keep all the horrors in the village off my back. If you plan is to destroy them and stop it all, go ahead. But drawing attention to you by exploding the slurm monster's intestines might not have been the smartest move to do so.\r\nOh, these? Just slurm addicts. The vampires wanted to use slurm to entrap people here, but it rendered their blood foul and the method was too lengthy anyway. The chose to rely on good old-fashioned kidnapping instead.\r\nSince you interrupted our dealings anyway, would you like to take look at my goods?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[ann_conv_02_shop_next]
+{
+	[text*]
+	{
+		choice = shop;
+		screen_text = "Ah, you, um...startled us, friend? Allright, my dealings with the castle inhabitants might not have been the most honorable, but I place a lot of value on my life, allright? In exchange for getting them a rare artifact here and there, they keep all the horrors in the village off my back. If you plan is to destroy them and stop it all, go ahead. But drawing attention to you by exploding the slurm monster's intestines might not have been the smartest move to do so.\r\nOh, these? Just slurm addicts. The vampires wanted to use slurm to entrap people here, but it rendered their blood foul and the method was too lengthy anyway. The chose to rely on good old-fashioned kidnapping instead.";
+	  f scroll_rate = 10.000000;
+	}
+}

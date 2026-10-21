@@ -77,22 +77,6 @@
 	  p position = -0.972626,0,-1.4845,0xe77784c7;
 	}
 }
-[t:ann_r02_casket_wood,n:0x00200122]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.923879,0,-0.382684;
-	  p position = -0.589001,0,-0.700687,0x466e6163;
-	}
-}
-[t:ann_r02_casket_wood,n:0x00200123]
-{
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,0.382683;
-	  p position = -1.87343,-9.53674e-007,0.644161,0x466e6163;
-	}
-}
 [t:ann_r02_barrel,n:0x00200325]
 {
 	[placement]
@@ -183,11 +167,28 @@
 	  p position = 0.372345,0,-1.92582,0x39e3749a;
 	}
 }
-[t:ann_r02_sarcophagus,n:0x002003c0]
+[t:ann_r02_sarcophagus_2,n:0x00200c12]
 {
-	[base_chest]
+	[common]
 	{
-	  b wait_for_activate = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00200C1C,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
 	}
 	[inventory]
 	{
@@ -195,48 +196,213 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,-2.98023e-008;
-	  p position = 0.837563,0,1.14691,0xf51ffa71;
-		use_point_scids = 0x002000aa;
+	  q orientation = 2.5049e-006,1,-1.54218e-006,1.10268e-006;
+	  p position = -1.49107,0,1.00011,0xef127b83;
+		use_point_scids = 0x00200c15;
 	}
 }
-[t:ann_r02_casket_stone,n:0x002000e8]
+[t:ann_r02_sarcophagus_2,n:0x00200c10]
 {
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00200C21,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
 	[inventory]
 	{
 	  b drop_at_use_point = true;
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,0;
-	  p position = 1.16176,0,-0.0730286,0xef127b83;
-		use_point_scids = 0x002000ad;
+	  q orientation = -2.5049e-006,-1,1.54218e-006,-9.82258e-007;
+	  p position = -0.230713,0,1.65159,0x4359d61c;
+		use_point_scids = 0x00200c1a;
 	}
 }
-[t:ann_r02_casket_stone,n:0x00200102]
+[t:ann_r02_sarcophagus_2,n:0x00200c0d]
 {
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00200C1B,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
 	[inventory]
 	{
 	  b drop_at_use_point = true;
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,0;
-	  p position = -1.46065,0,0.133644,0x4359d61c;
-		use_point_scids = 0x002000ab;
+	  q orientation = -1.54218e-006,-8.2992e-007,-2.5049e-006,1;
+	  p position = -1.42714,0,-0.769241,0x08ef18ed;
+		use_point_scids = 0x002003c8;
 	}
 }
-[t:ann_r02_casket_stone,n:0x00200101]
+[t:ann_r02_sarcophagus_2,n:0x00200c0e]
 {
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00200C1F,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
 	[inventory]
 	{
 	  b drop_at_use_point = true;
 	}
 	[placement]
 	{
-	  q orientation = 0,8.9407e-008,0,1;
-	  p position = -0.828621,0,0.438034,0x08ef18ed;
-		use_point_scids = 0x002000ac;
+	  q orientation = -1.54218e-006,-8.34469e-007,-2.5049e-006,1;
+	  p position = 1.36406,0,-0.633209,0xcec7d8df;
+		use_point_scids = 0x00200c18;
+	}
+}
+[t:ann_r02_sarcophagus_2,n:0x00200c0f]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00200C1D,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = -1.54218e-006,-8.34469e-007,-2.5049e-006,1;
+	  p position = -1.92621,0,-0.834534,0xcec7d8df;
+		use_point_scids = 0x00200c16;
+	}
+}
+[t:ann_r02_sarcophagus_2,n:0x00200c13]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00200C20,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 2.5049e-006,1,-1.54218e-006,1.07288e-006;
+	  p position = 1.30017,0,1.13614,0x2b58888f;
+		use_point_scids = 0x00200c19;
+	}
+}
+[t:ann_r02_sarcophagus_2,n:0x00200c14]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00200C1E,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 2.5049e-006,1,-1.54218e-006,1.10268e-006;
+	  p position = -1.9901,0,0.934814,0x2b58888f;
+		use_point_scids = 0x00200c17;
 	}
 }
 [t:ann_r02_barrel,n:0x002005d1]
@@ -785,6 +951,14 @@
 	  p position = -1.09764,0.920664,-1.72754,0x97776936;
 	}
 }
+[t:ann_r02_casket_wood,n:0x00200149]
+{
+	[placement]
+	{
+	  q orientation = -0.0264084,0.432573,0.0740269,0.898166;
+	  p position = 0.0799179,0,-0.0834808,0x97776936;
+	}
+}
 [t:ann_r02_casket_wood,n:0x00200168]
 {
 	[placement]
@@ -1017,53 +1191,42 @@
 	  p position = 0.990233,0.341328,2.97891,0x2fa7ba91;
 	}
 }
-[t:ann_r02_sarcophagus,n:0x00200109]
+[t:cask_glb_ale,n:0x00200c05]
 {
-	[base_chest]
+	[aspect]
 	{
-	  b wait_for_activate = false;
-	}
-	[inventory]
-	{
-	  b drop_at_use_point = true;
+	  b is_invincible = true;
+	  b is_selectable = false;
 	}
 	[placement]
 	{
 	  q orientation = 0,-1,0,-1.66939e-007;
-	  p position = 2.77586,-2,4.90932,0x8477aa15;
-		use_point_scids = 0x002000b3;
+	  p position = -1.42987,0.909547,0.291306,0x3b445f0d;
 	}
 }
-[t:ann_r02_sarcophagus,n:0x00200107]
+[t:cask_glb_ale,n:0x00200c06]
 {
-	[base_chest]
+	[aspect]
 	{
-	  b wait_for_activate = false;
-	}
-	[inventory]
-	{
-	  b drop_at_use_point = true;
+	  b is_invincible = true;
+	  b is_selectable = false;
 	}
 	[placement]
 	{
-	  p position = 4.28587,-2,-0.659088,0xe6f3a3f7;
-		use_point_scids = 0x002000af;
+	  q orientation = 0,0.707107,0,-0.707106;
+	  p position = -1.30566,0.697838,-0.767719,0x3b445f0d;
 	}
 }
-[t:ann_r02_sarcophagus,n:0x00200103]
+[t:chest_csl_06,n:0x00200c07]
 {
-	[base_chest]
+	[aspect]
 	{
-	  b wait_for_activate = false;
-	}
-	[inventory]
-	{
-	  b drop_at_use_point = true;
+	  b is_selectable = false;
 	}
 	[placement]
 	{
-	  p position = 3.13527,-2,-0.281076,0x0157a2c2;
-		use_point_scids = 0x002000ae;
+	  q orientation = -0.146447,0.853553,0.353553,0.353553;
+	  p position = 1.04474,-1.5,0.135651,0x3194fcea;
 	}
 }
 [t:ann_r02_casket_wood,n:0x0020011e]
@@ -1074,7 +1237,7 @@
 	  p position = -0.726639,0,-0.601364,0xfde1ab93;
 	}
 }
-[t:ann_r02_casket_stone,n:0x0020070a]
+[t:ann_r02_sarcophagus_2,n:0x0020070a]
 {
 	[inventory]
 	{
@@ -1087,7 +1250,7 @@
 		use_point_scids = 0x00200711;
 	}
 }
-[t:ann_r02_casket_stone,n:0x0020070b]
+[t:ann_r02_sarcophagus_2,n:0x0020070b]
 {
 	[inventory]
 	{
@@ -1096,11 +1259,11 @@
 	[placement]
 	{
 	  q orientation = -0.707107,-3.63517e-007,-6.84885e-008,0.707107;
-	  p position = 1.54005,-0.337141,0.0114594,0xc672db11;
+	  p position = 1.54005,-0.322391,0.0114594,0xc672db11;
 		use_point_scids = 0x00200712;
 	}
 }
-[t:ann_r02_casket_stone,n:0x0020070c]
+[t:ann_r02_sarcophagus_2,n:0x0020070c]
 {
 	[inventory]
 	{
@@ -1108,8 +1271,8 @@
 	}
 	[placement]
 	{
-	  q orientation = -0.923739,0.016124,0.265834,-0.275279;
-	  p position = -0.95047,0.991428,0.697281,0x98e005e4;
+	  q orientation = -0.275279,0.265834,-0.0161239,0.923739;
+	  p position = -0.650574,0.424002,1.40817,0x98e005e4;
 		use_point_scids = 0x00200713;
 	}
 }

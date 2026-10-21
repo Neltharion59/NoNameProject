@@ -1,0 +1,306 @@
+[t:template,n:ann_r03_helmet_static_01]
+{
+	doc = "ann_r03_helmet_static_01";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_a_hlmt_type23;
+        [textures]
+        {
+            0 = b_a_hlmt_023;
+        }
+	}
+}
+[t:template,n:ann_r03_helmet_static_02]
+{
+	doc = "ann_r03_helmet_static_02";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_a_hlmt_type4;
+        [textures]
+        {
+            0 = b_a_hlmt_004;
+        }
+	}
+}
+[t:template,n:ann_r03_helmet_static_03]
+{
+	doc = "ann_r03_helmet_static_03";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_a_hlmt_type14;
+        [textures]
+        {
+            0 = b_a_hlmt_014;
+        }
+	}
+}
+[t:template,n:ann_r03_helmet_static_04]
+{
+	doc = "ann_r03_helmet_static_04";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_a_hlmt_type14;
+        [textures]
+        {
+            0 = b_a_hlmt_089;
+        }
+	}
+}
+[t:template,n:ann_r03_helmet_static_05]
+{
+	doc = "ann_r03_helmet_static_05";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_a_hlmt_type28;
+        [textures]
+        {
+            0 = b_a_hlmt_028;
+        }
+	}
+}
+[t:template,n:ann_r03_helmet_static_06]
+{
+	doc = "ann_r03_helmet_static_06";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_a_hlmt_type40;
+        [textures]
+        {
+            0 = b_a_hlmt_040;
+        }
+	}
+}
+[t:template,n:ann_r03_helmet_static_07]
+{
+	doc = "ann_r03_helmet_static_07";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_a_hlmt_type40;
+        [textures]
+        {
+            0 = b_a_hlmt_084;
+        }
+	}
+}
+[t:template,n:ann_r03_helmet_static_08]
+{
+	doc = "ann_r03_helmet_static_08";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_a_hlmt_type40;
+        [textures]
+        {
+            0 = b_a_hlmt_085;
+        }
+	}
+}
+
+[t:template,n:ann_r03_shield_static_01]
+{
+	doc = "ann_r03_shield_static_01";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_a_shd_18;
+		[textures]
+		{
+			0 = b_a_shd_065;
+		}
+	}
+}
+[t:template,n:ann_r03_shield_static_02]
+{
+	doc = "ann_r03_shield_static_02";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_a_shd_18;
+		[textures]
+		{
+			0 = b_a_shd_043;
+		}
+	}
+}
+[t:template,n:ann_r03_shield_static_03]
+{
+	doc = "ann_r03_shield_static_03";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_a_shd_10;
+		[textures]
+		{
+			0 = b_a_shd_044;
+		}
+	}
+}
+[t:template,n:ann_r03_shield_static_04]
+{
+	doc = "ann_r03_shield_static_04";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_a_shd_24;
+		[textures]
+		{
+			0 = b_a_shd_102;
+		}
+	}
+}
+[t:template,n:ann_r03_shield_static_05]
+{
+	doc = "ann_r03_shield_static_05";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_a_shd_25;
+		[textures]
+		{
+			0 = b_a_shd_135;
+		}
+	}
+}
+[t:template,n:ann_r03_shield_static_06]
+{
+	doc = "ann_r03_shield_static_06";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_a_shd_19;
+		[textures]
+		{
+			0 = b_a_shd_079;
+		}
+	}
+}
+[t:template,n:ann_r03_shield_static_07]
+{
+	doc = "ann_r03_shield_static_07";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_a_shd_03;
+		[textures]
+		{
+			0 = b_a_shd_022;
+		}
+	}
+}
+[t:template,n:ann_r03_shield_static_08]
+{
+	doc = "ann_r03_shield_static_08";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_a_shd_04;
+		[textures]
+		{
+			0 = b_a_shd_023;
+		}
+	}
+}
+
+[t:template,n:ann_r03_sword_static_01]
+{
+	doc = "ann_r03_sword_static_01";
+	specializes = non_interactive_nonblocking;
+    [aspect]
+	{
+		is_selectable = false;
+		model = m_w_swd_038;
+	}
+}
+[t:template,n:ann_r03_sword_static_02]
+{
+	doc = "ann_r03_sword_static_02";
+	specializes = non_interactive_nonblocking;
+    [aspect]
+	{
+		is_selectable = false;
+		model = m_w_swd_049;
+	}
+}
+[t:template,n:ann_r03_sword_static_03]
+{
+	doc = "ann_r03_sword_static_03";
+	specializes = non_interactive_nonblocking;
+    [aspect]
+	{
+		is_selectable = false;
+		model = m_w_swd_038;
+	}
+}
+[t:template,n:ann_r03_sword_static_04]
+{
+	doc = "ann_r03_sword_static_04";
+	specializes = non_interactive_nonblocking;
+    [aspect]
+	{
+		is_selectable = false;
+		model = m_w_swd_056;
+	}
+}
+[t:template,n:ann_r03_sword_static_05]
+{
+	doc = "ann_r03_sword_static_05";
+	specializes = non_interactive_nonblocking;
+    [aspect]
+	{
+		is_selectable = false;
+		model = m_w_swd_052;
+	}
+}
+[t:template,n:ann_r03_sword_static_06]
+{
+	doc = "ann_r03_sword_static_06";
+	specializes = non_interactive_nonblocking;
+    [aspect]
+	{
+		is_selectable = false;
+		model = m_w_swd_048;
+	}
+}
+[t:template,n:ann_r03_sword_static_07]
+{
+	doc = "ann_r03_sword_static_07";
+	specializes = non_interactive_nonblocking;
+    [aspect]
+	{
+		is_selectable = false;
+		model = m_w_swd_053;
+	}
+}
+[t:template,n:ann_r03_sword_static_08]
+{
+	doc = "ann_r03_sword_static_08";
+	specializes = non_interactive_nonblocking;
+    [aspect]
+	{
+		is_selectable = false;
+		model = m_w_swd_057;
+	}
+}

@@ -3,25 +3,25 @@
 
 [t:template,n:ann_r02_googore_grub]
 {
+    category_name = "1W_evil_d";
 	doc = "ann_r02_googore_grub";
 	specializes = actor_evil;
-    category_name = "3W_evil_d";
 	[actor]
 	{
 		race	= other;
 
 		[skills]
 		{
-			strength =  	5.5, 0;
-			intelligence =  4.5, 0;
-			dexterity =  	8.7, 0;
-			melee =  		30, 0;
+			strength =  	1, 0;
+			intelligence =  1, 0;
+			dexterity =  	1, 0;
+			melee =  		4, 0;
 		}
 	}
 	[aspect]
 	{
 		model			= m_c_edm_gb_pos_1;
-		experience_value	= 2084000;
+		experience_value	= 28;
 		life				= 30;
 		max_life			= 30;
 		mana = 16.8;
@@ -33,8 +33,8 @@
 	}
 	[attack]
 	{
-		damage_min		= 5;
-		damage_max		= 10;
+		damage_min		= 12;
+		damage_max		= 15;
 		attack_range	= 0.5;
 	}
 
@@ -98,8 +98,8 @@
 			}
 		}
 	}
-	[common] { screen_name = "Googore Grub"; }
-	[defend] { defense=538.5; }
+	[common] { screen_name = "Intestinal Parasite"; }
+	[defend] { defense=30; }
 	[mind]
 	{
 		jat_fidget	= world\ai\jobs\common\job_fidget.skrit;

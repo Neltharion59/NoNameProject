@@ -232,3 +232,69 @@
 		}
 	}
 }
+[t:template,n:ann_r02_sarcophagus_2]
+{
+	specializes			= base_chest_use_toggle;
+	doc					= "ann_r02_sarcophagus_2";
+    category_name       = "container";
+
+	common:screen_name	= "Sarcophagus";
+
+	aspect:model		= m_i_cav_sarcophagus-01;
+	aspect:material 	= stone;
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_cav;
+			[chore_open]
+			{
+				skrit = random_transition;
+				[anim_files]
+				{
+					00=sarcophagus-open-01;
+					01=sarcophagus-open-02;
+				}
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/17-35;
+					il_main = #armor/22-68;
+				}
+				[oneof*]
+				{
+					chance = 0.10;
+					il_main = #weapon/-rare(1)/17-35;
+					il_main = #body/-rare(1)/22-68;
+				}
+				[oneof*]
+				{
+					chance = 0.10;
+					il_main = #weapon/-unique(2)/17-35;
+					il_main = #body/-unique(2)/22-68;
+				}
+				[gold*]
+				{
+					chance = 0.2;
+					max = 80;
+					min = 33;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+			}
+		}
+	}
+}
