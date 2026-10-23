@@ -1,0 +1,32 @@
+[t:generator_generic,n:0x003003a8]
+{
+	[generator_basic]
+	{
+		child_template_name = "ann_r03_skeleton_dog";
+	  x initial_command = 0x003003A9;
+	  i max_alive_children = 5;
+	  i num_children_incubating = 12;
+	  f spawn_period = 3;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.66939e-007;
+	  p position = 0.436516,-1.5,2.45037,0x4f50a76c;
+	}
+}
+[t:generator_generic,n:0x003003aa]
+{
+	[generator_basic]
+	{
+		child_template_name = "ann_r03_skeleton_dog";
+	  x initial_command = 0x003003AB;
+	  i max_alive_children = 5;
+	  i num_children_incubating = 12;
+	  f spawn_period = 3;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.66939e-007;
+	  p position = -0.428345,-1.5,2.41113,0x4f50a76c;
+	}
+}

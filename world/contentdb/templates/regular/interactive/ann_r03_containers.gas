@@ -156,6 +156,33 @@
 		}
 	}
 }
+[t:template,n:ann_r03_bookcase]
+{
+	category_name = "container";
+	doc = "ann_r03_bookcase";
+	specializes = ann_base_bookcase;
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.95;
+					il_main = #spell/7-16;
+					min = 1;
+					max = 2;
+				}
+				[oneof*]
+				{
+					chance = 0.05;
+					il_main = #spellbook/16-19;
+				}
+			}
+		}
+	}
+}
 [t:template,n:ann_r03_rack_wpn]
 {
 	category_name = "container";

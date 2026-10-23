@@ -1,0 +1,34 @@
+[t:template,n:ann_generator_rack_wpn]
+{
+	category_name =	"container";
+	doc	= "ann_generator_rack_wpn";
+	specializes	= prop;
+	[aspect]
+	{
+		model =	m_i_csl_rack-weapon;
+		[textures]
+		{
+			0 =	b_w_weapons;
+			1 =	b_i_csl_rack-weapon;
+		}
+	}
+	[generator_object_pcontent]
+	{
+		create_msg = WE_REQ_ACTIVATE;
+		one_shot = true;
+	}
+	[common]
+	{
+		screen_name = "Weapon Rack";
+		rollover_display = true;
+	}
+    [inventory] {}
+    [ann_generator_advanced_a2_extended]
+    {
+//        spawn_period = 0;
+        trigger_range = 14;
+        sound_start = true;
+        sound_end = false;
+        accelerate = false;
+    }
+}

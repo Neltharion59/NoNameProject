@@ -73,6 +73,31 @@
 		}
 	}
 }
+[t:template,n:ann_base_bookcase]
+{
+	doc = "ann_base_bookcase";
+	specializes = base_chest;
+
+	common:screen_name = "Bookcase";
+
+	[aspect]
+	{
+		model = m_i_glb_bookcase-01;
+		material = ;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=bookcase-01-open; }
+			}
+		}
+	}
+}
 [t:template,n:ann_base_rack_wpn]
 {
 	category_name =	"container";
