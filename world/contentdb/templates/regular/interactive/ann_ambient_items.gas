@@ -146,10 +146,10 @@
 		model		= m_i_glb_cap;
 	}
 }
-[t:template,n:ann_ambient_item_satanic_book_base]
+[t:template,n:ann_ambient_item_open_book_base]
 {
 	category_name = "indoor";
-	doc = "ann Ambient Item satanic book base";
+	doc = "ann Ambient Item open book base";
 	specializes = ann_ambient_item_base;
 	[aspect]
 	{
@@ -161,7 +161,7 @@
 {
 	category_name = "indoor";
 	doc = "ann Ambient Item satanic book 00";
-	specializes = ann_ambient_item_satanic_book_base;
+	specializes = ann_ambient_item_open_book_base;
 	[aspect]
 	{
 		[textures]
@@ -174,7 +174,7 @@
 {
 	category_name = "indoor";
 	doc = "ann Ambient Item satanic book 01";
-	specializes = ann_ambient_item_satanic_book_base;
+	specializes = ann_ambient_item_open_book_base;
 	[aspect]
 	{
 		[textures]
@@ -187,7 +187,7 @@
 {
 	category_name = "indoor";
 	doc = "ann Ambient Item satanic book 02";
-	specializes = ann_ambient_item_satanic_book_base;
+	specializes = ann_ambient_item_open_book_base;
 	[aspect]
 	{
 		[textures]
@@ -200,7 +200,7 @@
 {
 	category_name = "indoor";
 	doc = "ann Ambient Item satanic book 03";
-	specializes = ann_ambient_item_satanic_book_base;
+	specializes = ann_ambient_item_open_book_base;
 	[aspect]
 	{
 		[textures]
@@ -213,7 +213,7 @@
 {
 	category_name = "indoor";
 	doc = "ann Ambient Item satanic book 04";
-	specializes = ann_ambient_item_satanic_book_base;
+	specializes = ann_ambient_item_open_book_base;
 	[aspect]
 	{
 		[textures]
@@ -226,7 +226,7 @@
 {
 	category_name = "indoor";
 	doc = "ann Ambient Item satanic book 05";
-	specializes = ann_ambient_item_satanic_book_base;
+	specializes = ann_ambient_item_open_book_base;
 	[aspect]
 	{
 		[textures]
@@ -239,7 +239,7 @@
 {
 	category_name = "indoor";
 	doc = "ann Ambient Item satanic book 06";
-	specializes = ann_ambient_item_satanic_book_base;
+	specializes = ann_ambient_item_open_book_base;
 	[aspect]
 	{
 		[textures]
@@ -248,6 +248,257 @@
 		}
 	}
 }
+[t:template,n:ann_ambient_item_goblin_menace_book_01]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item goblin menace book 01";
+	specializes = ann_ambient_item_open_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_gm_ds;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_goblin_menace_book_02]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item goblin menace book 02";
+	specializes = ann_ambient_item_open_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_gm_01;
+		}
+	}
+}
+
+[t:template,n:ann_ambient_item_goblin_menace_book_03]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item goblin menace book 03";
+	specializes = ann_ambient_item_open_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_gm_02;
+		}
+	}
+}
+
+[t:template,n:ann_ambient_item_goblin_menace_book_04]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item goblin menace book 04";
+	specializes = ann_ambient_item_open_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_gm_03;
+		}
+	}
+}
+
+[t:template,n:ann_ambient_item_goblin_menace_book_05]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item goblin menace book 05";
+	specializes = ann_ambient_item_open_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_gm_04;
+		}
+	}
+}
+
+[t:template,n:ann_ambient_item_goblin_menace_book_06]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item goblin menace book 06";
+	specializes = ann_ambient_item_open_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_gm_05;
+		}
+	}
+}
+
+[t:template,n:ann_ambient_item_goblin_menace_book_07]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item goblin menace book 07";
+	specializes = ann_ambient_item_open_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_gm_06;
+		}
+	}
+}
+
+[t:template,n:ann_ambient_item_goblin_menace_book_08]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item goblin menace book 08";
+	specializes = ann_ambient_item_open_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_gm_07;
+		}
+	}
+}
+
+[t:template,n:ann_ambient_item_goblin_menace_book_09]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item goblin menace book 09";
+	specializes = ann_ambient_item_open_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_gm_08;
+		}
+	}
+}
+
+[t:template,n:ann_ambient_item_goblin_menace_book_10]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item goblin menace book 10";
+	specializes = ann_ambient_item_open_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_gm_09;
+		}
+	}
+}
+
+[t:template,n:ann_ambient_item_goblin_menace_book_11]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item goblin menace book 11";
+	specializes = ann_ambient_item_open_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_gm_10;
+		}
+	}
+}
+
+[t:template,n:ann_ambient_item_goblin_menace_book_12]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item goblin menace book 12";
+	specializes = ann_ambient_item_open_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_gm_11;
+		}
+	}
+}
+
+[t:template,n:ann_ambient_item_goblin_menace_book_13]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item goblin menace book 13";
+	specializes = ann_ambient_item_open_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_gm_12;
+		}
+	}
+}
+
+[t:template,n:ann_ambient_item_goblin_menace_book_14]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item goblin menace book 14";
+	specializes = ann_ambient_item_open_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_gm_13;
+		}
+	}
+}
+
+[t:template,n:ann_ambient_item_goblin_menace_book_15]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item goblin menace book 15";
+	specializes = ann_ambient_item_open_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_gm_14;
+		}
+	}
+}
+
+[t:template,n:ann_ambient_item_goblin_menace_book_16]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item goblin menace book 16";
+	specializes = ann_ambient_item_open_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_gm_15;
+		}
+	}
+}
+
+[t:template,n:ann_ambient_item_goblin_menace_book_17]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item goblin menace book 17";
+	specializes = ann_ambient_item_open_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_gm_16;
+		}
+	}
+}
+
+[t:template,n:ann_ambient_item_goblin_menace_book_18]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item goblin menace book 01";
+	specializes = ann_ambient_item_open_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_twn_books-01_gm_ds_blue;
+		}
+	}
+}
+
 [t:template,n:ann_ambient_item_big_bowl]
 {
 	category_name = "indoor";

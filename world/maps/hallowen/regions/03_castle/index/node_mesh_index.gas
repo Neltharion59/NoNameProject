@@ -26,6 +26,19 @@
 	0x0030074a = t_xxx_keep_flr_16x16-a;
 	0x00300760 = t_xxx_keep_flr_dgn-portal-top-a;
 	0x0030076c = t_xxx_keep_flr_pillar-b;
+	0x0030077b = t_xxx_keep_rug_02x02-c;
+	0x0030077c = t_xxx_keep_rug_04x02-a;
+	0x0030077d = t_xxx_keep_rug_04x02-b;
+	0x0030077e = t_xxx_keep_rug_04x02-c;
+	0x0030077f = t_xxx_keep_rug_tx-a;
+	0x00300780 = t_xxx_keep_rug_tx-b;
+	0x00300781 = t_xxx_keep_rug_tx-c;
+	0x00300782 = t_xxx_keep_rug_tx-cncv-a;
+	0x00300784 = t_xxx_keep_rug_tx-cncv-c;
+	0x00300785 = t_xxx_keep_rug_tx-cnvx-a;
+	0x00300786 = t_xxx_keep_rug_tx-cnvx-b;
+	0x00300787 = t_xxx_keep_rug_tx-cnvx-c;
+	0x00300799 = t_xxx_keep_wall_clmn-a;
 	0x003007a1 = t_xxx_keep_wall_doorway-a;
 	0x003007a2 = t_xxx_keep_wall_doorway-tx-a;
 	0x003007a4 = t_xxx_keep_wall_outside-a;
@@ -38,5 +51,7 @@
 	0x003007cb = t_xxx_keep_wall_thin-tx-tall-r-a;
 	0x003007df = t_xxx_keep_spiral-center-a;
 	0x003007e1 = t_xxx_keep_spiral-floor-base-a;
+	0x003007e4 = t_xxx_keep_spiral-floor-top-a;
 	0x003007e5 = t_xxx_keep_spiral-stairs-a;
+	0x003007e6 = t_xxx_keep_spiral-stairs-top-a;
 }
