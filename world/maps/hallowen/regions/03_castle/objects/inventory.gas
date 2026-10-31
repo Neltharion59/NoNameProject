@@ -10,126 +10,6 @@
 	  p position = -1.24833,-0.927696,-0.00669003,0xfc42a8fd;
 	}
 }
-[t:ann_ambient_item_goblin_menace_book_07,n:0x0030047d]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
-	  p position = 0.632521,2.12114,0.574959,0x106e0ad2;
-	}
-}
-[t:ann_ambient_item_goblin_menace_book_09,n:0x0030048a]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
-	  p position = 0.551559,2.12114,0.673565,0xe3d29e55;
-	}
-}
-[t:ann_ambient_item_goblin_menace_book_10,n:0x0030048b]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
-	  p position = 0.615307,2.12114,0.608307,0x639d0829;
-	}
-}
-[t:ann_ambient_item_goblin_menace_book_11,n:0x0030048c]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
-	  p position = 0.63092,2.12114,0.685753,0xe4aa1864;
-	}
-}
-[t:ann_ambient_minor_spider,n:0x003004bd]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 0.4;
-	}
-	[placement]
-	{
-	  q orientation = 0.92388,1.99894e-008,-1.30047e-007,-0.382683;
-	  p position = -0.0327301,0.754113,0.039669,0x5038e70c;
-	}
-}
-[t:ann_ambient_item_goblin_menace_book_08,n:0x0030047f]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
-	  p position = 0.693054,2.12114,0.67017,0x4641a27c;
-	}
-}
-[t:ann_ambient_item_goblin_menace_book_12,n:0x0030048d]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
-	  p position = 0.617599,2.12114,0.568886,0xaa346d73;
-	}
-}
-[t:ann_ambient_item_goblin_menace_book_13,n:0x00300490]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
-	  p position = 0.462952,2.12114,0.595028,0xb8257504;
-	}
-}
-[t:ann_ambient_item_goblin_menace_book_14,n:0x00300493]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
-	  p position = 0.61499,2.12114,0.612541,0xd5b46427;
-	}
-}
-[t:ann_ambient_item_goblin_menace_book_15,n:0x00300494]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
-	  p position = 0.519947,2.12114,0.609619,0xbbb27882;
-	}
-}
 [t:ann_ambient_item_goblin_menace_book_16,n:0x00300495]
 {
 	[aspect]
@@ -140,6 +20,18 @@
 	{
 	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
 	  p position = 0.537666,2.12114,0.599434,0xdfe7636a;
+	}
+}
+[t:ann_ambient_item_goblin_menace_book_17,n:0x00300496]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
+	  p position = 0.722931,2.12114,0.604233,0x471f9674;
 	}
 }
 [t:ann_ambient_item_goblin_menace_book_18,n:0x00300497]
@@ -154,7 +46,7 @@
 	  p position = 0.648628,2.12114,0.612679,0x819bcfd7;
 	}
 }
-[t:ann_ambient_item_goblin_menace_book_06,n:0x0030047c]
+[t:ann_ambient_item_goblin_menace_book_15,n:0x00300494]
 {
 	[aspect]
 	{
@@ -163,7 +55,79 @@
 	[placement]
 	{
 	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
-	  p position = 0.702726,2.12114,0.73143,0x1e9095d2;
+	  p position = 0.519947,2.12114,0.609619,0xbbb27882;
+	}
+}
+[t:ann_ambient_item_goblin_menace_book_12,n:0x0030048d]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
+	  p position = 0.617599,2.12114,0.568886,0xaa346d73;
+	}
+}
+[t:ann_ambient_item_goblin_menace_book_11,n:0x0030048c]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
+	  p position = 0.63092,2.12114,0.685753,0xe4aa1864;
+	}
+}
+[t:ann_ambient_item_goblin_menace_book_10,n:0x0030048b]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
+	  p position = 0.615307,2.12114,0.608307,0x639d0829;
+	}
+}
+[t:ann_ambient_item_goblin_menace_book_09,n:0x0030048a]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
+	  p position = 0.551559,2.12114,0.673565,0xe3d29e55;
+	}
+}
+[t:ann_ambient_item_goblin_menace_book_14,n:0x00300493]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
+	  p position = 0.61499,2.12114,0.612541,0xd5b46427;
+	}
+}
+[t:ann_ambient_item_goblin_menace_book_13,n:0x00300490]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
+	  p position = 0.462952,2.12114,0.595028,0xb8257504;
 	}
 }
 [t:ann_ambient_item_goblin_menace_book_05,n:0x0030047b]
@@ -176,6 +140,30 @@
 	{
 	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
 	  p position = 0.645218,2.12114,0.659005,0x42cd99a0;
+	}
+}
+[t:ann_ambient_item_goblin_menace_book_06,n:0x0030047c]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
+	  p position = 0.702726,2.12114,0.73143,0x1e9095d2;
+	}
+}
+[t:ann_ambient_item_goblin_menace_book_07,n:0x0030047d]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
+	  p position = 0.632521,2.12114,0.574959,0x106e0ad2;
 	}
 }
 [t:ann_ambient_item_goblin_menace_book_03,n:0x00300475]
@@ -265,7 +253,7 @@
 	  p position = 0.676865,0.933899,0.167853,0x96dbeba3;
 	}
 }
-[t:ann_ambient_item_goblin_menace_book_17,n:0x00300496]
+[t:ann_ambient_item_goblin_menace_book_08,n:0x0030047f]
 {
 	[aspect]
 	{
@@ -274,7 +262,19 @@
 	[placement]
 	{
 	  q orientation = -0.146447,0.853553,-0.353553,-0.353554;
-	  p position = 0.722931,2.12114,0.604233,0x471f9674;
+	  p position = 0.693054,2.12114,0.67017,0x4641a27c;
+	}
+}
+[t:ann_ambient_minor_spider,n:0x003004bd]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.4;
+	}
+	[placement]
+	{
+	  q orientation = 0.92388,1.99894e-008,-1.30047e-007,-0.382683;
+	  p position = -0.0327301,0.754113,0.039669,0x5038e70c;
 	}
 }
 [t:ann_ambient_item_rat_running,n:0x00300386]
