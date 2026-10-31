@@ -13,6 +13,7 @@
 	0x00300619 = t_xxx_dgn_wal_ex-pillar-b;
 	0x0030061c = t_xxx_dgn_wal_ex-thick-a;
 	0x0030061d = t_xxx_dgn_wal_ex-thin-a;
+	0x00300638 = t_xxx_dgn_cap-archway-a-2-a;
 	0x00300657 = t_xxx_dgn_zportal-base-a;
 	0x00300735 = t_xxx_keep_cnr_cncv-a;
 	0x00300737 = t_xxx_keep_cnr_cnvx-a;
@@ -49,6 +50,12 @@
 	0x003007c8 = t_xxx_keep_wall_thin-a;
 	0x003007ca = t_xxx_keep_wall_thin-tx-tall-l-a;
 	0x003007cb = t_xxx_keep_wall_thin-tx-tall-r-a;
+	0x003007cc = t_xxx_keep_cap-02x02-a;
+	0x003007cd = t_xxx_keep_cap-02x04-a;
+	0x003007ce = t_xxx_keep_cap-04x04-a;
+	0x003007cf = t_xxx_keep_cap-08x04-a;
+	0x003007d0 = t_xxx_keep_cap-08x08-a;
+	0x003007d1 = t_xxx_keep_cap-doorway-a;
 	0x003007df = t_xxx_keep_spiral-center-a;
 	0x003007e1 = t_xxx_keep_spiral-floor-base-a;
 	0x003007e4 = t_xxx_keep_spiral-floor-top-a;
