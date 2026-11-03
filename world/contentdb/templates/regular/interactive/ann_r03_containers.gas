@@ -5,6 +5,7 @@
 	specializes = ann_base_chest_of_drawers;
 	[inventory]
 	{
+		drop_at_use_point = true;
 		[pcontent]
 		{
 			[all*]
@@ -73,6 +74,7 @@
 	specializes = ann_base_open_basket;
 	[inventory]
 	{
+		drop_at_use_point = true;
 		[pcontent]
 		{
 			[all*]
@@ -124,6 +126,7 @@
 	specializes = ann_base_locker;
 	[inventory]
 	{
+		drop_at_use_point = true;
 		[pcontent]
 		{
 			[all*]
@@ -163,6 +166,7 @@
 	specializes = ann_base_bookcase;
 	[inventory]
 	{
+		drop_at_use_point = true;
 		[pcontent]
 		{
 			[oneof*]
@@ -190,6 +194,7 @@
 	specializes = ann_base_rack_wpn;
 	[inventory]
 	{
+		drop_at_use_point = true;
 		[pcontent]
 		{
 			[oneof*]
@@ -225,6 +230,7 @@
 	specializes = ann_base_rack_amr;
 	[inventory]
 	{
+		drop_at_use_point = true;
 		[pcontent]
 		{
 			[oneof*]
@@ -271,6 +277,7 @@
 	}
 	[inventory]
 	{
+		drop_at_use_point = true;
 		[pcontent]
 		{
 			[all*]
@@ -329,10 +336,14 @@
 	{
 		material = steel;
 		model = m_i_glb_chest-03;
-		[textures]		{ 0 = b_i_glb_locker-01; }
+		[textures]
+		{
+			0 = b_i_glb_chest-stone;
+		}
 	}
 	[inventory]
 	{
+		drop_at_use_point = true;
 		[pcontent]
 		{
 			[all*]

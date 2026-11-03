@@ -1,3 +1,51 @@
+[t:generator_generic,n:0x003008f7]
+{
+	[generator_basic]
+	{
+		child_template_name = "ann_r03_skeleton_dog";
+	  x initial_command = 0x003009AF;
+	  i max_alive_children = 4;
+	  i num_children_incubating = 12;
+	  f spawn_period = 4;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.35878,0,-1.04856,0x6b958940;
+	}
+}
+[t:generator_generic,n:0x0030094d]
+{
+	[generator_basic]
+	{
+		child_template_name = "ann_r03_skeleton_dog";
+	  x initial_command = 0x0030094E;
+	  i max_alive_children = 4;
+	  i num_children_incubating = 12;
+	  f spawn_period = 4;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.68499,0,0.17073,0x6b958940;
+	}
+}
+[t:generator_generic,n:0x003008ea]
+{
+	[generator_basic]
+	{
+		child_template_name = "ann_r03_skeleton_dog";
+	  x initial_command = 0x003009B0;
+	  i max_alive_children = 4;
+	  i num_children_incubating = 12;
+	  f spawn_period = 4;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.531842,0,-0.340325,0xfbad88a6;
+	}
+}
 [t:generator_generic,n:0x003003a8]
 {
 	[generator_basic]

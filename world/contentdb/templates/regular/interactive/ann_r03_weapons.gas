@@ -5,7 +5,7 @@
 	specializes = base_staff;
 	[aspect]
 	{
-		model = m_w_stf_012;
+		model = m_w_stf_035;
 	}
 	[attack]
 	{
@@ -15,15 +15,6 @@
 	[common]
 	{
 		is_pcontent_allowed = false;
-		screen_name = "Sickle Staff";
-	}
-	[gui]
-	{
-		active_icon = b_gui_ig_i_ic_stf_004;
-		equip_requirements = strength:4;
-		inventory_height = 4;
-		inventory_icon = b_gui_ig_i_w_stf_010;
-		inventory_width = 1;
 	}
 }
 
@@ -52,5 +43,45 @@
 		inventory_height = 2;
 		inventory_icon = b_gui_ig_i_w_dgr_007;
 		inventory_width = 1;
+	}
+}
+[t:template,n:ann_r03_weapon_2h_sword]
+{
+	doc = "ann_r03_weapon_2h_sword";
+	specializes = base_sword;
+	[aspect]
+	{
+		model = m_w_swd_020;
+	}
+	[attack]
+	{
+	  f damage_max = 25.000000;
+	  f damage_min = 23.000000;
+		is_two_handed = true;
+	}
+	[common]
+	{
+	  b allow_modifiers = false;
+		is_pcontent_allowed = false;
+	}
+}
+[t:template,n:ann_r03_weapon_2h_hammer]
+{
+	doc = "ann_r03_weapon_2h_hammer";
+	specializes = base_hammer;
+	[aspect]
+	{
+		model = m_w_hmr_016;
+	}
+	[attack]
+	{
+	  f damage_max = 30.000000;
+	  f damage_min = 17.000000;
+		is_two_handed = true;
+	}
+	[common]
+	{
+	  b allow_modifiers = false;
+		is_pcontent_allowed = false;
 	}
 }

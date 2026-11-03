@@ -1,3 +1,67 @@
+[t:emitter_glb_smoke_01,n:0x003007d1]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -2.84861,0.836443,-7.10073,0x54164013;
+	}
+}
+[t:emitter_glb_smoke_01,n:0x003007d4]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -2.93889,0.786444,-3.11721,0x54164013;
+	}
+}
+[t:emitter_glb_smoke_01,n:0x003007d7]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -3.05819,0.786444,0.871023,0x54164013;
+	}
+}
+[t:emitter_glb_smoke_01,n:0x003007da]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -2.97998,0.786444,4.78864,0x54164013;
+	}
+}
+[t:emitter_glb_smoke_01,n:0x003007dd]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -6.781,0.686446,-5.06506,0x54164013;
+	}
+}
+[t:emitter_glb_smoke_01,n:0x003007e0]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -6.90029,0.686446,-1.07683,0x54164013;
+	}
+}
+[t:emitter_glb_smoke_01,n:0x003007e3]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -6.82208,0.686446,2.84079,0x54164013;
+	}
+}
+[t:emitter_glb_smoke_01,n:0x003007cb]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -7.01911,2.73569,-7.13153,0x35c780f6;
+	}
+}
 [t:emt_light_ray,n:0x003004ad]
 {
 	[placement]
