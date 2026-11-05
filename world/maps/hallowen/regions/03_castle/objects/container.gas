@@ -1224,21 +1224,3 @@
 		use_point_scids = 0x00300632;
 	}
 }
-[t:ann_r03_basket,n:0x0030006a]
-{
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,-0.382683;
-	  p position = 1.17474,2.49399,0.717506,0x9910fd74;
-		use_point_scids = 0x0030049f;
-	}
-}
-[t:ann_r03_basket,n:0x0030006b]
-{
-	[placement]
-	{
-	  q orientation = 0,1,0,1.59522e-008;
-	  p position = -0.0812988,2.49698,0.747366,0x9910fd74;
-		use_point_scids = 0x0030049f;
-	}
-}

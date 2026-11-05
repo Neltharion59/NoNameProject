@@ -11,4 +11,12 @@
 			0x00000002 = 0x39A24310,2;
 		}
 	}
+	[t:stitch_editor,n:03_castle]
+	{
+		dest_region = 03_castle;
+		[node_ids]
+		{
+			0x00000003 = 0x819F3A00,1;
+		}
+	}
 }

@@ -2,4 +2,25 @@
 {
 	source_region_guid = 0x00000003;
 	source_region_name = 03_castle;
+	[t:stitch_editor,n:02_dungeon]
+	{
+		dest_region = 02_dungeon;
+		[node_ids]
+		{
+			0x00000003 = 0x6E6D77A5,25;
+		}
+	}
+	[t:stitch_editor,n:04_library]
+	{
+		dest_region = 04_library;
+		[node_ids]
+		{
+			0x00000004 = 0xE4C598DD,2;
+			0x00000005 = 0xFEDB3FA4,3;
+			0x00000006 = 0xA33A62F0,5;
+			0x00000007 = 0xA33A62F0,4;
+			0x00000008 = 0x612094AF,6;
+			0x00000009 = 0x79B4CEDF,3;
+		}
+	}
 }

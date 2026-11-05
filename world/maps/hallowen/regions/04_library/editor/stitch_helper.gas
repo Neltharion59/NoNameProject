@@ -2,4 +2,17 @@
 {
 	source_region_guid = 0x00000005;
 	source_region_name = 04_library;
+	[t:stitch_editor,n:03_castle]
+	{
+		dest_region = 03_castle;
+		[node_ids]
+		{
+			0x00000004 = 0xDB58B7BB,8;
+			0x00000005 = 0xBD2130EE,6;
+			0x00000006 = 0x85E61C6F,4;
+			0x00000007 = 0x85E61C6F,5;
+			0x00000008 = 0xF7BC9017,3;
+			0x00000009 = 0x81A1CEBD,3;
+		}
+	}
 }

@@ -93,6 +93,35 @@
 		}
 	}
 }
+[t:template,n:ann_monster_spell_leech_life_r03_3]
+{
+	category_name = "magic";
+	doc = "ann_monster_spell_leech_life_r03_3";
+	specializes = ann_monster_spell_leech_life_base;
+	[attack]
+	{
+		damage_max = 40;
+		damage_min = 40;
+	}
+	[magic]
+	{
+		usage_context_flags = uc_life_giving;
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_life;
+				description = "leech life";
+				duration = 1.1;
+				frequency = 0.1;
+				initial_delay = 0.0;
+				is_enhancement = true;
+				is_permanent = true;
+				value = ( ( #src_life > 40 ) ? 40 : ( ( #src_life > 0.0 ) ? #src_life : 0.0 ) )/10.0;
+			}
+		}
+	}
+}
 [t:template,n:ann_monster_spell_bombard_soul]
 {
 	category_name = "magic";

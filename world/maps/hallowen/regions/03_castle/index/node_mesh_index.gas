@@ -1,5 +1,11 @@
 [node_mesh_index]
 {
+	0x003004b6 = t_grdn_floor-gravel-04x04-a;
+	0x003004ba = t_grdn_floor-gravel-tx-grs01-08x04-a;
+	0x003004bb = t_grdn_floor-gravel-tx-grs01-cnr-a;
+	0x003004c5 = t_grdn_hedge-corner-a;
+	0x003004c9 = t_grdn_hedge-wall-04x04-a;
+	0x003004ca = t_grdn_hedge-wall-08x04-a;
 	0x0030056f = t_xxx_dgn_cnr_ex-ccav-a;
 	0x00300573 = t_xxx_dgn_cnr_ex-cnvx-a;
 	0x003005a2 = t_xxx_dgn_flr_04x04-a;
@@ -30,6 +36,7 @@
 	0x00300749 = t_xxx_keep_flr_16x08-a;
 	0x0030074a = t_xxx_keep_flr_16x16-a;
 	0x00300760 = t_xxx_keep_flr_dgn-portal-top-a;
+	0x00300768 = t_xxx_keep_flr_path-08x04-a;
 	0x0030076c = t_xxx_keep_flr_pillar-b;
 	0x0030077b = t_xxx_keep_rug_02x02-c;
 	0x0030077c = t_xxx_keep_rug_04x02-a;

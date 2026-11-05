@@ -1,0 +1,132 @@
+[t:template,n:bottle_alcohol-empty]
+{
+	category_name = "indoor";
+	doc = "food_alcohol-empty";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.7;
+		lodfi_upper = 1;
+		model = m_i_glb_bottle_alcohol-empty;
+	}
+}
+[t:template,n:bottle_alcohol-001]
+{
+	category_name = "indoor";
+	doc = "food_alcohol-green";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.7;
+		lodfi_upper = 1;
+		model = m_i_glb_bottle_alcohol-001;
+	}
+}
+[t:template,n:bottle_alcohol-002]
+{
+	category_name = "indoor";
+	doc = "food_alcohol-brown";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.7;
+		lodfi_upper = 1;
+		model = m_i_glb_bottle_alcohol-002;
+	}
+}
+[t:template,n:bottle_alcohol-003]
+{
+	category_name = "indoor";
+	doc = "food_alcohol-blue";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.7;
+		lodfi_upper = 1;
+		model = m_i_glb_bottle_alcohol-003;
+	}
+}
+[t:template,n:bottle_alcohol-004]
+{
+	category_name = "indoor";
+	doc = "food_alcohol-red";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.7;
+		lodfi_upper = 1;
+		model = m_i_glb_bottle_alcohol-004;
+	}
+}
+[t:template,n:bottle_rack]
+{
+	category_name = "indoor";
+	doc = "food_bottle_rack";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		lodfi_lower = 0.7;
+		lodfi_upper = 1;
+		model = m_i_glb_bottle_rack;
+	}
+}
+[t:template,n:bottle_rack-empty]
+{
+	category_name = "indoor";
+	doc = "food_bottle_rack-empty";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		lodfi_lower = 0.7;
+		lodfi_upper = 1;
+		model = m_i_glb_bottle_rack-empty;
+	}
+}
+[t:template,n:barrel_rack-huge]
+{
+	category_name = "indoor";
+	doc = "barrel_rack_huge";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		lodfi_lower = 0.7;
+		lodfi_upper = 1;
+		model = m_i_glb_barrel_rack-hge;
+	}
+}
+[t:template,n:barrel_rack-large]
+{
+	category_name = "indoor";
+	doc = "barrel_rack_large";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		lodfi_lower = 0.7;
+		lodfi_upper = 1;
+		model = m_i_glb_barrel_rack-lrg;
+	}
+}
+[t:template,n:barrel_rack-medium]
+{
+	category_name = "indoor";
+	doc = "barrel_rack_medium";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		lodfi_lower = 0.7;
+		lodfi_upper = 1;
+		model = m_i_glb_barrel_rack-med;
+	}
+}
+[t:template,n:barrel_rack-small]
+{
+	category_name = "indoor";
+	doc = "barrel_rack_small";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		lodfi_lower = 0.7;
+		lodfi_upper = 1;
+		model = m_i_glb_barrel_rack-sml;
+	}
+}
