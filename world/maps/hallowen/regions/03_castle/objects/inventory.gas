@@ -459,6 +459,37 @@
 	  p position = 0.355118,0.528327,-0.886832,0xec037ed1;
 	}
 }
+[t:ann_ambient_item_spider_fidgeting,n:0x00300396]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.12;
+	}
+	[placement]
+	{
+	  q orientation = -0.5,-0.5,-0.5,0.5;
+	  p position = -0.34553,-0.821709,-0.682411,0xf426e5a2;
+	}
+}
+[t:ann_ambient_item_big_bowl,n:0x003001e9]
+{
+	[placement]
+	{
+	  q orientation = 0,-7.47325e-007,0,1;
+	  p position = 1.8899,-2,-0.108356,0x6c239e3e;
+	}
+}
+[t:ann_ambient_item_spider_fidgeting,n:0x00300395]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.2;
+	}
+	[placement]
+	{
+	  p position = -1.51471,0.32797,-1.75103,0xa6b51124;
+	}
+}
 [t:ann_ambient_minor_spider,n:0x0030027a]
 {
 	[aspect]
@@ -477,36 +508,5 @@
 	{
 	  q orientation = -1,0,0,-1.60478e-007;
 	  p position = 0.822201,0.812043,-0.264305,0x14dae79c;
-	}
-}
-[t:ann_ambient_item_spider_fidgeting,n:0x00300396]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 0.12;
-	}
-	[placement]
-	{
-	  q orientation = -0.5,-0.5,-0.5,0.5;
-	  p position = -0.34553,-0.821709,-0.682411,0xf426e5a2;
-	}
-}
-[t:ann_ambient_item_spider_fidgeting,n:0x00300395]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 0.2;
-	}
-	[placement]
-	{
-	  p position = -1.51471,0.32797,-1.75103,0xa6b51124;
-	}
-}
-[t:ann_ambient_item_big_bowl,n:0x003001e9]
-{
-	[placement]
-	{
-	  q orientation = 0,-7.47325e-007,0,1;
-	  p position = 1.8899,-2,-0.108356,0x6c239e3e;
 	}
 }
