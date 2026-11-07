@@ -598,6 +598,20 @@
 	  p position = 0.0136222,0,0.81601,0x29953cda;
 	}
 }
+[t:blocking_object,n:0x00300c00]
+{
+	[placement]
+	{
+	  p position = 3.00392,0,0.034882,0xeaacfc9c;
+	}
+}
+[t:blocking_object,n:0x00300c01]
+{
+	[placement]
+	{
+	  p position = 4.73992,0,-0.0827936,0x02a5f39c;
+	}
+}
 [t:use_point,n:0x0030067c]
 {
 	[placement]
@@ -2616,19 +2630,5 @@
 	{
 	  q orientation = 0,1,0,0;
 	  p position = 1.79355,0,-0.854466,0x01bf715f;
-	}
-}
-[t:blocking_object,n:0x00300c00]
-{
-	[placement]
-	{
-	  p position = 3.00392,0,0.034882,0xeaacfc9c;
-	}
-}
-[t:blocking_object,n:0x00300c01]
-{
-	[placement]
-	{
-	  p position = 4.73992,0,-0.0827936,0x02a5f39c;
 	}
 }

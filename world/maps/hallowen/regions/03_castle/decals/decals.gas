@@ -4166,18 +4166,6 @@
 	}
 	[t:decal,n:*]
 	{
-		decal_orientation = 0.000000,-1.000000,0.000000,0.000000,0.000000,-1.000000,1.000000,0.000000,0.000000;
-		decal_origin = -7.695378,1.054484,-3.800747,0x5CCC9BDE;
-	  f far_plane = 1.100000;
-	  x guid = 0x0E7F160C;
-	  f horizontal_meters = 2.000000;
-	  f lod = 1.000000;
-	  f near_plane = 0.100000;
-		texture = art\bitmaps\decals\b_d_blood.raw;
-	  f vertical_meters = 2.000000;
-	}
-	[t:decal,n:*]
-	{
 		decal_orientation = -0.707107,-0.707107,0.000000,0.000000,-0.000000,-1.000000,0.707107,-0.707107,0.000000;
 		decal_origin = -7.740544,-1.800000,-6.814978,0x5BE9212E;
 	  f far_plane = 1.100000;
@@ -4185,7 +4173,7 @@
 	  f horizontal_meters = 2.000000;
 	  f lod = 1.000000;
 	  f near_plane = 0.100000;
-		texture = art\bitmaps\decals\b_d_blood.raw;
+		texture = Art\Bitmaps\Decals\b_d_blood.%img%;
 	  f vertical_meters = 2.000000;
 	}
 	[t:decal,n:*]
@@ -4197,7 +4185,19 @@
 	  f horizontal_meters = 2.000000;
 	  f lod = 1.000000;
 	  f near_plane = 0.100000;
-		texture = art\bitmaps\decals\b_d_blood.raw;
+		texture = Art\Bitmaps\Decals\b_d_blood.%img%;
+	  f vertical_meters = 2.000000;
+	}
+	[t:decal,n:*]
+	{
+		decal_orientation = 0.000000,-1.000000,0.000000,0.000000,0.000000,-1.000000,1.000000,0.000000,0.000000;
+		decal_origin = -7.695378,1.054484,-3.800747,0x5CCC9BDE;
+	  f far_plane = 1.100000;
+	  x guid = 0x0E7F160C;
+	  f horizontal_meters = 2.000000;
+	  f lod = 1.000000;
+	  f near_plane = 0.100000;
+		texture = Art\Bitmaps\Decals\b_d_blood.%img%;
 	  f vertical_meters = 2.000000;
 	}
 }
