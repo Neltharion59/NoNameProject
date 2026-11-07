@@ -2,4 +2,12 @@
 {
 	source_region_guid = 0x00000006;
 	source_region_name = 04_side_gazebo_dungeon;
+	[t:stitch_editor,n:04_library]
+	{
+		dest_region = 04_library;
+		[node_ids]
+		{
+			0x00000010 = 0x8A157704,10;
+		}
+	}
 }

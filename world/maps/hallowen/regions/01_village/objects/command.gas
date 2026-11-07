@@ -666,14 +666,6 @@
 	  p position = -0.212799,0,-1.22765,0xf8eb99c3;
 	}
 }
-[t:cmd_delete_object,n:0x001003bf]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 1.78113,0,0.756411,0xdedd5a8c;
-	}
-}
 [t:cmd_animation_command,n:0x00100e05]
 {
 	[cmd_animation_command]

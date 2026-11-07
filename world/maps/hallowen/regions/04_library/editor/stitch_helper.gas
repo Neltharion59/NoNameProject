@@ -15,4 +15,12 @@
 			0x00000009 = 0x81A1CEBD,3;
 		}
 	}
+	[t:stitch_editor,n:04_side_gazebo_dungeon]
+	{
+		dest_region = 04_side_gazebo_dungeon;
+		[node_ids]
+		{
+			0x00000010 = 0x9374E8EF,2;
+		}
+	}
 }

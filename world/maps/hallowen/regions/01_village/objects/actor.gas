@@ -2002,7 +2002,7 @@
 	  p position = 2.76082,0,-2.49148,0x308b6134;
 	}
 }
-[t:ann_r01_shop_bowl_token,n:0x001003b9]
+[t:ann_r01_shop_potions,n:0x001003b9]
 {
 	[conversation]
 	{

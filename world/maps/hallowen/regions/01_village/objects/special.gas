@@ -2050,24 +2050,6 @@
 	  p position = 1.18498,0,-2.38654,0x308b6134;
 	}
 }
-[t:ann_r01_bowl_flipping_game_manager,n:0x001003b6]
-{
-	[ann_bowl_flipping_game]
-	{
-		bowlmovingeffect = "ann_bowl_moving_effect";
-		bowlpassiveeffect = "ann_bowl_passive_effect";
-	  x bowlspot01 = 0x001003B3;
-	  x bowlspot02 = 0x001003B5;
-	  x bowlspot03 = 0x001003B7;
-		rewardtemplate = "ann_r01_reward_bowl_flipping";
-	  x tokencollectingtrigger = 0x001003BD;
-		treasurepassiveeffect = "ann_treasure_passive_effect";
-	}
-	[placement]
-	{
-	  p position = -2.47404,0,0.397681,0x1fb23d0d;
-	}
-}
 [t:blocking_object,n:0x001003ba]
 {
 	[aspect]
@@ -2085,36 +2067,6 @@
 	[placement]
 	{
 	  p position = -2.48825,0,1.50215,0x1fb23d0d;
-	}
-}
-[t:trigger_generic,n:0x001003bd]
-{
-	[common]
-	{
-		dev_instance_text = "ON TOKEN DROPPED";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x001003BF,0f,"0x4003","go_within_sphere",0);
-				action* = send_world_message("we_req_activate",0x001003B6,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = go_within_sphere(3.500000,0x00000000,"ann_r01_trs_token_bowl_flip","on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -3.56229,0,1.29484,0x1fb23d0d;
 	}
 }
 [t:blocking_object,n:0x001003bb]
