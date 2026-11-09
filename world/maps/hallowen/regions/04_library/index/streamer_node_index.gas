@@ -592,7 +592,6 @@
   x * = 0x449EB97E;
   x * = 0x44BA8544;
   x * = 0x450DDFE1;
-  x * = 0x4525307E;
   x * = 0x452C0483;
   x * = 0x457C9B29;
   x * = 0x458A5685;
@@ -656,7 +655,6 @@
   x * = 0x4B7B07D2;
   x * = 0x4B923F0A;
   x * = 0x4BB8493B;
-  x * = 0x4BBFDF4C;
   x * = 0x4BE886C8;
   x * = 0x4BE8CCA8;
   x * = 0x4BFE7EA0;
