@@ -120,13 +120,14 @@
 		material = ice;
 		[voice]
 		{
-			[cast]			{ * = s_e_attack_frostnid; }
-			[die]			{ priority = high; * = s_e_die_spider; }
+			[cast]			{ * = s_e_attack_shard; }
+			[die]			{ priority = high; * = s_e_die_shard_small; }
 			[enemy_spotted]	{ priority = high; * = s_e_call_spider_SED; }
 		}
 		[textures]
 		{
-			0 = b_c_edm_ann_frostnid;
+			//0 = b_c_edm_ann_frostnid;
+			0 = b_i_cav_gems-05-static;
 		}
 	}
 	[attack]
@@ -141,6 +142,20 @@
 		actor_auto_switches_to_magic	= true;
 		actor_auto_switches_to_karate	= false;
 		actor_auto_switches_to_melee	= false;
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		explosion_magnitude = 1.0;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			ann_r02_frag_glb_shard_red_01 = 1;
+			ann_r02_frag_glb_shard_red_02 = 1;
+			ann_r02_frag_glb_shard_red_03 = 2;
+			ann_r02_frag_glb_shard_red_04 = 3;
+			ann_r02_frag_glb_shard_red_05 = 3;
+		}
 	}
 }
 [t:template,n:ann_r02_spider]

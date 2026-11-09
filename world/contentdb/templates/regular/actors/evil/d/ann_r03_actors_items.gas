@@ -60,11 +60,6 @@
 	[defend] { 
 		defense=14; 
 	}
-	[inventory]
-	{
-		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=ann_flying_item_spell; }
-	}
 	[mind]
 	{
 		actor_weapon_preference		= WP_MAGIC;

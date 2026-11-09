@@ -16,6 +16,10 @@
 	{
 		is_pcontent_allowed = false;
 	}
+	[gui]
+	{
+		is_droppable = false;
+	}
 }
 
 [t:template,n:ann_weapon_vampire]

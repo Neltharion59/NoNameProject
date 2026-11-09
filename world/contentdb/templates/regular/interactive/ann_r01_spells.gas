@@ -14,6 +14,7 @@
 	}
 	[common]
 	{
+		is_pcontent_allowed = false;
 		description = "Tears <alter_life> Health and <alter_mana> Mana from the Enemy and gives it to the Caster. Little Tibby will it when wounded or out of mana.";
 		[template_triggers]
 		{
@@ -111,6 +112,7 @@
 	}
 	[common]
 	{
+		is_pcontent_allowed = false;
 		description = "Recites dark incantation to hurt the target. Deals devastating damage to weak targets. Deals damage based on target max Health against bosses.";
 		screen_name = "Dark Incantation";
 		[template_triggers]

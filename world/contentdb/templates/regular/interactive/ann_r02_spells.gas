@@ -47,6 +47,18 @@
 		damage_min = 1;
 		skill_class = "Combat Magic";
 	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("ann_effect_red_crystal_dust");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+		}
+	}
 }
 [t:template,n:ann_r02_spell_frostnid_blast]
 {

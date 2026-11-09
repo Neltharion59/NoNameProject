@@ -2849,19 +2849,12 @@
 	  p position = -3.98342,0,0.601509,0xdfe63a1c;
 	}
 }
-[t:ann_r03_vampire_female,n:0x00300264]
-{
-	[placement]
-	{
-	  p position = -0.385231,0,0.791817,0xc12b7006;
-	}
-}
 [t:ann_r03_toreck,n:0x00300261]
 {
 	[placement]
 	{
 	  q orientation = 0,1,0,-1.66939e-007;
-	  p position = -4.22617,-0.05,3.28839,0x43aab680;
+	  p position = -4.64669,-0.05,-0.310179,0x43aab680;
 	}
 }
 [t:ann_r03_toreck,n:0x00300262]
@@ -2873,7 +2866,7 @@
 	[placement]
 	{
 	  q orientation = 0,1,0,-1.66939e-007;
-	  p position = 4.5601,-0.05,2.6421,0x43aab680;
+	  p position = 5.43227,-0.05,-0.983869,0x43aab680;
 	}
 }
 [t:ann_r03_skeleton_dog,n:0x003003b1]

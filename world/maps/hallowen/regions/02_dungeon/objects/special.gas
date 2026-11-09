@@ -66,6 +66,14 @@
 	  p position = -1.21523,0,0.788387,0x4c4b1a8e;
 	}
 }
+[t:blocking_object,n:0x00200eab]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382684,0,0.92388;
+	  p position = 1.83963,0,-0.533974,0x57dda34c;
+	}
+}
 [t:use_point,n:0x00200c15]
 {
 	[placement]
@@ -488,7 +496,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 1.14305,0,-0.824463,0x1df98cbd;
+	  p position = 1.16359,0,1.49532,0x1d492e74;
 	}
 }
 [t:use_point,n:0x002006b1]
@@ -1138,6 +1146,64 @@
 	  p position = -2.58606,0,-0.0578499,0x3b445f0d;
 	}
 }
+[t:trigger_fade_nodes_box,n:0x00200103]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0x00000003,99,99,99,"in");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(1.000000,2.000000,3.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = true;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.306699,0.0999999,-4.01566,0x819f3a00;
+	}
+}
+[t:trigger_fade_nodes_box,n:0x002000ec]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0x00000003,99,99,99,"out:black");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(1.000000,2.000000,3.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = true;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.31635,-1.5,1.93723,0xdafd2282;
+	}
+}
 [t:blocking_object,n:0x00200a1b]
 {
 	[aspect]
@@ -1272,64 +1338,53 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.279737,-1.90735e-006,0.97934,0x83d180a4;
+	  p position = -0.670403,0,0.60022,0x83d180a4;
 	}
 }
-[t:trigger_fade_nodes_box,n:0x002000ec]
+[t:use_point,n:0x00200ddd]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.00344849,-1.5,-1.57325,0xafe21c08;
+	}
+}
+[t:use_point,n:0x00200eac]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.0816956,-1.5,-1.71819,0x5b8dc338;
+	}
+}
+[t:trigger_generic,n:0x00200f21]
 {
 	[common]
 	{
+		dev_instance_text = "Open the crypt doors";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = fade_nodes(0x00000003,99,99,99,"out:black");
+				action* = send_world_message("we_req_use",0x00200660,0f,"default","every",0);
+				action* = send_world_message("we_req_use",0x00200684,0f,"default","every",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,2.000000,3.000000,"on_every_enter");
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
 			  f delay = 0.000000;
-			  b flip_flop = true;
+			  b flip_flop = false;
 			  b multi_player = true;
 			  b no_trig_bits = false;
 				occupants_group = ;
 			  f reset_duration = 0.000000;
 			  b single_player = true;
-			  b single_shot = false;
+			  b single_shot = true;
 			  b start_active = true;
 			}
 		}
 	}
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -0.31635,-1.5,1.93723,0xdafd2282;
-	}
-}
-[t:trigger_fade_nodes_box,n:0x00200103]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes(0x00000003,99,99,99,"in");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,2.000000,3.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = true;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.306699,0.0999999,-4.01566,0x819f3a00;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.778542,1,1.7368,0x7ba7a39b;
 	}
 }

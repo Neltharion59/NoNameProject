@@ -81,7 +81,7 @@
 }
 [t:template,n:ann_r02_sarcophagus]
 {
-	specializes			= base_chest_use_toggle;
+	specializes			= base_chest;
 	doc					= "ann_r02_sarcophagus";
     category_name       = "container";
 

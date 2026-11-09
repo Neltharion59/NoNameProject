@@ -160,3 +160,63 @@
 		model = m_i_glb_frag-googore-grub-05;
 	}
 }
+
+[t:template,n:ann_r02_frag_glb_shard_red_01]
+{
+	doc = "ann_r02_frag_glb_shard_red_01";
+	specializes = fragment;
+	[aspect] 
+	{ 
+		scale_base = 0.15;
+		model = m_i_glb_frag-shard-01; 
+		[textures] { 0 = b_i_cav_gems-05-static; }
+	}
+}
+
+[t:template,n:ann_r02_frag_glb_shard_red_02]
+{
+	doc = "ann_r02_frag_glb_shard_red_02";
+	specializes = fragment;
+	[aspect] 
+	{ 
+		scale_base = 0.15;
+		model = m_i_glb_frag-shard-02; 
+		[textures] { 0 = b_i_cav_gems-05-static; }
+	}
+}
+
+[t:template,n:ann_r02_frag_glb_shard_red_03]
+{
+	doc = "ann_r02_frag_glb_shard_red_03";
+	specializes = fragment;
+	[aspect] 
+	{ 
+		scale_base = 0.15;
+		model = m_i_glb_frag-shard-03; 
+		[textures] { 0 = b_i_cav_gems-05-static; }
+	}
+}
+
+[t:template,n:ann_r02_frag_glb_shard_red_04]
+{
+	doc = "ann_r02_frag_glb_shard_red_04";
+	specializes = fragment;
+	[aspect] 
+	{ 
+		scale_base = 0.15;
+		model = m_i_glb_frag-shard-04; 
+		[textures] { 0 = b_i_cav_gems-05-static; }
+	}
+}
+
+[t:template,n:ann_r02_frag_glb_shard_red_05]
+{
+	doc = "ann_r02_frag_glb_shard_red_05";
+	specializes = fragment;
+	[aspect] 
+	{ 
+		scale_base = 0.15;
+		model = m_i_glb_frag-shard-05; 
+		[textures] { 0 = b_i_cav_gems-05-static; }
+	}
+}

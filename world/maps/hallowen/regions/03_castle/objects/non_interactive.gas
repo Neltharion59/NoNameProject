@@ -10480,14 +10480,6 @@
 	  p position = 1.23932,0,0.0409241,0xc12b7006;
 	}
 }
-[t:statue_glb_roman_03,n:0x00300263]
-{
-	[placement]
-	{
-	  q orientation = 8.63756e-009,1.85923e-007,4.31456e-009,1;
-	  p position = -0.940063,0,-0.624893,0xc12b7006;
-	}
-}
 [t:statue_glb_roman_02,n:0x00300144]
 {
 	[aspect]
@@ -14927,5 +14919,101 @@
 	{
 	  q orientation = 0,-0.382684,0,0.923879;
 	  p position = -0.513542,-2,-0.486176,0x926b96c1;
+	}
+}
+[t:statue_glb_roman_03,n:0x00300b46]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,7.70833e-008;
+	  p position = 3.24967,-0.05,1.76923,0x43aab680;
+	}
+}
+[t:statue_glb_roman_03,n:0x00300b6e]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,7.70833e-008;
+	  p position = 3.97689,-0.05,1.76054,0x43aab680;
+	}
+}
+[t:statue_glb_roman_03,n:0x00300b6f]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,7.70833e-008;
+	  p position = 4.72155,-0.05,1.73879,0x43aab680;
+	}
+}
+[t:statue_glb_roman_03,n:0x00300b70]
+{
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.76431e-007;
+	  p position = 5.39695,-0.05,1.64837,0x43aab680;
+	}
+}
+[t:statue_glb_roman_03,n:0x00300b71]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.63968,-2,-0.875831,0x59b900b9;
+	}
+}
+[t:statue_glb_roman_03,n:0x00300b76]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.61793,-2,-0.131172,0x59b900b9;
+	}
+}
+[t:statue_glb_roman_03,n:0x00300b77]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.388719,0,-0.330721,0xae7cf9bd;
+	}
+}
+[t:statue_glb_roman_03,n:0x00300b78]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,7.70833e-008;
+	  p position = -5.94205,-0.05,1.38003,0x43aab680;
+	}
+}
+[t:statue_glb_roman_03,n:0x00300bab]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,7.70833e-008;
+	  p position = -5.19739,-0.05,1.35828,0x43aab680;
+	}
+}
+[t:statue_glb_roman_03,n:0x00300c02]
+{
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.76431e-007;
+	  p position = -4.52199,-0.05,1.26786,0x43aab680;
+	}
+}
+[t:statue_glb_roman_03,n:0x00300c03]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,3.66288e-008;
+	  p position = -3.79477,-0.05,1.25918,0x43aab680;
+	}
+}
+[t:statue_glb_roman_03,n:0x00300c04]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,5.51852e-009;
+	  p position = -3.05011,-0.05,1.23743,0x43aab680;
 	}
 }

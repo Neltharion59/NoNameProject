@@ -34,7 +34,7 @@ property Scid   	Initial_Command$							doc = "Scid of Command Object if applica
 //----Generator-------
 property string 	child_template_name$						doc = "Template name of the child you want to spawn.";
 property int    	num_children_incubating$	= 1				doc = "How many children total do you want to spawn?";
-property float  	spawn_period$            	= 2.0			doc = "Period between spawns.  Accel/Decel effects this number.";
+property float  	spawn_period$            	= 0.1			doc = "Period between spawns.  Accel/Decel effects this number.";
 property int    	max_alive_children$      	= 1        		doc = "Maximum number of children which can be alive at a time.";
 property float  	spawn_range$             	= 0.5			doc = "A radius around the spawnpoint/or generator used for collision detection.";
 property float  	trigger_range$             	= -1.0			doc = "When a party member is within this radius, the generator will activate.";
