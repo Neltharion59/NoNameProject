@@ -1,0 +1,132 @@
+[t:template,n:ann_talon_ambient]
+{
+	category_name = "1W_evil_b";
+	doc = "ann_talon_ambient";
+	specializes = actor_ambient;
+	[actor] { race=other; }
+	[aspect]
+	{
+		draw_shadow = false;
+		is_selectable = false;
+        is_invincible = true;
+
+		model = m_c_ebb_001_pos_1;
+		[textures]
+		{
+			0 = b_c_ebb_001_body-2_1;
+			1 = b_c_ebb_001_wings;
+		}
+	}
+	[body]
+	{
+		avg_move_velocity = 3.650000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine1;
+			body_posterior = bone13;
+			kill_bone = bip01_spine2;
+			shield_bone = Bip01_L_Hand;
+			weapon_bone = Bip01_tongue_01; //Bip01_R_Hand; //change for breath weapon
+			//misc1 = Bip01_L_Finger01; // Not needed in ds1?
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_ebb_001_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00=at-cntr;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00=dff;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00=di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00=dff;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00=at-cntr;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					// in the order that they are used:
+					lnis = a_c_ebb_001_fs0_ld_NIS; //land in the NIS
+					land = a_c_ebb_001_fs0_ld; //land
+					atkc = a_c_ebb_001_fs0_at-cntr; //attack anim
+					atkl = a_c_ebb_001_fs0_at-L; //attack anim
+					atkr = a_c_ebb_001_fs0_at-R; //attack anim
+					idle = a_c_ebb_001_fs0_dff; //fidget/don't attack, be vulnerable
+					rtrt = a_c_ebb_001_fs0_rt; //retreat
+
+					reac = a_c_ebb_001_fs0_rct; //react to getting hit
+					rea2 = a_c_ebb_001_fs0_rct-02; //react 2
+					rea3 = a_c_ebb_001_fs0_di; //react 3 / death
+
+					pree = a_c_ebb_001_fs0_pre; //no longer used
+					attk = a_c_ebb_001_fs0_at; //no longer used
+					post = a_c_ebb_001_fs0_post; //no longer used
+					pant = a_c_ebb_001_fs0_cb; //no longer used
+					chrg = a_c_ebb_001_fs0_chg; //no longer used
+					prep = a_c_ebb_001_fs0_dff; //no longer used
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = basic_walk;
+				[anim_files]
+				{
+					00=rt;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name="Dragon";
+	}
+	[mind]
+	{
+		on_enemy_spotted_alert_friends = false;
+		on_enemy_spotted_attack = false;
+		on_enemy_entered_ocz_attack = false;
+		on_enemy_entered_icz_attack = false;
+		on_enemy_entered_ocz_flee = false;
+		on_enemy_entered_weapon_engage_range_attack = false;
+	}
+}

@@ -1,0 +1,8 @@
+[t:ann_ambient_item_cage_empty,n:0x0050016c]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.901819,-0.25,0.69355,0xcbdf1a7c;
+	}
+}

@@ -13,3 +13,13 @@ TREE = M_C_EDM_049	, 049	, "049"
 #Items->Town
 TREE = B_I_TWN	, Town	, "Town"
 TREE = M_I_TWN	, Town	, "Town"
+
+
+#Talon
+TREE = A_C_EBB		,	Evil_B_Bosses	, "Evil B Bosses"
+TREE = A_C_EBB_001	, 001	, "001", FS0
+
+TREE = B_C_EBB , Evil_B_Bosses    , "Evil B Bosses"
+
+TREE = M_C_EBB , Evil_B_Bosses    , "Evil B Bosses"
+TREE = M_C_EBB_001	, 001	, "001"

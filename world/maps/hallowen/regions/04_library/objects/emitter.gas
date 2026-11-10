@@ -1,0 +1,13 @@
+[t:emt_generic_act,n:0x0050058b]
+{
+	[generic_emitter_act]
+	{
+	  x target = 0x0050058B;
+	  x target2 = 0x0050058F;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.66939e-007;
+	  p position = -0.806735,1.78678,-0.47551,0x9e9f570d;
+	}
+}

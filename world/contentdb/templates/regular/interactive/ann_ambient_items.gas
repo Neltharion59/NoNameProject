@@ -1544,3 +1544,29 @@
 		}
 	}
 }
+
+[t:template,n:ann_ambient_item_cage_empty]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item cage empty";
+	specializes = ann_ambient_item_base;
+	[aspect]
+	{
+		model = m_i_grs_cage-wood-01;
+	}
+}
+[t:template,n:ann_ambient_item_talon]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item talon";
+	specializes = ann_ambient_item_base;
+	[aspect]
+	{
+		model = m_c_ebb_001_pos_1;
+		[textures]
+		{
+			0 = b_c_ebb_001_body-2_1;
+			1 = b_c_ebb_001_wings;
+		}
+	}
+}
