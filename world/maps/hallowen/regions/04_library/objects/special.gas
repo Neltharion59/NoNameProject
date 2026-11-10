@@ -536,6 +536,41 @@
 	  p position = -1.34155,0,3.91343,0x36b22a37;
 	}
 }
+[t:trigger_generic,n:0x005005cb]
+{
+	[common]
+	{
+		dev_instance_text = "OPEN PASSAGE";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00500617,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x00500618,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x00500619,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x005005CC,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x005005CD,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x005005CE,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(3.000000,0.500000,0.500000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = false;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.0348986,0,0.999391;
+	  p position = -0.850239,0,-7.72177,0x54740397;
+	}
+}
 [t:trigger_generic,n:0x005011c8]
 {
 	[common]
@@ -1264,7 +1299,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.0348986,0,0.999391;
-	  p position = 0.830109,-2.8,-7.77216,0x6f654478;
+	  p position = 0.809689,-2.8,-7.11752,0x6f654478;
 	}
 }
 [t:blocking_object,n:0x0050125b]
@@ -1586,6 +1621,76 @@
 	  p position = -6.26802,0,2.24567,0x9fc7dc73;
 	}
 }
+[t:trigger_generic,n:0x0050058f]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.53106,12.5272,-0.42643,0x4bb8493b;
+	}
+}
+[t:trigger_generic,n:0x00500592]
+{
+	[common]
+	{
+		dev_instance_text = "ON TAXABANI KILLED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_trigger_activate",0x005005CB,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.416308,1,1.70048,0xffca0d43;
+	}
+}
+[t:trigger_generic,n:0x0050058e]
+{
+	[common]
+	{
+		dev_instance_text = "TRIGGER THE CAGE KIDNAPPING";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_delete",0x0050016C,0f,"default","every",0), doc("delete talon");
+				action* = send_world_message("we_req_delete",0x00500169,0f,"default","every",0), doc("delete cage");
+				action* = send_world_message("we_req_activate",0x0050058B,0f,"default","every",0), doc("trigger flying effect");
+				action* = send_world_message("we_req_activate",0x00500591,0f,"default","every",0), delay(3), doc("enable taxabani fight");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,0.500000,6.000000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.66939e-007;
+	  p position = 2.11657,1,-0.115845,0xfc2f9173;
+	}
+}
 [t:spawnpoint,n:0x005010a5]
 {
 	[placement]
@@ -1733,45 +1838,5 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -0.0423155,-3.5,-0.919451,0x0bfbfbfd;
-	}
-}
-[t:trigger_generic,n:0x0050058e]
-{
-	[common]
-	{
-		dev_instance_text = "TRIGGER THE CAGE KIDNAPPING";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_delete",0x0050016C,0f,"default","every",0), doc("delete talon");
-				action* = send_world_message("we_req_delete",0x00500169,0f,"default","every",0), doc("delete cage");
-				action* = send_world_message("we_req_activate",0x0050058B,0f,"default","every",0), doc("trigger flying effect");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,6.000000,"on_first_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-1.66939e-007,0,1;
-	  p position = -0.810516,-0.25,-0.755127,0xcbdf1a7c;
-	}
-}
-[t:trigger_generic,n:0x0050058f]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -3.53106,12.5272,-0.42643,0x4bb8493b;
 	}
 }

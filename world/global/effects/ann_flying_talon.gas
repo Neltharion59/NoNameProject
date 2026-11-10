@@ -1,0 +1,51 @@
+[effect_script*]
+{
+	name	=flying_talon_projectile_base;
+
+	script	=[[
+			/////////////////////////////////////////
+			// This is the main trackball for the effcect, everything is based off of this.
+			sfx create trackball #TARGET_KB 
+				"must_update()accel(0)dur(4)afterlife(2)scale(.45)ts(1.4)
+				invisible()no_collide_objects()velocity(4,0,0)";
+			set $trackball #POP;
+
+            // attach orbiters
+            sfx create orbiter #TARGET 
+				"must_update()model(ann_ambient_item_talon)radius(0)bone_orient()rotate(0, 0, 0)"; 
+			set $orbiter_talon #POP;
+			sfx rat $orbiter_talon;
+			sfx target $orbiter_talon $trackball;
+			sfx start $orbiter_talon;
+            
+            sfx create orbiter #TARGET 
+				"must_update()model(ann_ambient_item_cage_empty)radius(0)bone_orient()rotate(0, 0, 0)
+                offset(0, -3, 0)"; 
+			set $orbiter_talon #POP;
+			sfx rat $orbiter_talon;
+			sfx target $orbiter_talon $trackball;
+			sfx start $orbiter_talon;
+
+			// lets this baby fly.
+			sfx start $trackball;
+			
+			pause 3;
+
+			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+
+			]];
+}
+[effect_script*] // - ET
+{
+	name	=flying_talon_projectile;
+
+	script	=[[
+
+			sound play flying_talon_projectile_base at #SOURCE_POSITION dist 3 20;			
+
+			call fireball_base v<0 0 0> u<1>;
+			waitfor script #POP #DEFAULT_TIMEOUT;
+			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
+
+			]];
+}

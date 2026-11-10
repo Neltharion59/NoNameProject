@@ -3632,6 +3632,47 @@
 	  p position = 1.50751,0,2.47712,0x9fc7dc73;
 	}
 }
+[t:ann_r04_taxabani,n:0x00500590]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00500592,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-3.8194e-007;
+	  p position = -2.22701,1,-1.47466,0xffca0d43;
+	}
+}
+[t:ann_talon_ambient,n:0x00500169]
+{
+	[mind]
+	{
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,-7.91355e-007,0,1;
+	  p position = -0.942782,-0.25,-0.472725,0x7d10c066;
+	}
+}
 [t:ann_r04_spider_minor_jump,n:0x00501213]
 {
 	[actor]
@@ -4206,17 +4247,5 @@
 	{
 	  q orientation = 0,0.92388,0,0.382683;
 	  p position = 4.15035,0,-6.3484,0x2a5f3262;
-	}
-}
-[t:ann_talon_ambient,n:0x00500169]
-{
-	[mind]
-	{
-	  b on_enemy_entered_weapon_engage_range_attack = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,-7.91355e-007,0,1;
-	  p position = -0.942782,-0.25,-0.472725,0x7d10c066;
 	}
 }

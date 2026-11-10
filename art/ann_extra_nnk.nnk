@@ -18,8 +18,14 @@ TREE = M_I_TWN	, Town	, "Town"
 #Talon
 TREE = A_C_EBB		,	Evil_B_Bosses	, "Evil B Bosses"
 TREE = A_C_EBB_001	, 001	, "001", FS0
-
 TREE = B_C_EBB , Evil_B_Bosses    , "Evil B Bosses"
-
 TREE = M_C_EBB , Evil_B_Bosses    , "Evil B Bosses"
 TREE = M_C_EBB_001	, 001	, "001"
+
+
+# Taxabani familiar
+TREE = A_C_XEAM		, x_Evil_A_Monsters	, "DS2X Evil A Monsters"
+TREE = A_C_XEAM_006	, 006 	, "006", FS0, FS7
+TREE = B_C_XEAM		,	x_Evil_A_Monsters	, "DS2X Evil A Monsters"
+TREE = M_C_XEAM		,	x_Evil_A_Monsters	, "DS2X Evil A Monsters"
+TREE = M_C_XEAM_006	,	006					, "006"

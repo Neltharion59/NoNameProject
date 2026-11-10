@@ -39,3 +39,38 @@
         spawn_sfx = blood_mist;
     }
 }
+[t:template,n:ann_ambient_generator_bookcase]
+{
+	specializes = base_breakable_wood;
+	doc = "ann_ambient_generator_bookcase";
+    category_name = "1w_generator";
+	[aspect]
+	{
+		model = m_i_glb_bookcase-01;
+		is_selectable = false;
+        is_invincible = true;
+		does_block_path = true;
+	}
+    [common]
+    {
+    	rollover_display = false;
+		rollover_life = false;
+    }
+	[physics]
+	{
+		break_effect = dust_explosion_small;
+		explode_when_killed = true;
+		[break_particulate]
+		{
+			frag_glb_wood_01	= 3;
+			frag_glb_wood_02	= 2;
+			frag_glb_wood_03	= 2;
+			frag_glb_wood_04	= 4;
+		}
+	}
+    [generator_breakable]
+    {
+        spawn_range = 0;
+        spawn_sfx = dust_explosion_small;
+    }
+}

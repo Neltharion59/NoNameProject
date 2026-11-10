@@ -1,0 +1,20 @@
+[node_mesh_index]
+{
+	0x007005a2 = t_xxx_dgn_flr_04x04-a;
+	0x007005a4 = t_xxx_dgn_flr_08x04-a;
+	0x007005a5 = t_xxx_dgn_flr_08x08-a;
+	0x007005dc = t_xxx_dgn_flr_pillar-c;
+	0x007005f2 = t_xxx_dgn_stair_ex-a;
+	0x00700611 = t_xxx_dgn_wal_archway-b;
+	0x00700616 = t_xxx_dgn_wal_ex-diag-l;
+	0x00700617 = t_xxx_dgn_wal_ex-diag-r;
+	0x00700629 = t_xxx_dgn_wal_tx-rock-floor-a;
+	0x0070062a = t_xxx_dgn_wal_tx-rock-floor-b;
+	0x0070062b = t_xxx_dgn_wal_tx-rock-hal-l-a;
+	0x0070062c = t_xxx_dgn_wal_tx-rock-hal-l-b;
+	0x0070062d = t_xxx_dgn_wal_tx-rock-hal-r-a;
+	0x0070062e = t_xxx_dgn_wal_tx-rock-hal-r-b;
+	0x00700657 = t_xxx_dgn_zportal-base-a;
+	0x007006a9 = t_xxx_flr_04x08-v0;
+	0x007006aa = t_xxx_flr_08x08-v0;
+}

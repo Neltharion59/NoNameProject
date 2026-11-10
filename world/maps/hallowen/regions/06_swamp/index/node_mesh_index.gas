@@ -1,0 +1,8 @@
+[node_mesh_index]
+{
+	0x0080065d = t_xxx_dgn_zportal-top-a;
+	0x008006a5 = t_xxx_flr_04x04-v0;
+	0x008006a9 = t_xxx_flr_04x08-v0;
+	0x008006aa = t_xxx_flr_08x08-v0;
+	0x008006ad = t_xxx_flr_08x08-v3;
+}

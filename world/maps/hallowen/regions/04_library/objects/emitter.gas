@@ -2,6 +2,7 @@
 {
 	[generic_emitter_act]
 	{
+		other_effect = "flying_talon_projectile";
 	  x target = 0x0050058B;
 	  x target2 = 0x0050058F;
 	}
