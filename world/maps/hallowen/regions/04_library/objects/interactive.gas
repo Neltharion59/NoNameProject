@@ -84,6 +84,54 @@
 	  p position = -6.14563,0,1.32058,0x54740397;
 	}
 }
+[t:ann_ambient_generator_bookcase,n:0x005005cc]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.45468e-007;
+	  p position = -1.42625,0,-4.24652,0x54740397;
+	}
+}
+[t:ann_ambient_generator_bookcase,n:0x005005cd]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.45468e-007;
+	  p position = -3.17337,0,-4.24194,0x54740397;
+	}
+}
+[t:ann_ambient_generator_bookcase,n:0x005005ce]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.45468e-007;
+	  p position = -4.90997,0,-4.22864,0x54740397;
+	}
+}
+[t:ann_ambient_generator_bookcase,n:0x00500617]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.45468e-007;
+	  p position = -1.4653,1.00371,-4.26432,0x54740397;
+	}
+}
+[t:ann_ambient_generator_bookcase,n:0x00500618]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.45468e-007;
+	  p position = -3.21242,1.00371,-4.25974,0x54740397;
+	}
+}
+[t:ann_ambient_generator_bookcase,n:0x00500619]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.45468e-007;
+	  p position = -4.94902,1.00371,-4.24644,0x54740397;
+	}
+}
 [t:ann_bookcase_bookworm,n:0x00500372]
 {
 	[placement]
@@ -318,53 +366,5 @@
 	{
 	  q orientation = 0,1,0,-1.19209e-006;
 	  p position = -1.23741,0,5.56578,0x2a5f3262;
-	}
-}
-[t:ann_ambient_generator_bookcase,n:0x005005cc]
-{
-	[placement]
-	{
-	  q orientation = 0,1,0,-1.45468e-007;
-	  p position = -1.42625,0,-4.24652,0x54740397;
-	}
-}
-[t:ann_ambient_generator_bookcase,n:0x005005cd]
-{
-	[placement]
-	{
-	  q orientation = 0,1,0,-1.45468e-007;
-	  p position = -3.17337,0,-4.24194,0x54740397;
-	}
-}
-[t:ann_ambient_generator_bookcase,n:0x005005ce]
-{
-	[placement]
-	{
-	  q orientation = 0,1,0,-1.45468e-007;
-	  p position = -4.90997,0,-4.22864,0x54740397;
-	}
-}
-[t:ann_ambient_generator_bookcase,n:0x00500617]
-{
-	[placement]
-	{
-	  q orientation = 0,1,0,-1.45468e-007;
-	  p position = -1.4653,1.00371,-4.26432,0x54740397;
-	}
-}
-[t:ann_ambient_generator_bookcase,n:0x00500618]
-{
-	[placement]
-	{
-	  q orientation = 0,1,0,-1.45468e-007;
-	  p position = -3.21242,1.00371,-4.25974,0x54740397;
-	}
-}
-[t:ann_ambient_generator_bookcase,n:0x00500619]
-{
-	[placement]
-	{
-	  q orientation = 0,1,0,-1.45468e-007;
-	  p position = -4.94902,1.00371,-4.24644,0x54740397;
 	}
 }

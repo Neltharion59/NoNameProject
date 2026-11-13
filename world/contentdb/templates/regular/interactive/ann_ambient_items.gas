@@ -1570,3 +1570,23 @@
 		}
 	}
 }
+[t:template,n:ann_ambient_item_elf_elder_base]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item elf elder base";
+	specializes = ann_ambient_item_base;
+	[aspect]
+	{
+		model = m_c_eam_sm_pos_1;
+		[textures]
+		{
+            0 = b_c_eam_ann_elf_01;
+		}
+	}
+}
+[t:template,n:ann_ambient_item_elf_elder]
+{
+	category_name = "indoor";
+	doc = "ann Ambient Item elf elder";
+	specializes = ann_ambient_item_elf_elder_base;
+}

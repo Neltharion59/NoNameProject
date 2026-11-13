@@ -20,6 +20,7 @@
 	0x0010070d = t_xxx_for_wal-straight-08-a;
 	0x0010070e = t_xxx_for_wal-straight-08-b;
 	0x0010070f = t_xxx_for_wal-straight-16-a;
+	0x0010074a = t_xxx_keep_flr_16x16-a;
 	0x00100769 = t_xxx_keep_flr_path-cap-08x04-a;
 	0x001007a4 = t_xxx_keep_wall_outside-a;
 	0x001007a5 = t_xxx_keep_wall_outside-b;

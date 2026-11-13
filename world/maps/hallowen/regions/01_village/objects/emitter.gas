@@ -37,3 +37,15 @@
 	  p position = 0.757469,0,0.607918,0x9e0c02c3;
 	}
 }
+[t:emt_generic_act,n:0x00101298]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "ann_effect_elf_orbiter_on_taxabani";
+	  x target = 0x001003B6;
+	}
+	[placement]
+	{
+	  p position = 3.32368,-3.5,-2.6342,0x2b2d3ff0;
+	}
+}

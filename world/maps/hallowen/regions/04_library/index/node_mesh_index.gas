@@ -41,13 +41,10 @@
 	0x005006ac = t_xxx_flr_08x08-v2;
 	0x005006ad = t_xxx_flr_08x08-v3;
 	0x005006b1 = t_xxx_flr_bigstatue-head-12x16;
-	0x005006ca = t_xxx_flr_hills-32x32-a;
-	0x005006cd = t_xxx_flr_hills-32x32-dip-a;
 	0x005006ce = t_xxx_flr_hills-32x32-water-a;
 	0x005006cf = t_xxx_flr_hills-64x64-a;
 	0x005006d0 = t_xxx_flr_hills-64x64-b;
 	0x005006d1 = t_xxx_flr_hills-64x64-crest-a;
-	0x005006d2 = t_xxx_flr_hills-64x64-dip-a;
 	0x005006d4 = t_xxx_flr_hills-tx-flr-32x32-b;
 	0x00500736 = t_xxx_keep_cnr_cncv-tall-a;
 	0x00500739 = t_xxx_keep_cnr_cnvx-tall-a;
@@ -96,6 +93,9 @@
 	0x0050081e = t_xxx_ledg_32-thck-t;
 	0x0050081f = t_xxx_ledg_32-thin-b;
 	0x00500820 = t_xxx_ledg_32-thin-t;
+	0x00500834 = t_xxx_ledg_tx-wal-32-l-b;
+	0x00500835 = t_xxx_ledg_tx-wal-32-l-t;
+	0x00500836 = t_xxx_ledg_tx-wal-32-l;
 	0x00500853 = t_xxx_pth_08x04-d;
 	0x00500877 = t_xxx_rmp_ctx-04-l;
 	0x00500878 = t_xxx_rmp_ctx-04-r;
@@ -138,4 +138,5 @@
 	0x005009ef = t_xxx_wal_02b-thin;
 	0x005009f1 = t_xxx_wal_02b-tx-02b-r;
 	0x005009fb = t_xxx_wal_04-thin;
+	0x00500a17 = t_xxx_wal_08-tx-32-l;
 }

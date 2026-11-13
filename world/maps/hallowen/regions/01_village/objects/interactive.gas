@@ -109,6 +109,7 @@
 	[door_basic]
 	{
 	  b can_use = false;
+	  x second_door = 0x001009D7;
 	}
 	[placement]
 	{
@@ -121,6 +122,10 @@
 	{
 	  b is_selectable = false;
 	  b is_usable = false;
+	}
+	[door_basic]
+	{
+	  x second_door = 0x001009D6;
 	}
 	[placement]
 	{

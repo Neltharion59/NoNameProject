@@ -1,0 +1,11 @@
+[effect_script*]
+{
+	name	=ann_effect_elf_orbiter_on_taxabani;
+	script	=[[
+			sfx create orbiter #TARGET
+				"must_update()color0(.1,.3,.1)model(ann_ambient_item_elf_elder)radius(0)bone_orient()
+                offset(.3,.3,0)rotate(45,45,0)"; 
+            sfx attach_point #PEEK @kill_bone target;
+			sfx start #POP;
+	]];
+}

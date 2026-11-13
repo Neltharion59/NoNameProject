@@ -613,6 +613,39 @@
 	}
 }
 
+[t:template,n:ann_r01_elf_elder]
+{
+	category_name = "1W_character";
+	doc = "ann_r01_elf_elder";
+	specializes = ann_elf_mage_base;
+	[actor]
+	{
+		alignment = aa_good;
+	}
+	[aspect]
+	{
+		is_invincible = true;
+		is_collidable = false;
+		[textures]
+		{
+			0 = b_c_eam_ann_elf_01;
+		}
+	}
+	[common]
+	{
+		screen_name = "Salethil";
+	}
+	[conversation]
+	{
+
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
 [t:template,n:ann_r01_child_buyer]
 {
 	category_name = "1W_character";

@@ -26,6 +26,14 @@
 			sfx target $orbiter_talon $trackball;
 			sfx start $orbiter_talon;
 
+			sfx create orbiter #TARGET 
+				"must_update()model(ann_ambient_item_elf_elder)radius(0)bone_orient()rotate(0, 0, 0)
+                offset(0, -3, 0)"; 
+			set $orbiter_elf #POP;
+			sfx rat $orbiter_elf;
+			sfx target $orbiter_elf $orbiter_talon;
+			sfx start $orbiter_elf;
+
 			// lets this baby fly.
 			sfx start $trackball;
 			

@@ -4249,3 +4249,11 @@
 	  p position = 4.15035,0,-6.3484,0x2a5f3262;
 	}
 }
+[t:ann_r01_elf_elder,n:0x0050061a]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,4.13447e-007;
+	  p position = -0.73458,-0.25,0.520149,0xcbdf1a7c;
+	}
+}

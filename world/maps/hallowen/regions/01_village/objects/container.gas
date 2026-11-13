@@ -269,6 +269,18 @@
 		use_point_scids = 0x0010002a;
 	}
 }
+[t:chest_csl_02,n:0x00101312]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-3.12407e-007,0,1;
+	  p position = -3.16824,0.68304,2.91234,0x1fb23d0d;
+	}
+}
 [t:vase_glb_05,n:0x001012b0]
 {
 	[aspect]
@@ -349,17 +361,5 @@
 	  q orientation = 1.6237e-031,0.707107,-1.6237e-031,0.707107;
 	  p position = -11.3103,-2.65,-2.8791,0xa094e466;
 		use_point_scids = 0x0010034a;
-	}
-}
-[t:chest_csl_02,n:0x00101312]
-{
-	[aspect]
-	{
-	  b is_selectable = false;
-	}
-	[placement]
-	{
-	  q orientation = 0,-3.12407e-007,0,1;
-	  p position = -3.16824,0.68304,2.91234,0x1fb23d0d;
 	}
 }

@@ -1,6 +1,6 @@
 [t:region,n:region]
 {
-	created = RADOSKYNTB,lradosky;
+	created = radoskyntb,lradosky;
 	description = none;
   x guid = 0x00000008;
 	lastmodified = RADOSKYNTB,lradosky;

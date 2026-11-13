@@ -748,3 +748,36 @@
 	  p position = 1.32164,0,-1.51058,0xa8944b6c;
 	}
 }
+[t:cmd_ai_t_move,n:0x001003bd]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x001003B6;
+	}
+	[placement]
+	{
+	  p position = -0.0232239,-3.5,1.79431,0x2b2d3ff0;
+	}
+}
+[t:cmd_t_delete,n:0x0010131c]
+{
+	[cmd_t_delete]
+	{
+	  x target_scid = 0x0010131A;
+	}
+	[placement]
+	{
+	  p position = 1.51518,0,1.39806,0x709066f3;
+	}
+}
+[t:cmd_t_delete,n:0x0010131d]
+{
+	[cmd_t_delete]
+	{
+	  x target_scid = 0x001003B6;
+	}
+	[placement]
+	{
+	  p position = -0.55426,0,1.36664,0x709066f3;
+	}
+}
