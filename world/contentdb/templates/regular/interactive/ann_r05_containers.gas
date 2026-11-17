@@ -1,0 +1,62 @@
+[t:template,n:ann_r05_chest_small]
+{
+	category_name = "ann_r05_chest_small";
+	doc = "chest_metal_ornate_sm";
+	specializes = base_chest;
+	[aspect]
+	{
+		material = steel;
+		model = m_i_glb_chest-02;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=chest-02-open; }
+			}
+		}
+	}
+	[common] { screen_name="Small Metal Chest"; }
+    [inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[all*]
+				{
+					chance = 0.3;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+				[gold*]
+				{
+					chance = 0.5;
+					max = 200;
+					min = 40;
+				}
+				[oneof*]
+				{
+                    [oneof*]
+                    {
+                        chance = 0.90;
+                        il_main = #weapon/26-42;
+                        il_main = #armor/30-60;
+                        il_main = #*/26-42;
+                    }
+                    [oneof*]
+                    {
+                        chance = 0.10;
+                        il_main = #weapon/-rare(1)/26-42;
+                        il_main = #armor/-rare(1)/30-60;
+                        il_main = #*/-rare(1)/26-42;
+                    }
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+[t:template,n:ann_r05_frag_glb_rock_eater_base]
+{
+	doc = "ann_r05_frag_glb_rock_eater_base";
+	specializes = fragment;
+	[aspect]
+    {
+        scale_base = 2.5;
+        [textures]
+        {
+            0 = b_c_edm_mw;
+        }
+    }
+}
+[t:template,n:ann_r05_frag_glb_rock_eater_01]
+{
+	doc = "ann_r05_frag_glb_rock_eater_01";
+	specializes = ann_r05_frag_glb_rock_eater_base;
+	aspect:model = m_i_glb_frag-googore-grub-01; 
+}
+[t:template,n:ann_r05_frag_glb_rock_eater_02]
+{
+	doc = "ann_r05_frag_glb_rock_eater_02";
+	specializes = ann_r05_frag_glb_rock_eater_base;
+	aspect:model = m_i_glb_frag-googore-grub-02; 
+}
+[t:template,n:ann_r05_frag_glb_rock_eater_03]
+{
+	doc = "ann_r05_frag_glb_rock_eater_03";
+	specializes = ann_r05_frag_glb_rock_eater_base;
+	aspect:model = m_i_glb_frag-googore-grub-03; 
+}
+[t:template,n:ann_r05_frag_glb_rock_eater_04]
+{
+	doc = "ann_r05_frag_glb_rock_eater_04";
+	specializes = ann_r05_frag_glb_rock_eater_base;
+	aspect:model = m_i_glb_frag-googore-grub-04; 
+}
+[t:template,n:ann_r05_frag_glb_rock_eater_05]
+{
+	doc = "ann_r05_frag_glb_rock_eater_05";
+	specializes = ann_r05_frag_glb_rock_eater_base;
+	aspect:model = m_i_glb_frag-googore-grub-05; 
+}

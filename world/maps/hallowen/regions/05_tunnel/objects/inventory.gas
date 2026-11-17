@@ -1,0 +1,39 @@
+[t:ann_ambient_item_spider_fidgeting,n:0x00700090]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.2;
+	}
+	[placement]
+	{
+	  q orientation = -0.270598,-0.653282,-0.270598,0.653281;
+	  p position = -2.61564,-2.27063,-5.84579,0xd5985580;
+	}
+}
+[t:ann_ambient_item_satanic_book_04,n:0x007000af]
+{
+	[placement]
+	{
+	  p position = -0.0878916,0.302467,-0.0542097,0x2f0e4497;
+	}
+}
+[t:ann_ambient_item_satanic_book_00,n:0x007000b1]
+{
+	[placement]
+	{
+	  q orientation = -0.270598,0.653282,0.270598,0.653281;
+	  p position = -0.540677,0.211529,-0.0339823,0x2f0e4497;
+	}
+}
+[t:ann_ambient_minor_spider,n:0x007000b3]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.22;
+	}
+	[placement]
+	{
+	  q orientation = 0.270598,0.653281,-0.270599,0.653282;
+	  p position = -2.85557,1.28546,-0.178442,0xa52385ea;
+	}
+}

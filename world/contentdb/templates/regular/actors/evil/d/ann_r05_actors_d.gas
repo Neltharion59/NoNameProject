@@ -1,0 +1,321 @@
+[t:template,n:ann_r05_mine_worm_base]
+{
+	category_name = "1W_evil_d";
+	doc = "mine_worm";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  17, 0;
+			dexterity =  5, 0;
+			intelligence =  2, 0;
+
+			combat_magic =  11,  0;
+		}
+	}
+	[aspect]
+	{
+		draw_shadow = false;
+        force_no_render = true;
+        force_no_render_click = true;
+
+		experience_value = 400;
+		life = 317;
+		max_life = 317;
+		max_mana = 410;
+		mana = 410;
+		model = m_c_edm_mw_pos_1;
+		[voice]
+		{
+			[cast]			{ * = s_e_attack_mine_worm;		}
+			[die]			{ priority = high; * = s_e_die_worm;				}
+			[enemy_spotted]	{ priority = high; * = s_e_call_worm_SED;		}
+			[hit_glance]	{ priority = low; * = s_e_hit_worm_SED;			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 4;
+		damage_max = 59;
+		damage_min = 46;
+	}
+	[body]
+	{
+		avg_move_velocity = 0;
+		[bone_translator]
+		{
+			body_anterior = bone04;
+			body_mid = bone03;
+			body_posterior = bone02;
+			kill_bone = bone03;
+			shield_bone = bone03;
+			weapon_bone = AP_flame;
+		}
+		[chore_dictionary]
+		{
+			initial_chore = chore_none;
+			chore_prefix = a_c_edm_mw_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00=at;
+					01=at-02;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_misc]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					slep = ds;
+					wake = rv;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=mg; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=dsf; }
+			}
+		}
+	}
+	[common]
+	{
+		screen_name="Rock Eater";
+		membership=monster,immune_freeze;
+
+	}
+    [defend] { defense=102; }
+   	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=ann_r05_spell_worm_dancing_acid; }
+	}
+	[mind]
+	{
+		jat_die 								= world\ai\jobs\actors\evil\job_die_delete.skrit;
+		jat_flee_from_object					= jat_none;
+		jat_guard         						= jat_none;
+		jat_move          						= jat_none;
+		jat_patrol         						= jat_none;
+
+
+		actor_weapon_preference					= WP_MAGIC;
+		actor_auto_switches_to_magic			= true;
+		actor_auto_switches_to_karate			= false;
+		actor_auto_switches_to_melee			= false;
+
+		actor_auto_fidgets 						= false;
+		movement_orders 						= mo_hold;
+		inner_comfort_zone_range 				= 4.4;
+		melee_engage_range 						= 4.5;
+		personal_space_range 					= 2.0;
+		on_enemy_entered_ocz_attack 			= true;
+		ranged_engage_range 					= 10.0;
+		sight_range 							= 14.0;
+		sight_origin_height						= 2;
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		break_effect = blood_mist;
+		break_sound = s_e_meat_explosion;
+		[break_particulate]
+		{
+			ann_r05_frag_glb_rock_eater_01 = 1;
+			ann_r05_frag_glb_rock_eater_02 = 1;
+			ann_r05_frag_glb_rock_eater_03 = 1;
+			ann_r05_frag_glb_rock_eater_04 = 1;
+			ann_r05_frag_glb_rock_eater_05 = 1;
+		}
+	}
+    [ann_rock_eater_effect]
+    {
+        SpawnEffect = dust_explosion;
+    }
+}
+[t:template,n:ann_r05_mine_worm_reveal_auto]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r05_mine_worm_reveal_auto";
+	specializes = ann_r05_mine_worm_base;
+    [mind]
+    {
+        jat_startup 							= world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible 							= true;
+    }
+}
+[t:template,n:ann_r05_mine_worm_reveal_activate]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r05_mine_worm_reveal_activate";
+	specializes = ann_r05_mine_worm_base;
+    [mind]
+    {
+        jat_startup 							= world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible 							= true
+			&activate = true;
+    }
+}
+[t:template,n:ann_r05_darkling_base]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r05_darkling_base";
+	specializes = base_darkling;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  15, 0;
+			dexterity =  13, 0;
+			intelligence =  19, 0;
+
+			nature_magic =  15,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 230;
+		life = 116;
+		max_life = 116;
+		mana = 460;
+		max_mana = 460;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 35;
+		damage_min = 30;
+	}
+	[common] { screen_name="Darkling"; }
+	[defend] { defense=38; }
+	[inventory]
+	{
+    	selected_active_location = il_active_primary_spell;
+		[other]
+        {
+            il_spell_1=ann_r05_spell_darkling_spark;
+            il_spell_2=ann_r05_spell_darkling_spark;
+            il_spell_3=ann_r05_spell_darkling_spark;
+            il_spell_4=ann_r05_spell_darkling_mana_shield;
+            il_spell_5=ann_r05_spell_darkling_implosion;
+        }
+    	[pcontent]
+		{
+			[all*]
+			{
+   				chance = 0.07;
+                il_main = #nmagic/6-13;
+                il_main = #cmagic/6-13;
+			}
+			[oneof*]
+			{
+				chance = 0.3;
+				il_main = #*/35-51;
+				il_main = #armor/32-76;
+			}
+		}
+	}
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+        jat_cast 						= world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
+
+		on_enemy_entered_icz_flee      = true;
+		on_enemy_entered_ocz_flee      = true;
+		on_life_ratio_low_flee = true;
+
+		flee_count = 10;
+		flee_distance = 15;
+	}
+}
+
+[t:template,n:ann_r05_darkling]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r05_darkling";
+	specializes = ann_r05_darkling_base;
+}
+[t:template,n:ann_r05_darkling_revealing_auto]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r05_darkling_revealing_auto";
+	specializes = ann_r05_darkling_base;
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible = true;
+		sight_origin_height = 1;
+		actor_auto_fidgets = false;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				single_shot = true;
+				action* = call_sfx_script("darkling_eye_glow");
+				action* = call_sfx_script("darkling_reveal");
+				condition* = receive_world_message("we_enemy_spotted");
+			}
+		}
+	}
+}
+[t:template,n:ann_r05_darkling_revealing_activate]
+{
+	category_name = "1W_evil_d";
+	doc = "ann_r05_darkling_revealing_activate";
+	specializes = ann_r05_darkling_base;
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible = true
+			&activate = true;
+		sight_origin_height = 1;
+		actor_auto_fidgets = false;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				single_shot = true;
+				action* = call_sfx_script("darkling_eye_glow");
+				action* = call_sfx_script("darkling_reveal");
+				condition* = receive_world_message("WE_REQ_ACTIVATE");
+			}
+		}
+	}
+}

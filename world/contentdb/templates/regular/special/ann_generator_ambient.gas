@@ -74,3 +74,69 @@
         spawn_sfx = dust_explosion_small;
     }
 }
+[t:template,n:ann_ambient_generator_mine_worm]
+{
+	specializes = base_breakable_wood;
+	doc = "ann_ambient_generator_mine_worm";
+    category_name = "1w_generator";
+	[aspect]
+	{
+		model = m_c_edm_mw_pos_1;
+        material = flesh;
+		is_selectable = false;
+        is_invincible = true;
+	}
+	[body]
+	{
+		[bone_translator]
+		{
+			body_anterior = bone04;
+			body_mid = bone03;
+			body_posterior = bone02;
+			kill_bone = bone03;
+			shield_bone = bone03;
+			weapon_bone = AP_flame;
+		}
+		initial_chore = chore_fidget;
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_mw_fs;
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+		}
+	}
+    [common]
+    {
+    	rollover_display = false;
+		rollover_life = false;
+    }
+	[physics]
+	{
+		explosion_magnitude = 2.5;
+		bone_box_collision = true;
+		gib_gore_good = true;
+		break_effect = blood_mist;
+		explode_when_killed = true;
+		break_sound = s_e_meat_explosion;
+		[break_particulate]
+		{
+			frag_glb_googore_grub_01 = 8;
+			frag_glb_googore_grub_02 = 8;
+			frag_glb_googore_grub_03 = 8;
+			frag_glb_googore_grub_04 = 8;
+			frag_glb_googore_grub_05 = 8;
+		}
+	}
+    [generator_breakable]
+    {
+        spawn_range = 0;
+        spawn_sfx = blood_mist;
+    }
+}

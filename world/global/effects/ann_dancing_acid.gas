@@ -1,0 +1,93 @@
+[effect_script*] // -ET
+{
+	name	=ann_effect_dancing_acid;
+
+	script	=[[
+			sound play s_e_spell_acid_cloud_cast at #SOURCE_POSITION dist 3 25;
+
+			set $offset 3.5;			
+
+			frandrange f<-$offset> f<$offset>; frandrange f<-$offset> f<$offset>;
+			call ann_effect_dancing_acid_base v<#POP 0 #POP> [0] [1];
+			
+			frandrange f<-$offset> f<$offset>; frandrange f<-$offset> f<$offset>;
+			call ann_effect_dancing_acid_base v<#POP 0 #POP> [0] [1];
+			
+			frandrange f<-$offset> f<$offset>; frandrange f<-$offset> f<$offset>;
+			call ann_effect_dancing_acid_base v<#POP 0 #POP> [0] [1];
+			
+			frandrange f<-$offset> f<$offset>; frandrange f<-$offset> f<$offset>;
+			call ann_effect_dancing_acid_base v<#POP 0 #POP> [0] [1];
+			
+			frandrange f<-$offset> f<$offset>; frandrange f<-$offset> f<$offset>;
+			call ann_effect_dancing_acid_base v<#POP 0 #POP> [0] [1];
+			
+			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+
+			]];
+}
+
+[effect_script*] // -ET
+{
+	name	=ann_effect_dancing_acid_base;
+
+	script	=[[
+			// sound play s_e_spell_iron_fist_cast at #TARGET_POSITION
+
+			frandrange .6 1;
+			frandrange .2 .6;
+			frandrange -1 1;
+
+			sfx create trackball #TARGET_KB 
+				"invisible()no_collide()velocity(3)spin(#POP)radius(#POP)
+				must_update()ts(#POP)accel(0)color0(.3,.5,1)scale(.2)
+				afterlife(.5)rvel_max(0)[2]";
+			set $trackball #POP;
+			sfx offset_bone $trackball [0] target;
+			sfx position_at $trackball @weapon_bone source;
+			sfx start $trackball;
+
+			frandrange .2 .5;
+			frandrange 0 6.28;
+			frandrange -1 1;
+
+			sfx create orbiter #TARGET
+				"radiusi(1)free()smooth()invisible()iphi(#POP)phi(#POP)
+				radius(#POP)";
+			
+			sfx rat #PEEK;
+			sfx target #PEEK $trackball;
+			set $orb #PEEK;
+			sfx attach $trackball #POP;
+
+			sfx create fire #TARGET
+				"must_update()color0(.1,.15,.05)color1(.02,.02,.02)count(45)velocity(0,-4,0)
+				texture(b_sfx_mist_01)accel(0,10,0)alphafade(.45)flamesize(4)max_radius(8)
+				min_displace(-.33)max_displace(.66)[1]";
+			
+			sfx rat #PEEK;
+			sfx target #PEEK $orb;
+			sfx attach $trackball #POP;
+
+			sfx create fire #TARGET
+				"ts(.3)must_update()scale($scale)color0(.6,.6,.2)count(12)
+				velocity(0,2,0)accel(0,0,0)alphafade(.85)flamesize(.3)
+				max_radius(6)[1]";
+			
+			sfx rat #PEEK;
+			sfx target #PEEK $orb;
+			sfx attach $trackball #POP;
+
+			sfx create fire #TARGET_KB
+				"must_update()scale($scale)color0(.25,.5,.1)count(30)
+				velocity(0,1,0)accel(0,0,0)alphafade(.15)flamesize(.1)
+				min_radius(6)max_radius(8)[1]";
+			
+			sfx rat #PEEK;
+			sfx target #PEEK $orb;
+			sfx attach $trackball #POP;
+
+			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+
+			]];
+}

@@ -1,0 +1,8 @@
+[t:emt_light_ray,n:0x007004a4]
+{
+	[placement]
+	{
+	  q orientation = 0.353553,-0.353553,0.146447,0.853553;
+	  p position = -2.7997,0,1.27458,0x7320a3ab;
+	}
+}

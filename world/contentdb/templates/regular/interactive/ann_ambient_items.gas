@@ -1590,3 +1590,36 @@
 	doc = "ann Ambient Item elf elder";
 	specializes = ann_ambient_item_elf_elder_base;
 }
+[t:template,n:ann_ambient_item_r05_mine_worm]
+{
+	category_name = "outdoor";
+	doc = "ann r05 Ambient Item non_blocking mine worm animated";
+	specializes = ann_ambient_item_base;
+	[aspect] { model= m_c_edm_mw_pos_1; }
+	[body]
+	{
+		[bone_translator]
+		{
+			body_anterior = bone04;
+			body_mid = bone03;
+			body_posterior = bone02;
+			kill_bone = bone03;
+			shield_bone = bone03;
+			weapon_bone = AP_flame;
+		}
+		initial_chore = chore_fidget;
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_mw_fs;
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+		}
+	}
+}

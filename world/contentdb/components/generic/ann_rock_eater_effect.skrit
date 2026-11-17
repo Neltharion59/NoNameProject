@@ -1,0 +1,38 @@
+property Scid VisualObject$ doc="";
+property string SpawnEffect$ doc="";
+
+owner = GoSkritComponent;
+
+startup state Sleeping$
+{
+    trigger OnGoHandleMessage$( WE_ENTERED_WORLD )
+	{
+		VisualObject$.Go.Aspect.SSetIsVisible( false );
+	}
+    trigger OnGoHandleMessage$( WE_ENEMY_SPOTTED )
+	{
+		SetState Awake$;
+	}
+}
+
+state Awake$
+{
+    event OnEnterState$
+    {
+        VisualObject$.Go.Aspect.SSetIsVisible( true );
+        SiegeFx.SRunMPScript( SpawnEffect$, VisualObject$.Goid, VisualObject$.Goid, "", VisualObject$.Goid, WE_UNKNOWN );
+    }
+
+    trigger OnGoHandleMessage$( WE_KILLED )
+	{
+		SetState Delete$;
+	}
+}
+
+state Delete$
+{
+    event OnEnterState$
+    {
+        SendWorldMessage( WE_REQ_ACTIVATE, owner.goid, VisualObject$.goid, 0 );
+    }
+}
